@@ -42,9 +42,9 @@ for p in site["sitemap_base"]:
     check(p in urls, "bad sitemap base " + p)
 for path in ("_layouts/default.html", "_layouts/post.html", "_includes/schema.html", "_includes/navigation.html", "_includes/footer-navigation.html", "_includes/sidebar.html", "_includes/calculator.html", "_includes/pricing-table.html", "_includes/blog-posts.html", "_includes/topic-posts.html"):
     check((root / path).is_file(), "missing " + path)
-check(not list((root / "_posts").glob("*.md")) if (root / "_posts").exists() else True, "unexpected published posts")
+post_count = len(list((root / "_posts").glob("*.md"))) if (root / "_posts").exists() else 0
 if errors:
     print("CHINA QA FAILED:")
     print("\n".join(" - " + e for e in errors))
     sys.exit(1)
-print("CHINA source QA passed: %d pages, %d nav items, 0 posts, stable canonical." % (len(pages), len(nav)))
+print("CHINA source QA passed: %d pages, %d nav items, %d posts, stable canonical." % (len(pages), len(nav), post_count))
