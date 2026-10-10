@@ -6,4 +6,6 @@ markdown: kramdown
 timezone: Asia/Ho_Chi_Minh
 exclude:
   - scripts
+  - data
+  - docs
   - README.md
