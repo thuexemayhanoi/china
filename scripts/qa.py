@@ -45,6 +45,23 @@ for p in site["sitemap_base"]:
     check(p in urls, "bad sitemap base " + p)
 for path in ("_layouts/default.html", "_layouts/post.html", "_includes/schema.html", "_includes/navigation.html", "_includes/footer-navigation.html", "_includes/sidebar.html", "_includes/calculator.html", "_includes/pricing-table.html", "_includes/blog-posts.html", "_includes/topic-posts.html"):
     check((root / path).is_file(), "missing " + path)
+# Quick Call / chatbot must only use our own Chinese public content and centralized data.
+index = root / "assets/chat/site-index.json"
+assistant = root / "assets/assistant-cn.js"
+assistant_css = root / "assets/assistant-cn.css"
+layout = (root / "_layouts/default.html").read_text(encoding="utf-8")
+check(site["features"].get("quick_contact") is True, "Quick Call flag disabled")
+check(site["features"].get("local_chatbot") is True, "local chatbot flag disabled")
+check((root / "_includes/assistant-data.html").is_file(), "missing shared assistant config")
+for file in (index, assistant, assistant_css):
+    check(file.is_file(), "missing " + str(file))
+check("assets/assistant-cn.js" in layout and "assets/assistant-cn.css" in layout, "assistant assets not in default layout")
+check("assets/chat/site-index.json" in assistant.read_text(encoding="utf-8"), "assistant missing local search index")
+check("site.data.faqs" in index.read_text(encoding="utf-8"), "search index not generated from FAQs")
+check("site.posts" in index.read_text(encoding="utf-8"), "search index not generated from published posts")
+check("fr.rentbikehanoi.com" not in assistant.read_text(encoding="utf-8"), "French site link accidentally copied")
+check("https://wa.me/84942467674" == site["business"].get("whatsapp"), "WhatsApp number mismatch")
+check("https://zalo.me/0942467674" == site["business"].get("zalo"), "Zalo number mismatch")
 post_count = len(list((root / "_posts").glob("*.md"))) if (root / "_posts").exists() else 0
 if errors:
     print("CHINA QA FAILED:")
