@@ -87,3 +87,28 @@
 - Không đổi header, footer, menu, CSS, light/dark, Quick Call, chatbot hoặc cơ chế 中文 / EN trong giai đoạn lập matrix.
 - Không tự thêm ảnh thật, lượt review, chứng chỉ, giá/ưu đãi hoặc bảo đảm hoàn cọc không có nguồn.
 - Không tạo GitHub Actions SEO, cron hoặc publish post cho đến khi người dùng duyệt bước sau.
+
+## F. SEO-01 — live baseline, kiểm tra thực tế ngày 2026-10-10
+
+**Trạng thái:** `BASELINE_PASS_WITH_LIMITATIONS` — kiểm tra kỹ thuật cơ bản đạt trên URL đã thử. **Không đánh dấu SEO tối ưu nội dung của 26 trang đã hoàn tất.** Toàn bộ hàng mục B vẫn là `TODO` cho tối ưu nội dung và kiểm chứng chuyên sâu.
+
+Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehanoi.com` bằng truy vấn live (`maxAge=0`) và so với cấu hình Jekyll trong `main`. Báo cáo HTTP và markup dưới đây chỉ áp dụng tại thời điểm đo, không chứng minh trang đã được Google/Baidu index.
+
+| URL kiểm tra | HTTP | Robots render | Canonical | H1 | Schema JSON-LD |
+|---|---:|---|---|---:|---|
+| `/` | 200 | index,follow | `https://zh.rentbikehanoi.com/` | 1 | JSON hợp lệ: WebSite, LocalBusiness, WebPage |
+| `/prices/` | 200 | index,follow | `https://zh.rentbikehanoi.com/prices/` | 1 | JSON hợp lệ: WebSite, LocalBusiness, WebPage, BreadcrumbList |
+| `/faq/` | 200 | index,follow | `https://zh.rentbikehanoi.com/faq/` | 1 | JSON hợp lệ: WebSite, LocalBusiness, WebPage, BreadcrumbList, FAQPage; 12 câu |
+| `/blog/` | 200 | noindex,follow | `https://zh.rentbikehanoi.com/blog/` | 1 | JSON hợp lệ |
+| `/topics/50cc/requirements/` | 200 | noindex,follow | `https://zh.rentbikehanoi.com/topics/50cc/requirements/` | 1 | JSON hợp lệ |
+| `/topics/rental/` | 200 | index,follow | `https://zh.rentbikehanoi.com/topics/rental/` | 1 | JSON hợp lệ |
+| `/robots.txt` | 200 | `User-agent: *`, `Allow: /` | — | — | `Sitemap: https://zh.rentbikehanoi.com/sitemap.xml` |
+| `/sitemap.xml` | 200 | — | — | — | XML sitemap có đúng 12 `<loc>` riêng biệt, tất cả thuộc domain chính thức |
+
+**Thực đo bổ sung:**
+- Trên 3 trang money/trust chính (home, prices, FAQ), HTML cho biết ngôn ngữ `zh-CN`, có một meta description, một title, một H1; nguồn HTML có một JSON-LD parse hợp lệ; OG URL và canonical trùng đích; không thấy `github.io` hay HTTP links lạc vào các liên kết đã trích xuất.
+- FAQ `FAQPage` có 12 câu từ dữ liệu đang hiển thị. Không có nghĩa chắc chắn Google cung cấp FAQ rich results.
+- Sitemap có 12 URL và không đưa `/blog/` hoặc danh mục con `noindex` vào danh sách. `robots.txt` không chặn crawl toàn website.
+- **Chưa kiểm chứng:** Google Search Console/Bing index coverage, redirect http→https/non-canonical, tất cả 26 URL, liên kết gãy toàn site, JS tương tác thực tế, Lighthouse/Core Web Vitals và truy cập từ bot Trung Quốc. Đây là các hạng mục riêng, không được suy diễn PASS.
+
+**Kết luận SEO-01:** không phát hiện lỗi chặn index, canonical sai hoặc JSON-LD không parse được trên các trang chính đã kiểm tra; không chỉnh nội dung, cấu hình index, sitemap hay workflow. Chuyển sang bước 02: tối ưu trang thương mại `/` và `/prices/` đầu tiên, sau đó mới lần lượt xử lý các trang danh mục cha. Mỗi đợt 1–2 URL, có QA và xác nhận deploy.
