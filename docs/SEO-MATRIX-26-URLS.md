@@ -30,9 +30,9 @@
 | SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | TODO |
 | SEO-06 | `/topics/old-quarter/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内老城区附近租摩托车 | P0 | Giải thích cửa hàng ở Long Biên, không nằm trong Phố Cổ; thêm dẫn đường thực tế, điều kiện giao xe. | TODO |
 | SEO-07 | `/topics/guides/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁指南 | P1 | Cấu trúc hướng dẫn/kiểm tra xe/an toàn và câu hỏi trước thuê, hạn chế trùng nội dung trang con. | TODO |
-| SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | TODO |
-| SEO-09 | `/contact/` | Liên hệ | index,follow theo template | Trong sitemap | Nguyễn Tú 河内租车联系方式 | P1 | Nổi bật địa chỉ, Zalo, điện thoại, giờ mở cửa, bản đồ; rà accessibility và mobile. | TODO |
-| SEO-10 | `/faq/` | FAQ | index,follow theo template | Trong sitemap | 河内租摩托车常见问题 | P1 | Kiểm tra 12 câu FAQ và giá/đặt cọc/luật, đồng bộ JSON-LD; FAQ rich result không được bảo đảm. | TODO |
+| SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | QA_PASS |
+| SEO-09 | `/contact/` | Liên hệ | index,follow theo template | Trong sitemap | Nguyễn Tú 河内租车联系方式 | P1 | Nổi bật địa chỉ, Zalo, điện thoại, giờ mở cửa, bản đồ; rà accessibility và mobile. | QA_PASS |
+| SEO-10 | `/faq/` | FAQ | index,follow theo template | Trong sitemap | 河内租摩托车常见问题 | P1 | Kiểm tra 12 câu FAQ và giá/đặt cọc/luật, đồng bộ JSON-LD; FAQ rich result không được bảo đảm. | QA_PASS |
 | SEO-11 | `/privacy/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 隐私政策 | P3 | Rà soát độ đúng của mô tả dữ liệu lưu trữ, dịch vụ ngoài, liên hệ yêu cầu; duyệt chính sách. | TODO |
 | SEO-12 | `/terms/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 使用条款 | P3 | Rà soát điều kiện đặt xe, trách nhiệm/đặt cọc và tuyên bố giới hạn; duyệt pháp lý. | TODO |
 | SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | TODO |
@@ -132,3 +132,25 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 **Giới hạn:** Chưa có kiểm tra click/tương tác thực tế trên iPhone, GSC/Bing index coverage, keyword volumes, tốc độ PSI/CWV hay chuyển đổi thực. Không nhận định các mục này đã PASS.
 
 **Dừng tại SEO-02.** Giai đoạn sau, nếu được duyệt: SEO-03 về NAP, thương hiệu và FAQ của `/about/`, `/contact/`, `/faq/` và template schema chung; mỗi lượt nhỏ, có rollback.
+
+## H. SEO-03 — About, Contact, FAQ & LocalBusiness Entity (2026-10-11)
+
+**Trạng thái: QA_PASS** cho đúng ba URL `/about/`, `/contact/`, `/faq/`. Cập nhật một template schema dùng chung, nên đã kiểm tra thêm `/` nhằm tránh hồi quy toàn site. Không khẳng định đã có Google/Baidu index, rich result, cải thiện thứ hạng hoặc tăng traffic.
+
+**Đã làm:**
+- `/about/` — H1 rõ về Nguyễn Tú và thuê xe tại Hà Nội; hiển thị thương hiệu, tên Google Business Profile qua cấu hình NAP tập trung, địa chỉ và giờ Hà Nội, cách tự xác minh qua Google Maps và liên hệ; không hứa giao xe Phố Cổ.
+- `/contact/` — title/description sát ý định tìm kiếm địa chỉ/điện thoại/Zalo; `ContactPage` trong front matter; hướng dẫn 3 bước trước khi thuê, nút gọi/Zalo, lưu ý không tự đặt hoặc trả tiền trực tuyến.
+- `/faq/` — H1/sapo rõ nội dung giá/đặt cọc/50cc/nhận trả; giữ nguyên 12 FAQ thật từ `_data/faqs.json`; liên kết hỗ trợ đến `/prices/` và quy định 50cc.
+- `_includes/schema.html` — nối `WebSite.publisher` → `LocalBusiness`, bổ sung `hasMap`/trang website chính, `AboutPage` và `ContactPage.mainEntity` trỏ đến doanh nghiệp; **một `FAQPage` có `@id` bằng trang FAQ và 12 Question/Answer từ nguồn chung** thay vì WebPage và FAQPage tách rời.
+- `_data/i18n-en.json` — thêm các nhãn/đoạn EN có biên tập cho nội dung mới; HTML mặc định vẫn tiếng Trung.
+
+**Bằng chứng kiểm tra:** PR [#3](https://github.com/thuexemayhanoi/china/pull/3) merge commit `737a98b65e76bf09c6dcd6a288ae5ab8f02d09dd`. GitHub Pages run `38071707146`: **Jekyll build SUCCESS / Deploy SUCCESS**. Live fetch `maxAge=0` sau deploy:
+
+| URL | HTTP | Canonical / Robots / H1 / JSON-LD | Entity type | Kết quả |
+|---|---:|---|---|---|
+| `/about/` | 200 | đúng URL / index,follow / 1 H1 / JSON hợp lệ | AboutPage → LocalBusiness | QA_PASS |
+| `/contact/` | 200 | đúng URL / index,follow / 1 H1 / JSON hợp lệ | ContactPage → LocalBusiness | QA_PASS |
+| `/faq/` | 200 | đúng URL / index,follow / 1 H1 / JSON hợp lệ | FAQPage, 12 Q&A hiển thị và schema | QA_PASS |
+| `/` (hồi quy schema) | 200 | đúng URL / index,follow / 1 H1 / JSON hợp lệ | WebPage + LocalBusiness | QA_PASS |
+
+**Ràng buộc:** Không sửa CNAME/DNS, 26 permalink, robots/sitemap, CSS/menu/footer, bảng giá, widget, `/french` hay workflow/matrix 250 bài. QA này không thay thế Google Rich Results Test, Google Search Console, đo mobile thực tế hoặc kiểm toán pháp lý. **Tạm dừng tại SEO-03.**
