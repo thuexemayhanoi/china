@@ -18,7 +18,7 @@ Native Jekyll from GitHub Pages' existing branch build; optional editorial QA/pu
 **Editorial capacity: exactly 250 planned Simplified Chinese articles, in 10 batches × 25.** Allocated equally to rental, pricing, 50cc, Old Quarter and guides (50 each). Actual progress is tracked in `data/china-matrix.csv`; run `python3 scripts/china_factory.py status`. **Installing the factory publishes no posts.**
 
 ## Adding posts later (do not generate empty posts)
-Create `_posts/YYYY-MM-DD-unique-slug.md` with front matter `layout: post`, `title`, `description`, `topic`, `subtopic`, `date`, `breadcrumbs`; GitHub Pages/Jekyll generates `/blog/:title/`, blog lists, category related posts, article schema, CTA and sitemap automatically.
+**Do not write directly to `_posts/`.** Create `_drafts/CN-xxxx.md` for the approved matrix ID and topic; run matrix QA and manual human review, then the `CHINA Publish Reviewed Posts` Action moves it to `_posts/YYYY-MM-DD-<planned-slug>.md` and updates the matrix atomically. Existing Jekyll templates then update `/blog/<planned-slug>/`, blog lists, categories, schema, CTA and sitemap automatically. See `docs/CHINA-FACTORY-250.md`.
 
 ## SEO/QA safeguards
 Preserve all existing page URLs, titles, descriptions, canonical domain, visible content and design. Canonical: https://zh.rentbikehanoi.com/. Sitemap base: 9 indexed pages. No false prices, waived deposits, fabricated reviews or assumed 50cc license exemptions.
