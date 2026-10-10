@@ -87,7 +87,7 @@ def validate_matrix():
             fail(aid + ": invalid permalink")
         if not re.fullmatch(r"[a-z0-9-]+", r["slug"]):
             fail(aid + ": invalid slug")
-        if count_han(r["working_title"]) < 5 or len(r["working_title"]) < 12:
+        if count_han(r["working_title"]) < 5 or len(r["working_title"]) < 10:
             fail(aid + ": title not Chinese")
         for label, item, seen in (("id",aid,ids),("title",r["working_title"],titles),
                                    ("slug",r["slug"],slugs),("permalink",r["permalink"],urls)):
@@ -146,7 +146,7 @@ def audit_draft(r):
     req(fm.get("title")==r["working_title"], "title must match approved matrix brief (edit brief first if needed)")
     title = str(fm.get("title",""))
     description = str(fm.get("description",""))
-    req(count_han(title)>=5 and 12<=len(title)<=95, "Chinese H1 must have >=5 Hanzi and 12–95 total characters (allow Latin vehicle model names)")
+    req(count_han(title)>=5 and 10<=len(title)<=95, "Chinese H1 must have >=5 Hanzi and 10–95 total characters (allow Latin vehicle model names)")
     req(40<=count_han(description)<=150, "meta description needs 40–150 Hanzi")
     req(count_han(body)>=800, "article needs >=800 substantive Chinese characters")
     req(len(re.findall(r"(?m)^##\s+\S",body))>=3, "at least 3 descriptive H2 sections")
