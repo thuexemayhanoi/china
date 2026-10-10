@@ -1,0 +1,71 @@
+name: CHINA 250 Matrix QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_drafts/**'
+      - '_posts/**'
+      - '_data/china-plan.json'
+      - 'data/china-matrix.csv'
+      - 'scripts/china_factory.py'
+      - 'scripts/qa.py'
+      - '.github/workflows/china-factory-quality.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '_drafts/**'
+      - '_posts/**'
+      - '_data/china-plan.json'
+      - 'data/china-matrix.csv'
+      - 'scripts/china_factory.py'
+      - 'scripts/qa.py'
+      - '.github/workflows/china-factory-quality.yml'
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: 'Read-only command'
+        required: true
+        default: 'status'
+        type: choice
+        options:
+          - status
+          - plan
+          - validate
+      batch:
+        description: 'Batch for plan (B01..B10)'
+        required: false
+        default: 'B01'
+        type: string
+  schedule:
+    - cron: '15 2 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout CHINA
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile factory script
+        run: python3 -m py_compile scripts/china_factory.py
+      - name: Check existing website, domain and navigation
+        run: python3 scripts/qa.py
+      - name: Validate exact 250-row plan and any staged drafts
+        run: python3 scripts/china_factory.py validate --drafts
+      - name: Read-only progress
+        run: python3 scripts/china_factory.py status
+      - name: Manual read-only plan
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.operation == 'plan' }}
+        env:
+          BATCH: ${{ inputs.batch }}
+        run: python3 scripts/china_factory.py plan --batch "$BATCH" --limit 5
+      - name: Ensure this workflow did not modify files
+        run: test -z "$(git status --porcelain --untracked-files=no)"

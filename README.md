@@ -3,7 +3,7 @@
 Live: https://zh.rentbikehanoi.com/ · Code: https://github.com/thuexemayhanoi/china · Language: zh-CN.
 
 ## Architecture — edit once, rebuild all pages
-Native Jekyll from GitHub Pages' existing branch build; no custom workflow/dependencies/hosting changes.
+Native Jekyll from GitHub Pages' existing branch build; optional editorial QA/publish GitHub Actions (distinct from unchanged Pages deployment), no heavy dependencies/hosting changes.
 
 - `_data/site.json`: business NAP, hours, canonical domain, feature flags, sitemap base routes.
 - `_data/navigation.json`: header dropdown, sidebar and footer navigation.
@@ -15,10 +15,10 @@ Native Jekyll from GitHub Pages' existing branch build; no custom workflow/depen
 - `assets/site.js`: existing interactions, reading price data embedded from central JSON.
 
 ## Current editorial scope
-**0 articles published.** Menu allows 200 future Simplified Chinese posts: rental 50, pricing 40, 50cc 35, Old Quarter 35, guides 40. Empty subcategories stay noindex and are excluded from sitemap until reviewed.
+**Editorial capacity: exactly 250 planned Simplified Chinese articles, in 10 batches × 25.** Allocated equally to rental, pricing, 50cc, Old Quarter and guides (50 each). Actual progress is tracked in `data/china-matrix.csv`; run `python3 scripts/china_factory.py status`. **Installing the factory publishes no posts.**
 
 ## Adding posts later (do not generate empty posts)
-Create `_posts/YYYY-MM-DD-unique-slug.md` with front matter `layout: post`, `title`, `description`, `topic`, `subtopic`, `date`, `breadcrumbs`; GitHub Pages/Jekyll generates `/blog/:title/`, blog lists, category related posts, article schema, CTA and sitemap automatically.
+**Do not write directly to `_posts/`.** Create `_drafts/CN-xxxx.md` for the approved matrix ID and topic; run matrix QA and manual human review, then the `CHINA Publish Reviewed Posts` Action moves it to `_posts/YYYY-MM-DD-<planned-slug>.md` and updates the matrix atomically. Existing Jekyll templates then update `/blog/<planned-slug>/`, blog lists, categories, schema, CTA and sitemap automatically. See `docs/CHINA-FACTORY-250.md`.
 
 ## SEO/QA safeguards
 Preserve all existing page URLs, titles, descriptions, canonical domain, visible content and design. Canonical: https://zh.rentbikehanoi.com/. Sitemap base: 9 indexed pages. No false prices, waived deposits, fabricated reviews or assumed 50cc license exemptions.
@@ -26,7 +26,7 @@ Preserve all existing page URLs, titles, descriptions, canonical domain, visible
 No changes to `CNAME`, DNS, Pages deployment mode or other repositories. Always verify native Jekyll build results and rollback if failing.
 
 ## Lightweight QA
-Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Jekyll build remains the final build/deployment check. No additional Action workflow is installed.
+Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Jekyll build remains the final build/deployment check. Editorial Actions added for 250-article matrix QA and explicit manual publishing; native GitHub Pages deployment is unchanged.
 
 ## Chinese / English switch (same URLs, Chinese-first SEO)
 - Toggle **中文 / EN** in the shared header, across all pages; preference is stored locally and remembered between pages.
@@ -53,3 +53,12 @@ Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Je
 - `assets/chat/site-index.json` is generated automatically by Jekyll from central FAQ, vehicle data, business info, real pages and future published posts, not the French-language 5MB search index.
 - Language follows the existing 中文 / EN toggle; script does not change canonical, SEO metadata, URLs, or the initial Chinese HTML.
 - All widget data/visibility flags are managed in `_data/site.json` (`features.quick_contact`, `features.local_chatbot`).
+
+
+## CHINA 250-article workflow — inspired by /vanchinh
+- **Guide:** [docs/CHINA-FACTORY-250.md](docs/CHINA-FACTORY-250.md).
+- **Manifest:** `_data/china-plan.json`: 250 unique planned Chinese article titles and canonical slugs.
+- **Matrix:** `data/china-matrix.csv`: immutable brief identifiers + actual publication state.
+- **Manual writer flow:** create `_drafts/CN-xxxx.md` → quality QA → human review → Actions **CHINA Publish Reviewed Posts** with 1–5 IDs and explicit PUBLISH → native Jekyll auto rebuild.
+- **Progress/QA from iPhone:** Actions **CHINA 250 Matrix QA** (Run workflow → status/plan/validate).
+- **Guardrails:** no posts created by setup, no cross-repo text reuse, no false prices or legal claims, no forced push, max 250 published, CNAME and GitHub Pages mode untouched.
