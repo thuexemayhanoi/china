@@ -24,3 +24,6 @@ Create `_posts/YYYY-MM-DD-unique-slug.md` with front matter `layout: post`, `tit
 Preserve all existing page URLs, titles, descriptions, canonical domain, visible content and design. Canonical: https://zh.rentbikehanoi.com/. Sitemap base: 9 indexed pages. No false prices, waived deposits, fabricated reviews or assumed 50cc license exemptions.
 
 No changes to `CNAME`, DNS, Pages deployment mode or other repositories. Always verify native Jekyll build results and rollback if failing.
+
+## Lightweight QA
+Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Jekyll build remains the final build/deployment check. No additional Action workflow is installed.
