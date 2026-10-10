@@ -1,0 +1,109 @@
+[
+  {
+    "label": "首页",
+    "href": "/"
+  },
+  {
+    "label": "租赁服务",
+    "href": "/topics/rental/",
+    "slug": "rental",
+    "children": [
+      {
+        "label": "踏板车租赁",
+        "href": "/topics/rental/scooters/"
+      },
+      {
+        "label": "月租摩托车",
+        "href": "/topics/rental/monthly/"
+      },
+      {
+        "label": "自动挡与手动挡",
+        "href": "/topics/rental/automatic/"
+      }
+    ]
+  },
+  {
+    "label": "租车价格",
+    "href": "/topics/pricing/",
+    "slug": "pricing",
+    "children": [
+      {
+        "label": "日租价格",
+        "href": "/topics/pricing/daily/"
+      },
+      {
+        "label": "周租价格",
+        "href": "/topics/pricing/weekly/"
+      },
+      {
+        "label": "押金与合同",
+        "href": "/topics/pricing/deposits/"
+      },
+      {
+        "label": "完整价格表",
+        "href": "/prices/"
+      }
+    ]
+  },
+  {
+    "label": "50cc 摩托车",
+    "href": "/topics/50cc/",
+    "slug": "50cc",
+    "children": [
+      {
+        "label": "50cc 车型与费用",
+        "href": "/topics/50cc/models/"
+      },
+      {
+        "label": "50cc 驾驶注意事项",
+        "href": "/topics/50cc/requirements/"
+      }
+    ]
+  },
+  {
+    "label": "老城区附近",
+    "href": "/topics/old-quarter/",
+    "slug": "old-quarter",
+    "children": [
+      {
+        "label": "从老城区前往门店",
+        "href": "/topics/old-quarter/directions/"
+      },
+      {
+        "label": "取车与还车咨询",
+        "href": "/topics/old-quarter/pickup/"
+      }
+    ]
+  },
+  {
+    "label": "租车指南",
+    "href": "/topics/guides/",
+    "slug": "guides",
+    "children": [
+      {
+        "label": "证件与合同",
+        "href": "/topics/guides/contracts/"
+      },
+      {
+        "label": "河内骑行安全",
+        "href": "/topics/guides/safety/"
+      },
+      {
+        "label": "还车与押金退还",
+        "href": "/topics/guides/returns/"
+      },
+      {
+        "label": "常见问题",
+        "href": "/faq/"
+      }
+    ]
+  },
+  {
+    "label": "博客",
+    "href": "/blog/"
+  },
+  {
+    "label": "联系我们",
+    "href": "/contact/"
+  }
+]

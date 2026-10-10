@@ -1,12 +1,8 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zh.rentbikehanoi.com/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/prices/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/contact/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/faq/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/topics/rental/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/topics/pricing/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/topics/50cc/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/topics/old-quarter/</loc></url>
-  <url><loc>https://zh.rentbikehanoi.com/topics/guides/</loc></url>
-</urlset>
+{% for path in site.data.site.sitemap_base %}  <url><loc>{{ site.data.site.domain }}{{ path }}</loc></url>
+{% endfor %}{% for p in site.posts %}  <url><loc>{{ site.data.site.domain }}{{ p.url }}</loc></url>
+{% endfor %}</urlset>

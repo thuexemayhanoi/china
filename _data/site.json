@@ -1,0 +1,39 @@
+{
+  "domain": "https://zh.rentbikehanoi.com",
+  "title": "Nguyễn Tú 河内摩托车租赁",
+  "language": "zh-CN",
+  "business": {
+    "name": "Cho Thuê Xe Máy Nguyễn Tú",
+    "gbp": "Thuê xe máy ở Hà Nội - Nguyễn Tú",
+    "address": "112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội, Việt Nam",
+    "address_short": "112 Nguyễn Văn Cừ, Bồ Đề, Long Biên, Hà Nội",
+    "street": "112 Nguyễn Văn Cừ",
+    "locality": "Bồ Đề, Long Biên, Hà Nội",
+    "country": "VN",
+    "phone": "0942 467 674",
+    "phone_display": "+84 942 467 674",
+    "phone_e164": "+84942467674",
+    "hours": "09:00–21:00",
+    "opens": "09:00",
+    "closes": "21:00",
+    "maps": "https://maps.google.com/maps?cid=7448790013669858019",
+    "zalo": "https://zalo.me/0942467674",
+    "website": "https://thuexemaynguyentu.com/"
+  },
+  "features": {
+    "show_post_cta": true,
+    "show_related_posts": true,
+    "related_limit": 4
+  },
+  "sitemap_base": [
+    "/",
+    "/prices/",
+    "/contact/",
+    "/faq/",
+    "/topics/rental/",
+    "/topics/pricing/",
+    "/topics/50cc/",
+    "/topics/old-quarter/",
+    "/topics/guides/"
+  ]
+}

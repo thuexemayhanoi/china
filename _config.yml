@@ -1,0 +1,9 @@
+title: "Nguyễn Tú 河内摩托车租赁"
+url: "https://zh.rentbikehanoi.com"
+baseurl: ""
+permalink: "/blog/:title/"
+markdown: kramdown
+timezone: Asia/Ho_Chi_Minh
+exclude:
+  - scripts
+  - README.md

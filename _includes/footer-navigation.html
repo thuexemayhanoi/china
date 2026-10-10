@@ -1,0 +1,1 @@
+<nav class="foot-menus" aria-label="页脚导航">{% for n in site.data.navigation %}<section><a class="foot-title" href="{{ site.data.site.domain }}{{ n.href }}">{{ n.label }}</a>{% for c in n.children %}<a href="{{ site.data.site.domain }}{{ c.href }}">{{ c.label }}</a>{% endfor %}</section>{% endfor %}</nav>
