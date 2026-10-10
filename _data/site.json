@@ -18,12 +18,15 @@
     "closes": "21:00",
     "maps": "https://maps.google.com/maps?cid=7448790013669858019",
     "zalo": "https://zalo.me/0942467674",
-    "website": "https://thuexemaynguyentu.com/"
+    "website": "https://thuexemaynguyentu.com/",
+    "whatsapp": "https://wa.me/84942467674"
   },
   "features": {
     "show_post_cta": true,
     "show_related_posts": true,
-    "related_limit": 4
+    "related_limit": 4,
+    "quick_contact": true,
+    "local_chatbot": true
   },
   "sitemap_base": [
     "/",

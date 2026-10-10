@@ -44,3 +44,12 @@ Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Je
 - New privacy and terms pages are informational notices, not substitutes for professional legal review; do not assert unverified policies or guarantees.
 - On laptop-width screens, navigation uses the already working responsive drawer to avoid 12 top-level labels overflowing the header.
 - Updated `scripts/qa.py` to expect 26 core HTML pages, 12 FAQs and proper top-menu order.
+
+## Quick Call and local chatbot (adapted from the /french repo)
+- UI interaction patterns adapted from `thuexemayhanoi/french` (read-only reference, untouched). Only this /china repository is modified.
+- `assets/assistant-cn.css` contains scoped floating widgets using **black / white / gold** design tokens, supporting dark mode, mobile safe areas, and iOS keyboard viewport.
+- `assets/assistant-cn.js` mounts two floating widgets: Quick Call (phone, Zalo, WhatsApp, Google Maps) and a **local rules-and-search FAQ assistant** in Simplified Chinese and English.
+- No external AI model, account credentials, tracking, third-party script, or API is used. The chatbot **does not invent inventory, prices or licensing exemptions**, does not book or take payments, and reads only publicly published Chinese-site content.
+- `assets/chat/site-index.json` is generated automatically by Jekyll from central FAQ, vehicle data, business info, real pages and future published posts, not the French-language 5MB search index.
+- Language follows the existing 中文 / EN toggle; script does not change canonical, SEO metadata, URLs, or the initial Chinese HTML.
+- All widget data/visibility flags are managed in `_data/site.json` (`features.quick_contact`, `features.local_chatbot`).
