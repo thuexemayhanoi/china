@@ -27,3 +27,11 @@ No changes to `CNAME`, DNS, Pages deployment mode or other repositories. Always 
 
 ## Lightweight QA
 Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Jekyll build remains the final build/deployment check. No additional Action workflow is installed.
+
+## Chinese / English switch (same URLs, Chinese-first SEO)
+- Toggle **中文 / EN** in the shared header, across all pages; preference is stored locally and remembered between pages.
+- English is a curated on-page translation via `_data/i18n-en.json` + `assets/i18n.js` (no remote translate service).
+- Initial server-generated HTML, meta descriptions, canonical tags, sitemap and all page URLs remain in Chinese at `https://zh.rentbikehanoi.com/`.
+- The switch changes visible text and accessibility labels, not URLs; `<html lang>` becomes `en` when selected.
+- For future published posts, add reviewed English translations to the dictionary or create an appropriate dedicated English content workflow. **Do not** assume new Chinese posts automatically get a professional English translation.
+- Existing menu behavior, page designs, CSS tokens, theme, contact information, and prices are preserved.

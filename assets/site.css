@@ -21,3 +21,16 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#0c0c0c;--surface:#171717;--surfa
   .mobile-overlay.active{z-index:60}
 }
 @media (max-width:690px){.main-nav{max-height:calc(100dvh - 69px)}}
+
+
+/* Chinese / English toggle — stays inside the header across all screen sizes. */
+.lang-toggle{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:40px;min-width:96px;padding:5px 9px;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap;line-height:1.2;letter-spacing:.01em}
+.lang-toggle .lang-choice{border-radius:5px;padding:3px 1px}
+.lang-toggle .lang-separator{opacity:.5}
+html:not([data-ui-lang="en"]) .lang-zh,html[data-ui-lang="zh"] .lang-zh,html[data-ui-lang="en"] .lang-en{color:var(--gold);font-weight:850}
+html[data-ui-lang="en"] .lang-zh{color:var(--muted);font-weight:700}
+html[data-ui-lang="en"] .lang-en{color:var(--gold);font-weight:850}
+.lang-toggle:hover{border-color:var(--gold)}
+@media(max-width:690px){.bar{gap:8px}.header-actions{gap:5px}.lang-toggle{min-width:86px;padding:5px 6px;gap:3px;font-size:11px}}
+@media(max-width:390px){.site-header .brand small{display:none}.site-header .brand{gap:6px;font-size:.86rem}.site-header .brand-mark{width:32px;height:32px}.header-actions .icon-btn{min-width:34px;height:36px}.lang-toggle{min-width:82px}}
+@media(max-width:335px){.site-header .brand{font-size:.76rem}.site-header .brand-mark{width:29px;height:29px}.bar{gap:4px}.header-actions{gap:3px}}
