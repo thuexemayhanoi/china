@@ -26,10 +26,10 @@
 | SEO-01 | `/` | Trang chủ | index,follow theo template | Trong sitemap | 河内摩托车租赁 | P0 | Tối ưu giới thiệu dịch vụ/CTA, xác thực giá và NAP; tránh trùng ý định với trang giá. | QA_PASS |
 | SEO-02 | `/prices/` | Giá và chuyển đổi | index,follow theo template | Trong sitemap | 河内摩托车租赁价格表 | P0 | Làm rõ bảng giá theo ngày/tuần/tháng, khoản đặt cọc tách biệt; nguồn giá tập trung, FAQ đúng thực tế. | QA_PASS |
 | SEO-03 | `/topics/rental/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁服务 | P0 | Làm rõ xe tay ga, số sàn, thuê dài hạn, chính sách giao nhận chỉ khi xác nhận. | TODO |
-| SEO-04 | `/topics/pricing/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租金指南 | P1 | Tập trung cách so sánh giá/đặt cọc; phân biệt rõ với /prices/ là bảng giá giao dịch. | TODO |
+| SEO-04 | `/topics/pricing/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租金指南 | P1 | Tập trung cách so sánh giá/đặt cọc; phân biệt rõ với /prices/ là bảng giá giao dịch. | QA_PASS |
 | SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | TODO |
 | SEO-06 | `/topics/old-quarter/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内老城区附近租摩托车 | P0 | Giải thích cửa hàng ở Long Biên, không nằm trong Phố Cổ; thêm dẫn đường thực tế, điều kiện giao xe. | TODO |
-| SEO-07 | `/topics/guides/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁指南 | P1 | Cấu trúc hướng dẫn/kiểm tra xe/an toàn và câu hỏi trước thuê, hạn chế trùng nội dung trang con. | TODO |
+| SEO-07 | `/topics/guides/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁指南 | P1 | Cấu trúc hướng dẫn/kiểm tra xe/an toàn và câu hỏi trước thuê, hạn chế trùng nội dung trang con. | QA_PASS |
 | SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | QA_PASS |
 | SEO-09 | `/contact/` | Liên hệ | index,follow theo template | Trong sitemap | Nguyễn Tú 河内租车联系方式 | P1 | Nổi bật địa chỉ, Zalo, điện thoại, giờ mở cửa, bản đồ; rà accessibility và mobile. | QA_PASS |
 | SEO-10 | `/faq/` | FAQ | index,follow theo template | Trong sitemap | 河内租摩托车常见问题 | P1 | Kiểm tra 12 câu FAQ và giá/đặt cọc/luật, đồng bộ JSON-LD; FAQ rich result không được bảo đảm. | QA_PASS |
@@ -154,3 +154,26 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 | `/` (hồi quy schema) | 200 | đúng URL / index,follow / 1 H1 / JSON hợp lệ | WebPage + LocalBusiness | QA_PASS |
 
 **Ràng buộc:** Không sửa CNAME/DNS, 26 permalink, robots/sitemap, CSS/menu/footer, bảng giá, widget, `/french` hay workflow/matrix 250 bài. QA này không thay thế Google Rich Results Test, Google Search Console, đo mobile thực tế hoặc kiểm toán pháp lý. **Tạm dừng tại SEO-03.**
+
+## I. SEO-04 — Pricing hub & Rental Guides hub (2026-10-11)
+
+**Trạng thái QA_PASS** chỉ cho hai danh mục cha: `/topics/pricing/` (`SEO-04`) và `/topics/guides/` (`SEO-07`). Không coi đây là xác nhận thứ hạng, Google/Baidu index, tốc độ hoặc chuyển đổi.
+
+**Phân định search intent chống trùng nội dung:**
+- `/prices/`: bảng giá công khai từng dòng xe, giá ngày/tuần/tháng và tiền cọc (trang giao dịch, đã QA ở SEO-02).
+- `/topics/pricing/`: giải thích cách đọc báo giá, phân biệt tiền thuê/đặt cọc, lựa chọn chu kỳ thuê và các thông tin cần chuẩn bị khi xin báo giá. Không nhúng lại bảng giá; liên kết dẫn về `/prices/`, FAQ, Contact và 3 danh mục con.
+- `/topics/guides/`: checklist bốn bước (trước thuê/giấy tờ, nhận xe/kiểm tra, đi đường/an toàn, trả xe/tiền cọc) thay vì lặp thông tin giá; liên kết đến hướng dẫn 50cc, an toàn, trả xe, FAQ và danh mục con.
+- Cả hai giữ nguyên Jekyll `site.posts` dynamic topic listings, `sidebar`, hệ thống 中文/EN và giao diện; bổ sung bản dịch EN từ `_data/i18n-en.json`.
+
+**GitHub:** PR [#4](https://github.com/thuexemayhanoi/china/pull/4) squash-merge commit `4635e8bce02fcc020ef74e6bdf5ebbaa92fcbc3a`. Jekyll build và GitHub Pages deploy run `38072158472` đều **SUCCESS**.
+
+**QA source trước merge:** giới hạn thay đổi đúng 3 file (`topics/pricing/index.html`, `topics/guides/index.html`, `_data/i18n-en.json`). Mỗi trang một H1, 4 hoặc 5 H2, khoảng 721/748 chữ Hán trong source đã bỏ tags, meta description đủ nghĩa, internal links trỏ đúng URL, các đoạn mới có bản dịch EN; dữ liệu 6 mẫu xe và matrix 250 bài không đổi.
+
+**Kiểm tra website trực tiếp sau deploy (`maxAge=0`):**
+
+| URL | HTTP | Canonical | Robots/Language | H1 | H2 | JSON-LD | Kết quả |
+|---|---:|---|---|---|---:|---|---|
+| `/topics/pricing/` | 200 | self | index,follow / zh-CN | `河内摩托车租金与押金指南` | 4 | parse hợp lệ: WebSite, LocalBusiness, WebPage, BreadcrumbList | QA_PASS |
+| `/topics/guides/` | 200 | self | index,follow / zh-CN | `河内摩托车租赁实用指南` | 5 | parse hợp lệ: WebSite, LocalBusiness, WebPage, BreadcrumbList | QA_PASS |
+
+**Không thay đổi:** CNAME, DNS, canonical URL, robots, sitemap, template/schema chung, CSS, JS, header/footer, chatbot, Quick Call, 6 danh mục con vẫn `noindex` và 250 bài trong factory. **Chưa thực hiện** Google Search Console, PSI/Core Web Vitals, QA chạm thực tế iPhone hoặc xác minh luật 50cc theo nguồn văn bản pháp lý chuyên sâu. Dừng tại SEO-04 theo phạm vi duyệt.
