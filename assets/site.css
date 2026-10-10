@@ -10,3 +10,14 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#0c0c0c;--surface:#171717;--surfa
 @media(max-width:690px){.container{width:min(100% - 30px,1180px)}.bar{min-height:69px}.main-nav{top:69px}.mobile-overlay.active{top:69px}.hero{padding:40px 0 44px}.hero h1{font-size:clamp(2.25rem,10vw,3.5rem)}.section{padding:39px 0}.section-head{display:block}.cards{grid-template-columns:1fr}.calculator{padding:21px;border-radius:20px}.form-grid{grid-template-columns:1fr 1fr}.two-col{gap:23px}.side-content{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:32px}.foot-menus{grid-template-columns:repeat(2,1fr)}.simple-band{padding:24px}.inner-panel{padding:20px}.brand{font-size:.96rem}.brand small{font-size:9px}.page-head{padding-bottom:22px}.footer{margin-top:45px}}
 @media(max-width:360px){.container{width:calc(100% - 24px)}.brand{gap:7px;font-size:.86rem}.brand-mark{width:33px;height:33px}.header-actions{gap:5px}.icon-btn{min-width:36px;height:36px}.form-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Mobile drawer interaction repair: keep the drawer above its backdrop.
+   backdrop-filter on a sticky ancestor creates a containing block for fixed
+   descendants on iOS/WebKit, so disable it below the desktop breakpoint. */
+@media (max-width:940px){
+  .site-header{z-index:100;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .main-nav{overscroll-behavior:contain;-webkit-overflow-scrolling:touch;max-height:calc(100dvh - 76px)}
+  .nav-drop-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;padding:0}
+  .mobile-overlay.active{z-index:60}
+}
+@media (max-width:690px){.main-nav{max-height:calc(100dvh - 69px)}}
