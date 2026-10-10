@@ -34,3 +34,20 @@ html[data-ui-lang="en"] .lang-en{color:var(--gold);font-weight:850}
 @media(max-width:690px){.bar{gap:8px}.header-actions{gap:5px}.lang-toggle{min-width:86px;padding:5px 6px;gap:3px;font-size:11px}}
 @media(max-width:390px){.site-header .brand small{display:none}.site-header .brand{gap:6px;font-size:.86rem}.site-header .brand-mark{width:32px;height:32px}.header-actions .icon-btn{min-width:34px;height:36px}.lang-toggle{min-width:82px}}
 @media(max-width:335px){.site-header .brand{font-size:.76rem}.site-header .brand-mark{width:29px;height:29px}.bar{gap:4px}.header-actions{gap:3px}}
+
+/* Navigation now includes About, FAQ, Privacy and Terms. Keep desktop labels readable.
+   Reuse the existing accessible drawer at laptop widths without affecting page/sidebar layout. */
+@media(min-width:941px) and (max-width:1500px){
+ .site-header{z-index:100;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .menu-toggle{display:grid}
+ .main-nav{display:none;position:fixed;top:76px;right:0;bottom:0;width:min(380px,88vw);background:var(--surface);border-left:1px solid var(--line);padding:18px 24px;overflow:auto;overscroll-behavior:contain;z-index:70;box-shadow:var(--shadow);margin:0;align-items:stretch;flex-direction:column;gap:4px;max-height:calc(100dvh - 76px)}
+ .main-nav.mobile-open{display:flex}
+ .main-nav .nav-item{flex-wrap:wrap;border-bottom:1px solid var(--line)}
+ .main-nav .nav-main{flex:1;font-size:.99rem!important;padding:13px 0!important}
+ .main-nav .nav-drop-toggle{font-size:23px;min-width:44px;min-height:44px;display:grid;place-items:center;padding:0}
+ .main-nav .dropdown{position:static;box-shadow:none;border:0;border-radius:0;min-width:0;width:100%;padding:0 0 12px 12px}
+ .main-nav .nav-item:hover>.dropdown,.main-nav .nav-item:focus-within>.dropdown{display:none}
+ .main-nav .nav-item.open>.dropdown{display:block}
+ .mobile-overlay.active{display:block;position:fixed;inset:76px 0 0;background:rgba(0,0,0,.56);z-index:60}
+}
+@media(min-width:1501px){.site-header .container{width:min(100% - 36px,1560px)}}

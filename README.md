@@ -35,3 +35,12 @@ Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Je
 - The switch changes visible text and accessibility labels, not URLs; `<html lang>` becomes `en` when selected.
 - For future published posts, add reviewed English translations to the dictionary or create an appropriate dedicated English content workflow. **Do not** assume new Chinese posts automatically get a professional English translation.
 - Existing menu behavior, page designs, CSS tokens, theme, contact information, and prices are preserved.
+
+## About, FAQ, privacy and terms (2026-10-10)
+- Navigation and footer share `_data/navigation.json` with exact same top-level labels and order: Home → About → topics → Blog → FAQ → Contact → Privacy → Terms. FAQ was removed from the Guides dropdown to avoid duplicate primary navigation.
+- New pages: `/about/`, `/privacy/`, `/terms/`. Existing `/faq/` remains the same canonical and now has 12 grounded questions, shared between visible answers and `FAQPage` JSON-LD.
+- `_data/i18n-en.json` includes reviewed English display translations for these pages and new FAQ answers. HTML remains Chinese-first; no English URL or hreflang claims.
+- Central sitemap expanded from 9 to 12 URLs; new informational pages use the same Jekyll layout, NAP, SEO and responsive design as the original site.
+- New privacy and terms pages are informational notices, not substitutes for professional legal review; do not assert unverified policies or guarantees.
+- On laptop-width screens, navigation uses the already working responsive drawer to avoid 12 top-level labels overflowing the header.
+- Updated `scripts/qa.py` to expect 26 core HTML pages, 12 FAQs and proper top-menu order.

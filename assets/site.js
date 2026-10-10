@@ -14,7 +14,7 @@ document.querySelectorAll(".nav-drop-toggle").forEach(function(b){b.addEventList
 if(nav)nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu)});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeMenu();closeDrops();}});
 document.addEventListener("click",function(e){if(!e.target.closest(".nav-item"))closeDrops();});
-window.addEventListener("resize",function(){if(window.innerWidth>940)closeMenu();});
+window.addEventListener("resize",function(){if(window.innerWidth>1500)closeMenu();});
 var side=document.querySelector(".side-details");if(side){var mobile=window.innerWidth<=940;side.open=!mobile;window.addEventListener("resize",function(){var m=window.innerWidth<=940;if(m!==mobile){mobile=m;side.open=!m;}});side.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){if(window.innerWidth<=940)side.open=false;})});}
 var model=document.getElementById("vehicle"),unit=document.getElementById("period"),count=document.getElementById("quantity"),amount=document.getElementById("estimate-amount"),deposit=document.getElementById("estimate-deposit");
 if(model&&unit&&count&&amount&&deposit){
