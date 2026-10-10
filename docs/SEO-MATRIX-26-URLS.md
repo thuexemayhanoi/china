@@ -23,8 +23,8 @@
 
 | ID | URL | Loại | Robots theo source | Sitemap theo source | Keyword chính (简体中文) | Ưu tiên | Hạng mục chính phải làm | Trạng thái |
 |---|---|---|---|---|---|---|---|---|
-| SEO-01 | `/` | Trang chủ | index,follow theo template | Trong sitemap | 河内摩托车租赁 | P0 | Tối ưu giới thiệu dịch vụ/CTA, xác thực giá và NAP; tránh trùng ý định với trang giá. | TODO |
-| SEO-02 | `/prices/` | Giá và chuyển đổi | index,follow theo template | Trong sitemap | 河内摩托车租赁价格表 | P0 | Làm rõ bảng giá theo ngày/tuần/tháng, khoản đặt cọc tách biệt; nguồn giá tập trung, FAQ đúng thực tế. | TODO |
+| SEO-01 | `/` | Trang chủ | index,follow theo template | Trong sitemap | 河内摩托车租赁 | P0 | Tối ưu giới thiệu dịch vụ/CTA, xác thực giá và NAP; tránh trùng ý định với trang giá. | QA_PASS |
+| SEO-02 | `/prices/` | Giá và chuyển đổi | index,follow theo template | Trong sitemap | 河内摩托车租赁价格表 | P0 | Làm rõ bảng giá theo ngày/tuần/tháng, khoản đặt cọc tách biệt; nguồn giá tập trung, FAQ đúng thực tế. | QA_PASS |
 | SEO-03 | `/topics/rental/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁服务 | P0 | Làm rõ xe tay ga, số sàn, thuê dài hạn, chính sách giao nhận chỉ khi xác nhận. | TODO |
 | SEO-04 | `/topics/pricing/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租金指南 | P1 | Tập trung cách so sánh giá/đặt cọc; phân biệt rõ với /prices/ là bảng giá giao dịch. | TODO |
 | SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | TODO |
@@ -112,3 +112,23 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 - **Chưa kiểm chứng:** Google Search Console/Bing index coverage, redirect http→https/non-canonical, tất cả 26 URL, liên kết gãy toàn site, JS tương tác thực tế, Lighthouse/Core Web Vitals và truy cập từ bot Trung Quốc. Đây là các hạng mục riêng, không được suy diễn PASS.
 
 **Kết luận SEO-01:** không phát hiện lỗi chặn index, canonical sai hoặc JSON-LD không parse được trên các trang chính đã kiểm tra; không chỉnh nội dung, cấu hình index, sitemap hay workflow. Chuyển sang bước 02: tối ưu trang thương mại `/` và `/prices/` đầu tiên, sau đó mới lần lượt xử lý các trang danh mục cha. Mỗi đợt 1–2 URL, có QA và xác nhận deploy.
+
+## G. SEO-02 — tối ưu trang chủ và bảng giá, QA live ngày 2026-10-11
+
+**Trạng thái:** `QA_PASS` cho đúng hai URL `/` và `/prices/` — nghĩa là thay đổi nội dung/SEO được triển khai và kiểm tra HTML sau khi deploy. **Không** chứng minh thứ hạng, organic traffic, Core Web Vitals hoặc index thực tế trong Search Console.
+
+**Thay đổi đã triển khai:**
+1. Trang chủ `/`: đưa từ khóa `河内摩托车租赁` vào H1, giới thiệu rõ mô hình thuê, giá tham khảo theo dữ liệu chung `_data/vehicles.json`, tiền cọc, vị trí Long Biên, 3 bước chuẩn bị trước thuê; CTA bảng giá + liên hệ thay vì CTA tới blog rỗng. Đồng bộ `250` chủ đề bằng `_data/china-plan.json` (không còn chữ 200 bài).
+2. Bảng giá `/prices/`: H1 rõ ý định tìm kiếm giá; trả lời trực tiếp mức tham khảo/ngày của Honda Wave, Vision, Air Blade và 50cc bằng dữ liệu chung; giải thích giá ngày/tuần/tháng, khoản đặt cọc, các mức chưa công bố; CTA liên hệ và Zalo.
+3. Bổ sung từ điển EN cho nội dung mới, giữ website Chinese-first và URLs hiện tại. **Không sửa** tiền trong `_data/vehicles.json`, CSS, schema chung, trang khác, sitemap, FAQ, DNS, CNAME, workflow hay nhà máy 250 bài.
+
+**QA đã xác minh:**
+- Pull request `#2` được squash-merge thành `c43ca221ef8ebc32c3f1de6facb04137459b52c5`; GitHub Pages Jekyll build và deploy **SUCCESS** (`run 38071021205`).
+- Đo trực tiếp sau deploy: cả hai URL HTTP 200; canonical self-reference đúng `https://zh.rentbikehanoi.com`, `index,follow`, HTML `zh-CN`, đúng 1 H1 và JSON-LD parse hợp lệ.
+- `/`: H1 hiển thị `河内摩托车租赁，先看价格与押金。` và nội dung kế hoạch 250 chủ đề; các giá tham khảo Honda Wave 150,000 ₫, Vision 200,000 ₫, 50cc 200,000 ₫ khớp dữ liệu tham chiếu.
+- `/prices/`: H1 `河内摩托车租赁价格表`, trả lời trực tiếp `河内租摩托车一天多少钱？`, bảng giá 6 dòng, nội dung về tiền cọc và gói chưa công bố; các liên kết đến FAQ, contact đều có trên HTML.
+- QA tĩnh: 2 permalink không đổi, 1 H1 mỗi trang, dictionary tiếng Anh có các chuỗi mới, các liên kết nội bộ mới đều đúng đường dẫn đã biết.
+
+**Giới hạn:** Chưa có kiểm tra click/tương tác thực tế trên iPhone, GSC/Bing index coverage, keyword volumes, tốc độ PSI/CWV hay chuyển đổi thực. Không nhận định các mục này đã PASS.
+
+**Dừng tại SEO-02.** Giai đoạn sau, nếu được duyệt: SEO-03 về NAP, thương hiệu và FAQ của `/about/`, `/contact/`, `/faq/` và template schema chung; mỗi lượt nhỏ, có rollback.
