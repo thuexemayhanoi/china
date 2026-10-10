@@ -1,0 +1,31 @@
+---
+layout: null
+permalink: /assets/chat/site-index.json
+---
+{
+  "domain": {{ site.data.site.domain | jsonify }},
+  "business": {{ site.data.site.business | jsonify }},
+  "vehicles": {{ site.data.vehicles | jsonify }},
+  "faqs": [
+    {% for q in site.data.faqs %}
+    {"question": {{ q.q | jsonify }}, "answer": {{ q.a | jsonify }},
+      "englishQuestion": {{ site.data["i18n-en"][q.q] | jsonify }},
+      "englishAnswer": {{ site.data["i18n-en"][q.a] | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "pages": [
+    {% assign china_first = true %}
+    {% for p in site.pages %}
+      {% if p.title and p.description and p.permalink %}
+        {% unless china_first %},{% endunless %}
+        {"title": {{ p.title | jsonify }}, "description": {{ p.description | jsonify }}, "url": {{ p.url | jsonify }}, "topic": {{ p.topic | default: "" | jsonify }}}
+        {% assign china_first = false %}
+      {% endif %}
+    {% endfor %}
+    {% for p in site.posts %}
+      {% unless china_first %},{% endunless %}
+      {"title": {{ p.title | jsonify }}, "description": {{ p.description | jsonify }}, "url": {{ p.url | jsonify }}, "topic": {{ p.topic | default: "" | jsonify }}}
+      {% assign china_first = false %}
+    {% endfor %}
+  ]
+}

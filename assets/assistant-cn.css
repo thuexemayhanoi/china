@@ -1,0 +1,38 @@
+/* Quick Call & local chatbot — adapted from /french, scoped to avoid affecting CHINA navigation. */
+.china-quick,.china-chat-fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));z-index:130}
+.china-quick{left:calc(18px + env(safe-area-inset-left))}
+.china-chat-fab{right:calc(18px + env(safe-area-inset-right))}
+.china-quick-main,.china-chat-fab{width:56px;height:56px;display:grid;place-items:center;border:1px solid #b48b36;border-radius:50%;background:linear-gradient(140deg,#f4d990,#b98c39);color:#19140b;box-shadow:0 14px 38px rgba(26,21,9,.25);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.china-quick-main:hover,.china-chat-fab:hover{transform:translateY(-2px);box-shadow:0 19px 46px rgba(26,21,9,.3)}
+.china-quick-main:focus-visible,.china-chat-fab:focus-visible,.china-chat-panel :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.china-quick-main svg,.china-chat-fab svg,.china-quick-action svg{width:23px;height:23px}
+.china-quick-actions{position:absolute;bottom:70px;left:0;display:flex;flex-direction:column;gap:9px;opacity:0;visibility:hidden;transform:translateY(8px) scale(.97);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
+.china-quick[data-open="true"] .china-quick-actions{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.china-quick-action{width:47px;height:47px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--surface);color:var(--ink);box-shadow:0 12px 28px rgba(0,0,0,.14);position:relative;text-decoration:none}
+.china-quick-action:hover{color:var(--gold);border-color:var(--gold)}
+.china-quick-tip,.china-chat-tip{position:absolute;top:50%;transform:translateY(-50%);padding:5px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);white-space:nowrap;font-size:.77rem;font-weight:750;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.china-quick-tip{left:58px}.china-chat-tip{right:67px}
+.china-chat-panel{position:fixed;right:18px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:145;width:min(395px,calc(100vw - 36px));height:min(565px,calc(100dvh - 125px));display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:23px;background:var(--surface);color:var(--ink);box-shadow:0 28px 85px rgba(0,0,0,.27);animation:china-chat-in .18s ease-out}
+.china-chat-panel[hidden]{display:none}
+@keyframes china-chat-in{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:none}}
+.china-chat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 15px 15px 19px;background:linear-gradient(120deg,#a67b2d,#efd18a);color:#17120a}
+.china-chat-title{font-size:1.04rem;font-weight:850;display:block;line-height:1.3}
+.china-chat-subtitle{font-size:.75rem;display:block;line-height:1.4;margin-top:3px;opacity:.88;font-weight:600}
+.china-chat-close{height:42px;min-width:42px;border-radius:13px;border:1px solid rgba(20,16,8,.26);background:rgba(255,255,255,.22);color:#17120a;font-size:1.5rem;cursor:pointer;line-height:1}
+.china-chat-log{flex:1;min-height:0;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:9px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.china-chat-msg{max-width:91%;font-size:.89rem;line-height:1.65;padding:10px 13px;border-radius:16px;overflow-wrap:anywhere;white-space:pre-wrap}
+.china-chat-msg.bot{align-self:flex-start;background:var(--surface2);border:1px solid var(--line);border-bottom-left-radius:5px}
+.china-chat-msg.user{align-self:flex-end;background:linear-gradient(140deg,#bb9142,#efd08b);color:#17120a;border-bottom-right-radius:5px}
+.china-chat-source{display:inline-flex;align-self:flex-start;font-size:.82rem;font-weight:750;color:var(--gold);border-bottom:1px solid transparent;text-decoration:none}
+.china-chat-source:hover{border-color:var(--gold)}
+.china-chat-shortcuts{display:flex;flex-wrap:wrap;gap:6px;padding:2px 14px 12px}
+.china-chat-shortcuts button{border:1px solid var(--line);border-radius:999px;min-height:37px;padding:6px 11px;background:var(--surface2);color:var(--ink);font:inherit;font-size:.77rem;cursor:pointer}
+.china-chat-shortcuts button:hover{color:var(--gold);border-color:var(--gold)}
+.china-chat-form{display:flex;align-items:center;gap:7px;padding:11px 12px calc(12px + env(safe-area-inset-bottom) * .2);border-top:1px solid var(--line);background:var(--surface)}
+.china-chat-input{flex:1;min-width:0;min-height:46px;padding:9px 13px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.china-chat-send{width:45px;min-width:45px;height:46px;display:grid;place-items:center;border:0;border-radius:12px;background:linear-gradient(140deg,#bd9139,#f0d28a);color:#19140b;font-size:1.3rem;font-weight:800;cursor:pointer}
+.china-chat-panel[data-keyboard-open="true"]{bottom:auto;top:var(--china-vv-top,8px);height:var(--china-vv-height,430px);max-height:none}
+body.china-chat-keyboard .china-quick,body.china-chat-keyboard .china-chat-fab,body.china-menu-open .china-quick,body.china-menu-open .china-chat-fab,body.china-menu-open .china-chat-panel{visibility:hidden;pointer-events:none}
+@media(max-width:700px){.china-chat-panel{left:12px;right:12px;width:auto;bottom:calc(83px + env(safe-area-inset-bottom));border-radius:21px}.china-chat-panel[data-keyboard-open="true"]{left:8px;right:8px}.china-quick-tip,.china-chat-tip{display:none}.footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}}
+@media(max-width:360px){.china-quick,.china-chat-fab{bottom:calc(12px + env(safe-area-inset-bottom))}.china-quick{left:12px}.china-chat-fab{right:12px}.china-chat-panel{left:8px;right:8px}}
+@media(prefers-reduced-motion:reduce){.china-quick-main,.china-chat-fab,.china-quick-actions,.china-chat-panel{animation:none;transition:none}}
