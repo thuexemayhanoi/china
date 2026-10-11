@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 200,
-  "remaining": 100,
+  "published": 205,
+  "remaining": 95,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0201",
-      "title": "第一次在河内租摩托车需要准备哪些资料",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0201.md",
-      "permalink": "/blog/hanoi-guides-contracts-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0202",
-      "title": "河内摩托车租赁合同阅读顺序",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0202.md",
-      "permalink": "/blog/hanoi-guides-contracts-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0203",
-      "title": "如何核实租车合同中的车辆信息",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0203.md",
-      "permalink": "/blog/hanoi-guides-contracts-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0204",
-      "title": "租车押金与预付租金如何区分",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0204.md",
-      "permalink": "/blog/hanoi-guides-contracts-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0205",
-      "title": "签署租车合同前必须确认哪些日期",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0205.md",
-      "permalink": "/blog/hanoi-guides-contracts-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0206",
       "title": "河内租车证件要求为什么要逐车型确认",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/contracts/",
       "draft": "_drafts/CN-0210.md",
       "permalink": "/blog/hanoi-guides-contracts-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0211",
+      "title": "租车之前如何确认门店的真实联系渠道",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0211.md",
+      "permalink": "/blog/hanoi-guides-contracts-11/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0212",
+      "title": "车辆租赁合同的取车地点应如何记录",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0212.md",
+      "permalink": "/blog/hanoi-guides-contracts-12/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0213",
+      "title": "租车时电子车与燃油车条款有什么不同",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0213.md",
+      "permalink": "/blog/hanoi-guides-contracts-13/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0214",
+      "title": "租车条款中的维修责任应怎么理解",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0214.md",
+      "permalink": "/blog/hanoi-guides-contracts-14/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0215",
+      "title": "长期租车应关注哪些延期条件",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0215.md",
+      "permalink": "/blog/hanoi-guides-contracts-15/",
       "review_required": false
     }
   ]
