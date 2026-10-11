@@ -40,8 +40,8 @@
 | SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
 | SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | QA_PASS |
 | SEO-17 | `/topics/pricing/daily/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | QA_PASS |
-| SEO-18 | `/topics/pricing/weekly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | TODO |
-| SEO-19 | `/topics/pricing/deposits/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | TODO |
+| SEO-18 | `/topics/pricing/weekly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | QA_PASS |
+| SEO-19 | `/topics/pricing/deposits/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | QA_PASS |
 | SEO-20 | `/topics/50cc/models/` | Danh mục con | noindex: true | Ngoài sitemap | 河内50cc踏板车车型与价格 | P2 | Giá/ngày, mức cọc và mẫu 50cc thực tế, tình trạng xe cần xác minh. | TODO |
 | SEO-21 | `/topics/50cc/requirements/` | Danh mục con | noindex: true | Ngoài sitemap | 越南50cc摩托车驾驶规定 | P2 | Tài liệu quy định VN hiện hành, nguồn có ngày, tuổi/giấy phép/định nghĩa xe. | TODO |
 | SEO-22 | `/topics/old-quarter/directions/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区到Long Biên租车店路线 | P2 | Google Maps và địa chỉ đúng; không bịa thời gian di chuyển hoặc lộ trình cố định. | TODO |
@@ -248,3 +248,20 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 | `/topics/pricing/daily/` | 200 | self đúng | `noindex,follow` | 1 H1, 4 H2, `zh-CN` | 150k/200k VND theo 5 mẫu, cọc từng mẫu, điều kiện tính ngày và link nội bộ; JSON-LD hợp lệ | QA_PASS nội dung |
 
 **Giới hạn nghiệm thu:** Chưa kiểm tra GSC index coverage, mobile tương tác thật, Core Web Vitals, keyword rankings hoặc thay đổi chuyển đổi. `QA_PASS` không đồng nghĩa trang con đã/được mở index. **Tiến độ 14/26; chờ duyệt thủ công bước tiếp theo.**
+
+## N. Lượt thủ công SEO-18/19 — Giá thuê tuần và tiền cọc (2026-10-11)
+
+**Trạng thái:** `SEO-18` (`/topics/pricing/weekly/`) và `SEO-19` (`/topics/pricing/deposits/`) chuyển **QA_PASS đối với nội dung và HTML đã kiểm tra sau deploy**. Cả hai URL giữ `noindex,follow`, nằm ngoài sitemap và không được tuyên bố là đã index hoặc xếp hạng. Việc mở index, đánh giá tính độc lập với pricing hub vẫn là quyết định riêng.
+
+- **Weekly:** Bốn nhóm xe có giá tuần công khai lấy trực tiếp từ `site.data.vehicles[0..3].display.week` và tiền cọc từ `deposit`: Wave 700k ₫; Vision và Air Blade 1m ₫; Click/Mio 700k ₫. 50cc và xe điện không có tuần công khai nên chỉ đề nghị hỏi trực tiếp; không suy ra bằng phép nhân từ giá ngày. Nội dung bổ sung định nghĩa kỳ thuê cần xác nhận, gia hạn, phí giao/nhận, so sánh ngày/tuần/tháng; internal links về price list, daily, monthly, deposits, contact.
+- **Deposits:** Năm dòng cọc đã công bố từ `_data/vehicles.json` (Wave 2–3m ₫, Vision 4–5m ₫, Air Blade 3m ₫, Click/Mio 2m ₫, 50cc 4m ₫); cọc xe điện chưa niêm yết và phải xác nhận theo mẫu. Phân biệt tiền thuê/cọc; checklist hợp đồng, bằng chứng xe trước/sau, xác minh các khoản khấu trừ và điều kiện trả cọc, không tự bịa thời hạn hoàn cọc hoặc bảo đảm trả đủ. Liên kết về bảng giá, terms, return guide và contact.
+- Cập nhật từ điển `_data/i18n-en.json` (+53 mục). PR chỉ chỉnh ba file: `topics/pricing/weekly/index.html`, `topics/pricing/deposits/index.html`, `_data/i18n-en.json`; không sửa bảng giá nguồn, NAP, schema/layout chung, JS/CSS, CNAME, DNS, sitemap/robots, widget, sidebar, menus hay workflow 250 bài.
+- GitHub: [PR #10](https://github.com/thuexemayhanoi/china/pull/10) squash merge `4c5efa548ed8679405f10c28a3264a75e14d405a`. [Pages run 38110952664](https://github.com/thuexemayhanoi/china/actions/runs/38110952664) **build/deploy SUCCESS**.
+- QA nguồn: mỗi trang 1 H1, 4 H2, nội dung tiếng Trung chuyên biệt, liên kết nội bộ đúng, bản dịch EN không thiếu text node, Liquid lấy giá/cọc từ nguồn chung, không gỡ `noindex: true`.
+
+| Trang live (maxAge=0 sau deploy) | HTTP | Canonical | Robots | Kết quả HTML và dữ liệu |
+|---|---:|---|---|---|
+| `/topics/pricing/weekly/` | 200 | đúng self-canonical | `noindex,follow`, `zh-CN` | 1 H1, 4 H2, LocalBusiness/BreadcrumbList JSON-LD parse hợp lệ; giá tuần 700k/1m và các khoản cọc đúng; nội dung 50cc/electric không giá tuần |
+| `/topics/pricing/deposits/` | 200 | đúng self-canonical | `noindex,follow`, `zh-CN` | 1 H1, 4 H2, LocalBusiness/BreadcrumbList JSON-LD parse hợp lệ; năm mức cọc từ nguồn chuẩn; không cam kết refund time; links hữu ích |
+
+**Chưa đo:** Google Search Console indexing, ranking, CTR, traffic, tương tác thực tế trên iPhone, Core Web Vitals và tư vấn pháp lý về từng hợp đồng. Lượt SEO thủ công này kết thúc tại **16/26 QA_PASS, còn 10 URL**; lịch SEO tự động vẫn tắt.
