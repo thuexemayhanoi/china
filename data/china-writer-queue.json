@@ -1,66 +1,10 @@
 {
   "schema_version": 1,
-  "status": "READY",
+  "status": "TARGET_REACHED",
   "target": 300,
-  "published": 295,
-  "remaining": 5,
+  "published": 300,
+  "remaining": 0,
   "drafts_staged": 0,
   "batch_size": 5,
-  "queue": [
-    {
-      "id": "CN-0296",
-      "title": "租车途中发现漏油应采取什么措施",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0296.md",
-      "permalink": "/blog/hanoi-guides-maintenance-06/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0297",
-      "title": "怎样判断后视镜是否固定稳妥",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0297.md",
-      "permalink": "/blog/hanoi-guides-maintenance-07/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0298",
-      "title": "租车遇到电瓶问题应如何联系门店",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0298.md",
-      "permalink": "/blog/hanoi-guides-maintenance-08/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0299",
-      "title": "骑行途中车辆故障如何保障自身安全",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0299.md",
-      "permalink": "/blog/hanoi-guides-maintenance-09/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0300",
-      "title": "还车前怎样整理车况记录和照片",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0300.md",
-      "permalink": "/blog/hanoi-guides-maintenance-10/",
-      "review_required": false
-    }
-  ]
+  "queue": []
 }
