@@ -7,7 +7,7 @@ permalink: "/blog/hanoi-oldquarter-pickup-25/"
 title: "老城区摩托车租赁交接沟通模板"
 description: "老城区摩托车租赁交接沟通模板：取车前确认时间地点、验车记录车况、还车前预约与变动沟通，一套可直接套用的消息模板。"
 primary_keyword: "河内老城区取车还车"
-date: "2026-10-11 21:68:00 +0700"
+date: "2026-10-11 22:08:00 +0700"
 seo_silo: "old-quarter/pickup"
 breadcrumbs:
   - label: "博客"
