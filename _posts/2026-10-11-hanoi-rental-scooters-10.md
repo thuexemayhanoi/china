@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0010"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-10/
-title: 河内短距离通勤如何选择踏板车
-description: 短距离通勤选车,标准与游玩不同。本文从通勤画像出发,给出轻便、座桶、灯光、车况、启动五个选车标准,以及通勤租期费用的比较方法。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-10/"
+title: "河内短距离通勤如何选择踏板车"
+description: "短距离通勤选车,标准与游玩不同。本文从通勤画像出发,给出轻便、座桶、灯光、车况、启动五个选车标准,以及通勤租期费用的比较方法。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:34 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"河内短距离通勤如何选择踏板车"}]
+publication_method: "automated_qa"
 ---
-
 在河内短距离通勤,踏板车是多数人的首选:距离不长、路口密集、停车方便。但通勤和游玩不一样,通勤讲的是每天重复的可靠性和成本,选车的标准也随之不同,验车的心态也要从游客模式切换到用户模式。本文从通勤画像出发,给出踏板车的选择思路。
 
 ## 先画清楚每天的通勤画像

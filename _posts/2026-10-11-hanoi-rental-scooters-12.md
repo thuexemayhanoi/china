@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0012"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-12/
-title: 租 Honda Vision 前应问清哪些费用
-description: 租 Honda Vision 的费用不只是日租金。本文整理包含项目、油量规则、超时规则、押金和损坏认定四类问题,帮助你在取车前把总价和规则一次问清。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-12/"
+title: "租 Honda Vision 前应问清哪些费用"
+description: "租 Honda Vision 的费用不只是日租金。本文整理包含项目、油量规则、超时规则、押金和损坏认定四类问题,帮助你在取车前把总价和规则一次问清。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:29:04 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"租 Honda Vision 前应问清哪些费用"}]
+publication_method: "automated_qa"
 ---
-
 租一台 Honda Vision 之类的踏板车,费用不只是"一天多少钱"这么简单。多数纠纷不是因为租金本身,而是取车后冒出来的附加项目:头盔计费、超时计费、油量争议、划痕认定。本文把租 Honda Vision 前应该问清的费用问题整理成清单,帮助你把总价和规则一次性确认到位,同样的清单也适用于其他自动挡踏板车。
 
 ## 问清日租金包含哪些项目

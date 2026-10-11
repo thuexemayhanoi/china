@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0004"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-04/
-title: 河内租踏板车如何核实实际车况
-description: 取车时核实车况是避免还车争议的关键。本文提供静态检查、动态试骑、交车记录三步流程,并列出四类不应接受的车辆问题,适用于河内各租车门店。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-04/"
+title: "河内租踏板车如何核实实际车况"
+description: "取车时核实车况是避免还车争议的关键。本文提供静态检查、动态试骑、交车记录三步流程,并列出四类不应接受的车辆问题,适用于河内各租车门店。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:06 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"河内租踏板车如何核实实际车况"}]
+publication_method: "automated_qa"
 ---
-
 租车最容易吃亏的环节,不是价格,而是取车时没把车况核实清楚。旧划痕没记录、刹车偏软没发现、灯光不亮没注意,还车时都可能变成争议。本文给出一套从静态到动态的核实流程,适用于河内的任何一家租车门店。
 
 ## 静态检查:绕车一圈

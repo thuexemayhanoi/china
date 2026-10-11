@@ -145,20 +145,50 @@ def check_built(fixtures=False, disabled=False):
             require("post-hub-links" in page, "contextual hub links missing")
         require('href="'+URL_BASE+'/topics/rental/"' in older, "rental topic hub missing")
         require('href="'+URL_BASE+'/topics/pricing/"' in pricing, "pricing topic hub missing")
-        require(older.count('class="card-id">相关阅读')==1,
-                "expected exactly one same-silo related post")
-        require(newer.count('class="card-id">相关阅读')==1,
-                "expected exactly one reciprocal related post")
-        require('class="card-id">相关阅读' not in monthly,
-                "isolated monthly silo must not link to a different silo")
-        require('class="card-id">相关阅读' not in pricing,
-                "isolated pricing silo must not invent related posts")
+        # CI fixture assertions must work after live posts begin publishing.
+        # Identify actual silo of every real or disposable fixture post and
+        # verify all suggested article URLs stay in the exact same silo.
+        silo_for_url={}
+        for source in POSTS.glob("*.md"):
+            content=source.read_text(encoding="utf-8")
+            front=re.match(r"^---\s*\n(.*?)\n---\s*\n",content,re.S)
+            require(front is not None,"post missing front matter "+source.name)
+            fields={}
+            for key in ("permalink","seo_silo"):
+                found=re.search(r"(?m)^"+key+r":\s*(.+?)\s*$",front.group(1))
+                if found:
+                    raw=found.group(1).strip()
+                    fields[key]=json.loads(raw) if raw.startswith('"') else raw
+            require(fields.get("permalink") and fields.get("seo_silo"),
+                    "published post lacks silo or permalink "+source.name)
+            silo_for_url[fields["permalink"]]=fields["seo_silo"]
+
+        expected_silos={"rental/scooters":(older,newer),
+                        "rental/monthly":(monthly,),
+                        "pricing/daily":(pricing,)}
+        limit=int(json.loads(read("_data/site.json"))["features"].get("related_limit",4))
+        for silo,pages in expected_silos.items():
+            for html in pages:
+                rel=re.search(r'<section class="section"><h2>相关文章</h2><div class="cards">(.*?)</div></section>',html,re.S)
+                section=rel.group(1) if rel else ""
+                targets=re.findall(r'<a class="card" href="([^"]+)"',section)
+                require(len(targets)<=limit,"related-post limit exceeded for "+silo)
+                for href in targets:
+                    require(href.startswith(URL_BASE) and silo_for_url.get(href[len(URL_BASE):])==silo,
+                            "related post crossed actual SEO silo "+silo+": "+href)
+                nav=re.search(r'<nav class="post-navigation section"[^>]*>(.*?)</nav>',html,re.S)
+                nav_html=nav.group(1) if nav else ""
+                for href in re.findall(r'rel="(?:prev|next)" href="([^"]+)"',nav_html):
+                    require(href.startswith(URL_BASE) and silo_for_url.get(href[len(URL_BASE):])==silo,
+                            "previous/next post crossed actual SEO silo "+silo+": "+href)
+        require(older.count('class="card-id">相关阅读')>=1,
+                "older scooter fixture must have same-silo recommendations")
+        require(newer.count('class="card-id">相关阅读')>=1,
+                "newer scooter fixture must have same-silo recommendations")
         require('rel="next" href="'+URL_BASE+'/blog/ci-scooter-two/"' in older,
                 "older post must link to newer article in same silo")
         require('rel="prev" href="'+URL_BASE+'/blog/ci-scooter-one/"' in newer,
                 "newer post must link back to older article in same silo")
-        require("post-navigation-item" not in monthly and "post-navigation-item" not in pricing,
-                "cross-silo or missing-post navigation must not render")
         for page in (older,newer):
             # Existing Related Posts intentionally uses broad topic grouping.
             # Enforce the stricter silo rule ONLY inside the Previous/Next nav.

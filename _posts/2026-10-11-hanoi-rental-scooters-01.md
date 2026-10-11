@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0001"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-01/
-title: 河内首次租踏板车前应该确认的八个问题
-description: 第一次在河内租踏板车,取车前应确认车型、车况、头盔、费用、押金、合同、故障处理和联系方式这八个问题,把答案写进交车记录,减少归还时的争议。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-01/"
+title: "河内首次租踏板车前应该确认的八个问题"
+description: "第一次在河内租踏板车,取车前应确认车型、车况、头盔、费用、押金、合同、故障处理和联系方式这八个问题,把答案写进交车记录,减少归还时的争议。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:06 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"河内首次租踏板车前应该确认的八个问题"}]
+publication_method: "automated_qa"
 ---
-
 第一次在陌生城市租摩托车,大多数人担心的不是骑行本身,而是信息不对称:车型没确认、费用没问清、车况没记录,归还时就容易产生分歧。如果你正在计划河内踏板车租赁,下面这八个问题建议在签合同之前逐条向门店确认,并把答案写进交车单或拍照留存。
 
 ## 先确认车辆本身的四个问题
