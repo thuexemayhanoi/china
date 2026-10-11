@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 270,
-  "remaining": 30,
+  "published": 275,
+  "remaining": 25,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0271",
-      "title": "租50cc摩托车前需要核实的项目",
-      "topic": "50cc",
-      "subtopic": "checklist",
-      "primary_keyword": "河内50cc摩托车检查",
-      "hub": "/topics/50cc/checklist/",
-      "draft": "_drafts/CN-0271.md",
-      "permalink": "/blog/hanoi-50cc-checklist-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0272",
-      "title": "50cc 踏板车取车时怎样检查刹车",
-      "topic": "50cc",
-      "subtopic": "checklist",
-      "primary_keyword": "河内50cc摩托车检查",
-      "hub": "/topics/50cc/checklist/",
-      "draft": "_drafts/CN-0272.md",
-      "permalink": "/blog/hanoi-50cc-checklist-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0273",
-      "title": "租50cc前如何检查灯光与转向灯",
-      "topic": "50cc",
-      "subtopic": "checklist",
-      "primary_keyword": "河内50cc摩托车检查",
-      "hub": "/topics/50cc/checklist/",
-      "draft": "_drafts/CN-0273.md",
-      "permalink": "/blog/hanoi-50cc-checklist-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0274",
-      "title": "50cc 车型轮胎状态怎样初步判断",
-      "topic": "50cc",
-      "subtopic": "checklist",
-      "primary_keyword": "河内50cc摩托车检查",
-      "hub": "/topics/50cc/checklist/",
-      "draft": "_drafts/CN-0274.md",
-      "permalink": "/blog/hanoi-50cc-checklist-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0275",
-      "title": "50cc 租车时头盔需要检查什么",
-      "topic": "50cc",
-      "subtopic": "checklist",
-      "primary_keyword": "河内50cc摩托车检查",
-      "hub": "/topics/50cc/checklist/",
-      "draft": "_drafts/CN-0275.md",
-      "permalink": "/blog/hanoi-50cc-checklist-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0276",
       "title": "确认50cc车辆类型为什么很重要",
@@ -115,6 +60,61 @@
       "hub": "/topics/50cc/checklist/",
       "draft": "_drafts/CN-0280.md",
       "permalink": "/blog/hanoi-50cc-checklist-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0281",
+      "title": "从河内老城区规划取车时间的建议",
+      "topic": "old-quarter",
+      "subtopic": "planning",
+      "primary_keyword": "河内老城区租摩托车",
+      "hub": "/topics/old-quarter/planning/",
+      "draft": "_drafts/CN-0281.md",
+      "permalink": "/blog/hanoi-old-quarter-planning-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0282",
+      "title": "老城区前往龙编区门店前要确认什么",
+      "topic": "old-quarter",
+      "subtopic": "planning",
+      "primary_keyword": "河内老城区租摩托车",
+      "hub": "/topics/old-quarter/planning/",
+      "draft": "_drafts/CN-0282.md",
+      "permalink": "/blog/hanoi-old-quarter-planning-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0283",
+      "title": "河内老城区租车如何安排返程",
+      "topic": "old-quarter",
+      "subtopic": "planning",
+      "primary_keyword": "河内老城区租摩托车",
+      "hub": "/topics/old-quarter/planning/",
+      "draft": "_drafts/CN-0283.md",
+      "permalink": "/blog/hanoi-old-quarter-planning-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0284",
+      "title": "租摩托车游览老城区需注意什么",
+      "topic": "old-quarter",
+      "subtopic": "planning",
+      "primary_keyword": "河内老城区租摩托车",
+      "hub": "/topics/old-quarter/planning/",
+      "draft": "_drafts/CN-0284.md",
+      "permalink": "/blog/hanoi-old-quarter-planning-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0285",
+      "title": "老城区狭窄街道骑车应如何谨慎通行",
+      "topic": "old-quarter",
+      "subtopic": "planning",
+      "primary_keyword": "河内老城区租摩托车",
+      "hub": "/topics/old-quarter/planning/",
+      "draft": "_drafts/CN-0285.md",
+      "permalink": "/blog/hanoi-old-quarter-planning-05/",
       "review_required": false
     }
   ]
