@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 215,
-  "remaining": 85,
+  "published": 220,
+  "remaining": 80,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0216",
-      "title": "租车时是否需要交护照应怎样询问",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0216.md",
-      "permalink": "/blog/hanoi-guides-contracts-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0217",
-      "title": "租车前如何核对车辆已有损伤",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0217.md",
-      "permalink": "/blog/hanoi-guides-contracts-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0218",
-      "title": "押金退还时间应怎样向门店确认",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0218.md",
-      "permalink": "/blog/hanoi-guides-contracts-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0219",
-      "title": "租赁期间发生费用争议先核对什么",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0219.md",
-      "permalink": "/blog/hanoi-guides-contracts-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0220",
-      "title": "河内短租和长租的合同条款比较",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0220.md",
-      "permalink": "/blog/hanoi-guides-contracts-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0221",
       "title": "押金扣减规则需要提前了解哪些项目",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/contracts/",
       "draft": "_drafts/CN-0225.md",
       "permalink": "/blog/hanoi-guides-contracts-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0226",
+      "title": "河内摩托车新手骑行前安全检查表",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0226.md",
+      "permalink": "/blog/hanoi-guides-safety-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0227",
+      "title": "雨季骑摩托车应检查哪些车辆部件",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0227.md",
+      "permalink": "/blog/hanoi-guides-safety-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0228",
+      "title": "河内拥堵路段骑行时如何保持安全距离",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0228.md",
+      "permalink": "/blog/hanoi-guides-safety-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0229",
+      "title": "摩托车夜间骑行灯光检查步骤",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0229.md",
+      "permalink": "/blog/hanoi-guides-safety-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0230",
+      "title": "在河内骑车时头盔怎么正确选择",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0230.md",
+      "permalink": "/blog/hanoi-guides-safety-05/",
       "review_required": false
     }
   ]
