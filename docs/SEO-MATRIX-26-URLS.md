@@ -38,8 +38,8 @@
 | SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | TODO |
 | SEO-14 | `/topics/rental/scooters/` | Danh mục con | noindex: true | Ngoài sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | QA_PASS |
 | SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
-| SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | TODO |
-| SEO-17 | `/topics/pricing/daily/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | TODO |
+| SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | QA_PASS |
+| SEO-17 | `/topics/pricing/daily/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | QA_PASS |
 | SEO-18 | `/topics/pricing/weekly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | TODO |
 | SEO-19 | `/topics/pricing/deposits/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | TODO |
 | SEO-20 | `/topics/50cc/models/` | Danh mục con | noindex: true | Ngoài sitemap | 河内50cc踏板车车型与价格 | P2 | Giá/ngày, mức cọc và mẫu 50cc thực tế, tình trạng xe cần xác minh. | TODO |
@@ -229,3 +229,22 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 | `/topics/rental/monthly/` | 200 | self đúng | `noindex,follow` (giữ nguyên) | `zh-CN`, 1 H1, 4 H2, title/description mới | 4 mức tháng từ dữ liệu gốc, không suy ra 50cc/electric, links và schema hợp lệ | QA_PASS nội dung |
 
 **Giới hạn:** Không đo Core Web Vitals, index coverage/GSC, giao diện iPhone tương tác thực tế, tìm kiếm SERP hay tác động chuyển đổi. Bản QA này là nghiệm thu biên tập/tính đúng của HTML và chiến lược giữ noindex, không phải giấy phép mở index. Tiến độ **12/26 QA_PASS**, 14 hạng mục còn lại.
+
+## M. Lượt thủ công SEO-16/17 — Automatic & Daily pricing child guides (2026-10-11)
+
+**Trạng thái:** `SEO-16` `/topics/rental/automatic/` và `SEO-17` `/topics/pricing/daily/` → **QA_PASS chỉ cho nội dung & QA HTML sau deploy**. Hai URL vẫn `noindex,follow`, không nằm sitemap. Chưa quyết định mở index. Không khẳng định Google/Baidu index, SERP/traffic, chuyển đổi hoặc CWV cải thiện.
+
+**Phạm vi thay đổi:**
+- `/topics/rental/automatic/` — phân biệt xe tay ga số tự động, xe bán tự động (một số đời Honda Wave cần đạp số nhưng không có tay côn truyền thống) và xe côn tay, **không khẳng định cửa hàng có sẵn xe côn tay**. Hướng dẫn chọn theo kinh nghiệm, kiểm tra phanh/lốp/đèn/mũ bảo hiểm và đối chiếu điều kiện lái xe theo luật đang áp dụng. Dẫn nguồn thông tin chính thức `https://www.csgt.vn/`, không chép lại quy định pháp lý chưa kiểm chứng; link về danh mục thuê, scooter, bảng giá, an toàn và contact.
+- `/topics/pricing/daily/` — H1, title/meta về giá thuê ngày; 5 dòng xe có giá/ngày và đặt cọc lấy trực tiếp `_data/vehicles.json`, không hardcode mức trong phần body; riêng xe điện không công bố, tuần/tháng 50cc phải hỏi. Không khẳng định ngày thuê tính tròn 24h: nêu rõ phải xác nhận giờ bắt đầu/kết thúc, phát sinh và loại phí. Link về giá, danh mục giá, giá tuần, cọc và liên hệ.
+- `_data/i18n-en.json` bổ sung 53 mục dịch EN; ba file duy nhất. Không đổi dữ liệu gốc về giá/cọc, template chung, schema, CSS, menu, sitemap, robots, CNAME, DNS, chatbot hoặc factory 250 bài.
+
+**Bằng chứng GitHub:** [PR #9](https://github.com/thuexemayhanoi/china/pull/9) squash-merge `e6520c756c5fd5aa486afebe02d68b3d1a0686cf`. [Pages run 38109629533](https://github.com/thuexemayhanoi/china/actions/runs/38109629533) **Jekyll build và deploy SUCCESS**.
+
+**QA HTML live** (request `maxAge=0`, sau deploy):
+| URL | HTTP | Canonical | Robots | H1/H2 | Schema & nội dung | Kết luận |
+|---|---:|---|---|---|---|---|
+| `/topics/rental/automatic/` | 200 | self đúng | `noindex,follow` | 1 H1, 4 H2, `zh-CN` | LocalBusiness + BreadcrumbList JSON-LD parse hợp lệ; link cơ quan CSGT, không hứa miễn phép lái hay có xe côn tay | QA_PASS nội dung |
+| `/topics/pricing/daily/` | 200 | self đúng | `noindex,follow` | 1 H1, 4 H2, `zh-CN` | 150k/200k VND theo 5 mẫu, cọc từng mẫu, điều kiện tính ngày và link nội bộ; JSON-LD hợp lệ | QA_PASS nội dung |
+
+**Giới hạn nghiệm thu:** Chưa kiểm tra GSC index coverage, mobile tương tác thật, Core Web Vitals, keyword rankings hoặc thay đổi chuyển đổi. `QA_PASS` không đồng nghĩa trang con đã/được mở index. **Tiến độ 14/26; chờ duyệt thủ công bước tiếp theo.**
