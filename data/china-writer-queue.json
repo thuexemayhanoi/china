@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 230,
-  "remaining": 70,
+  "published": 235,
+  "remaining": 65,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0231",
-      "title": "租来的摩托车轮胎磨损怎么看",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0231.md",
-      "permalink": "/blog/hanoi-guides-safety-06/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0232",
-      "title": "摩托车刹车异常时应该怎么处理",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0232.md",
-      "permalink": "/blog/hanoi-guides-safety-07/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0233",
-      "title": "骑车前后视镜应该怎样调节",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0233.md",
-      "permalink": "/blog/hanoi-guides-safety-08/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0234",
-      "title": "城市短途骑行如何规划合理路线",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0234.md",
-      "permalink": "/blog/hanoi-guides-safety-09/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0235",
-      "title": "河内道路标志不熟悉时如何安全出行",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0235.md",
-      "permalink": "/blog/hanoi-guides-safety-10/",
-      "review_required": false
-    },
     {
       "id": "CN-0236",
       "title": "摩托车骑行遇到大雨应该如何应对",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/safety/",
       "draft": "_drafts/CN-0240.md",
       "permalink": "/blog/hanoi-guides-safety-15/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0241",
+      "title": "第一次驾驶自动挡踏板车前的准备",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0241.md",
+      "permalink": "/blog/hanoi-guides-safety-16/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0242",
+      "title": "摩托车雨天制动需要了解什么",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0242.md",
+      "permalink": "/blog/hanoi-guides-safety-17/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0243",
+      "title": "从河内市区外出骑车前要准备什么",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0243.md",
+      "permalink": "/blog/hanoi-guides-safety-18/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0244",
+      "title": "摩托车车辆异响出现时怎么沟通维修",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0244.md",
+      "permalink": "/blog/hanoi-guides-safety-19/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0245",
+      "title": "骑行前如何核对油量与行驶计划",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0245.md",
+      "permalink": "/blog/hanoi-guides-safety-20/",
       "review_required": false
     }
   ]
