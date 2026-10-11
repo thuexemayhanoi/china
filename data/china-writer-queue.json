@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 185,
-  "remaining": 115,
+  "published": 190,
+  "remaining": 110,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0186",
-      "title": "从老城区预订咨询需要提供哪些信息",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0186.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-11/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0187",
-      "title": "取车前如何与门店确认车型是否可租",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0187.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-12/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0188",
-      "title": "老城区交车时怎么核对车辆状况",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0188.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-13/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0189",
-      "title": "异地交接摩托车应拍哪些照片",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0189.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-14/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0190",
-      "title": "老城区取车后如何确认租期起点",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0190.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-15/",
-      "review_required": false
-    },
     {
       "id": "CN-0191",
       "title": "老城区还车时押金核对应注意什么",
@@ -115,6 +60,61 @@
       "hub": "/topics/old-quarter/pickup/",
       "draft": "_drafts/CN-0195.md",
       "permalink": "/blog/hanoi-oldquarter-pickup-20/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0196",
+      "title": "预定取车时间前怎样确认营业时间",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0196.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-21/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0197",
+      "title": "老城区取还车能否通过 Zalo 咨询",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0197.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-22/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0198",
+      "title": "离开老城区之前的租车文件清单",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0198.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-23/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0199",
+      "title": "老城区交车与门店交车的合同区别",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0199.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-24/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0200",
+      "title": "老城区摩托车租赁交接沟通模板",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0200.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-25/",
       "review_required": false
     }
   ]
