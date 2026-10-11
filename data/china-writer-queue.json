@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 255,
-  "remaining": 45,
+  "published": 260,
+  "remaining": 40,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0256",
-      "title": "租电动车时如何记录交接车况",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0256.md",
-      "permalink": "/blog/hanoi-rental-electric-06/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0257",
-      "title": "电动车租期与押金需要确认的事项",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0257.md",
-      "permalink": "/blog/hanoi-rental-electric-07/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0258",
-      "title": "电动车雨天使用有哪些安全注意点",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0258.md",
-      "permalink": "/blog/hanoi-rental-electric-08/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0259",
-      "title": "电动自行车停放和保管有哪些建议",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0259.md",
-      "permalink": "/blog/hanoi-rental-electric-09/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0260",
-      "title": "归还电动车前需要检查哪些项目",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0260.md",
-      "permalink": "/blog/hanoi-rental-electric-10/",
-      "review_required": false
-    },
     {
       "id": "CN-0261",
       "title": "河内摩托车月租预算应该怎样规划",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/monthly/",
       "draft": "_drafts/CN-0265.md",
       "permalink": "/blog/hanoi-pricing-monthly-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0266",
+      "title": "月租和周租方案需要怎样对照",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0266.md",
+      "permalink": "/blog/hanoi-pricing-monthly-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0267",
+      "title": "月租合同的计费起止日期怎么确认",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0267.md",
+      "permalink": "/blog/hanoi-pricing-monthly-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0268",
+      "title": "按月租车时押金和租金怎样区分",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0268.md",
+      "permalink": "/blog/hanoi-pricing-monthly-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0269",
+      "title": "续租摩托车前需要确认哪些费用",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0269.md",
+      "permalink": "/blog/hanoi-pricing-monthly-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0270",
+      "title": "长期租车退车时如何核算合同费用",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0270.md",
+      "permalink": "/blog/hanoi-pricing-monthly-10/",
       "review_required": false
     }
   ]
