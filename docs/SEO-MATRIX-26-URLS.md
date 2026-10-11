@@ -28,7 +28,7 @@
 | SEO-03 | `/topics/rental/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁服务 | P0 | Làm rõ xe tay ga, số sàn, thuê dài hạn, chính sách giao nhận chỉ khi xác nhận. | QA_PASS |
 | SEO-04 | `/topics/pricing/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租金指南 | P1 | Tập trung cách so sánh giá/đặt cọc; phân biệt rõ với /prices/ là bảng giá giao dịch. | QA_PASS |
 | SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | QA_PASS |
-| SEO-06 | `/topics/old-quarter/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内老城区附近租摩托车 | P0 | Giải thích cửa hàng ở Long Biên, không nằm trong Phố Cổ; thêm dẫn đường thực tế, điều kiện giao xe. | TODO |
+| SEO-06 | `/topics/old-quarter/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内老城区附近租摩托车 | P0 | Giải thích cửa hàng ở Long Biên, không nằm trong Phố Cổ; thêm dẫn đường thực tế, điều kiện giao xe. | QA_PASS |
 | SEO-07 | `/topics/guides/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁指南 | P1 | Cấu trúc hướng dẫn/kiểm tra xe/an toàn và câu hỏi trước thuê, hạn chế trùng nội dung trang con. | QA_PASS |
 | SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | QA_PASS |
 | SEO-09 | `/contact/` | Liên hệ | index,follow theo template | Trong sitemap | Nguyễn Tú 河内租车联系方式 | P1 | Nổi bật địa chỉ, Zalo, điện thoại, giờ mở cửa, bản đồ; rà accessibility và mobile. | QA_PASS |
@@ -195,3 +195,17 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 | `/topics/50cc/` | 200 | Self canonical đúng | index,follow / zh-CN | 1, đúng chủ đề | LocalBusiness + BreadcrumbList parse hợp lệ | QA_PASS |
 
 **Không nghiệm thu:** tương tác iPhone thực tế, GSC/Bing index, đo traffic/conversion, xác thực pháp lý riêng từng trường hợp hoặc Core Web Vitals. Không đổi robots/noindex của 13 trang con. **Dừng lượt thủ công tại 9/26**, chờ duyệt bước kế tiếp.
+
+## K. SEO-06 — Old Quarter danh mục cha (2026-10-11)
+
+**Kết quả:** `SEO-06` cho đúng URL `/topics/old-quarter/` → **QA_PASS** sau khi đã kiểm tra Jekyll build/deploy và HTML trang thật. Đây không phải xác nhận Google/Baidu index, ranking, Core Web Vitals hay chuyển đổi.
+
+- Đã phân định đúng ý định tìm kiếm “thuê xe máy từ Phố Cổ Hà Nội”: cửa hàng Nguyễn Tú **ở 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên**, không nằm trong Phố Cổ; tránh mô tả là cơ sở ngay tại Phố Cổ.
+- H1/title/description tiếng Trung nhấn mạnh vị trí và hướng dẫn khách từ Phố Cổ. Bổ sung cách dùng Google Maps, tránh tự bịa km/phút; giờ và địa chỉ lấy từ nguồn NAP chung.
+- Nêu rõ nhận xe tại cửa hàng khác với giao xe hoặc nhận trả ở địa điểm khác; phải liên hệ xác nhận địa điểm, lịch và phí phát sinh. Không mặc định giao miễn phí, có tồn kho, hay đặt trước tự động.
+- Bổ sung checklist trước chuyến đi và internal links đến `/prices/`, `/contact/`, `/faq/`, `/topics/guides/`, hai trang con cùng Google Maps. Bổ sung 29 mục dịch EN; giữ giao diện 中文-first.
+- Chỉ chỉnh **2 file** `topics/old-quarter/index.html` và `_data/i18n-en.json`. Không đụng `/topics/old-quarter/directions/` (`SEO-22`) hoặc `/topics/old-quarter/pickup/` (`SEO-23`); hai trang con vẫn `noindex`, **chưa QA_PASS**. Không sửa CNAME, DNS, robots, sitemap, giá, schema chung, CSS/JS/menu, chatbot, factory 250 bài.
+- PR [#7](https://github.com/thuexemayhanoi/china/pull/7) squash-merge `91422e8c966b0c82fe34dea7af6ca0a01dd7048c`. [GitHub Pages run 38108696436](https://github.com/thuexemayhanoi/china/actions/runs/38108696436) **Jekyll build/deploy SUCCESS**.
+- QA trang thật `https://zh.rentbikehanoi.com/topics/old-quarter/` (`maxAge=0`): **HTTP 200**, self-canonical đúng, `index,follow`, `zh-CN`, đúng 1 H1 `从河内老城区出发租摩托车：门店与取还车指南`, 5 H2, LocalBusiness/BreadcrumbList JSON-LD hợp lệ; có địa chỉ, giờ 09:00–21:00, Google Maps, và liên kết liên hệ. Câu phủ định lời hứa giao miễn phí, đại diện Phố Cổ hiển thị đúng.
+
+**Sau lượt này:** 10/26 URL `QA_PASS`, 16 URL chưa hoàn thành. Giữ lịch tự động OFF; chỉ tiếp tục khi người dùng duyệt thủ công.
