@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CHINA 250-article editorial factory. Stdlib only; no text generation or API keys.
+"""CHINA 300-article editorial factory. Stdlib only; no text generation or API keys.
 
 Commands:
   status
@@ -8,8 +8,9 @@ Commands:
   qa --ids CN-0001,CN-0002
   publish --ids CN-0001,CN-0002 --confirm PUBLISH
 
-PLANNED is the only state before publication. A draft is detected from
-the physical _drafts/CN-xxxx.md file; no blind claim mutations are made.
+PLANNED is the only state before publication. An actual draft is detected at
+_drafts/CN-xxxx.md. Automated publication is opt-in with structural SEO QA,
+never a forged human review. External writers must push with authenticated GitHub credentials.
 """
 import argparse
 import csv
@@ -171,11 +172,22 @@ def audit_draft(r):
     prohibited = ("免押金","无需押金","保证有车","保证第一","100%保证","无需驾照","肯定不需要驾照","免费配送")
     req(not any(w in body or w in title for w in prohibited), "unsupported guarantee/no-deposit/licence/delivery claim")
     req(DOMAIN not in str(fm.get("permalink","")), "permalink should be relative")
-    if r["topic"] in ("50cc","guides") and re.search(r"法律|法规|驾驶资格|许可|驾照", title+body):
+    if re.search(r"法律|法规|驾驶资格|行驶许可|驾照|驾驶证|驾驶执照|交通法规", title+body):
         notes = str(fm.get("source_notes",""))
-        req("https://" in notes and len(notes)>=35, "legal claims require an attributable source note (review accuracy separately)")
-    req(fm.get("editor_approved") is True, "editor_approved: true required after actual review")
-    req(fm.get("reviewed_by")=="thuexemayhanoi", 'reviewed_by: "thuexemayhanoi" required')
+        req("https://" in notes and len(notes)>=35, "legal claims require a verifiable official source note (automated checks cannot certify truth)")
+    # Two explicitly distinguished modes. Automated QA is NOT an editorial sign-off.
+    policy=factory_state()
+    if policy.get("manual_review_required", True):
+        req(fm.get("editor_approved") is True, "human editor_approved: true required")
+        req(fm.get("reviewed_by")=="thuexemayhanoi", "human reviewer missing")
+    elif fm.get("editor_approved") is True:
+        req(fm.get("reviewed_by")=="thuexemayhanoi", "do not claim approval without an actual reviewer")
+    req(not re.search(r"todo|lorem ipsum|placeholder|待补充|待填写|示例正文",body,re.I),
+        "placeholder or unfinished text")
+    valid_blog={x["permalink"] for x in read_rows() if x["status"]=="PUBLISHED"}
+    for link in links:
+        if link.startswith("/blog/") and link not in valid_blog:
+            errors.append("blog link not yet published: "+link)
     # Score is deterministic, NOT fact-checking. Any critical failure rejects publication.
     score = max(0,100-15*len(errors))
     return {"id":aid,"score":score,"passed":not errors and score>=80,"errors":errors,
@@ -235,12 +247,15 @@ def publish(selected,rows):
         fm["breadcrumbs"]=[{"label":"博客","href":"/blog/"},
                            {"label":"专题","href":r["parent_hub"]},
                            {"label":r["working_title"]}]
-        # Remove editorial-only flags from published metadata.
-        fm.pop("editor_approved",None);fm.pop("reviewed_by",None)
+        # Never attribute a fictitious human review.
+        mode="human_review" if factory_state().get("manual_review_required", True) else "automated_qa"
+        fm["publication_method"]=mode
+        fm.pop("editor_approved",None)
+        if mode=="automated_qa":fm.pop("reviewed_by",None)
         newfront="---\n"+"\n".join(k+": "+json.dumps(v,ensure_ascii=False) for k,v in fm.items())+"\n---\n"
         operations.append((r,ROOT/r["draft_path"],target,newfront+body,report))
-    # This changes a GitHub Actions disposable checkout. Only the workflow makes a
-    # single fast-forward Git commit if validation passes; never force-push.
+    # External writer performs and verifies the authenticated main-branch push.
+    # Never use a GITHUB_TOKEN self-push to publish native Pages.
     POSTS.mkdir(exist_ok=True)
     for r,draft,target,content,rep in operations:
         target.write_text(content,encoding="utf-8")
@@ -248,7 +263,7 @@ def publish(selected,rows):
         r["status"]="PUBLISHED"
         r["qa_score"]=str(rep["score"])
         r["published_date"]=stamp
-        r["notes"]="Manually approved and batch-published by GitHub Actions"
+        r["notes"]="Published via automated structural QA; human factual review not asserted" if not factory_state().get("manual_review_required",True) else "Human-reviewed publication"
     save_matrix(rows)
     validate_matrix()
     refresh_queue(rows)
@@ -271,13 +286,14 @@ def save_state(state):
 def queue_payload(rows):
     state=factory_state()
     published=sum(r["status"]=="PUBLISHED" for r in rows)
-    waiting=[r for r in rows if r["status"]=="PLANNED"]
+    waiting=[r for r in rows if r["status"]=="PLANNED" and not (ROOT/r["draft_path"]).is_file()]
     status=("TARGET_REACHED" if published==300 else "PAUSED" if not state["enabled"] else "READY")
+    staged=sum(r["status"]=="PLANNED" and (ROOT/r["draft_path"]).is_file() for r in rows)
     return {"schema_version":1,"status":status,"target":300,"published":published,
-        "remaining":300-published,"batch_size":AUTO_BATCH,"queue":[
+        "remaining":300-published,"drafts_staged":staged,"batch_size":AUTO_BATCH,"queue":[
         {"id":r["article_id"],"title":r["working_title"],"topic":r["topic"],"subtopic":r["subtopic"],
          "primary_keyword":r["primary_keyword"],"hub":r["parent_hub"],"draft":r["draft_path"],
-         "permalink":r["permalink"],"review_required":True}
+         "permalink":r["permalink"],"review_required":state.get("manual_review_required",True)}
         for r in waiting[:QUEUE_SIZE]]}
 
 def refresh_queue(rows):
@@ -291,7 +307,7 @@ def pending_count(rows):
     if not factory_state()["enabled"]:return 0
     return sum((ROOT/r["draft_path"]).is_file() for r in rows if r["status"]=="PLANNED")
 
-def process_reviewed(rows):
+def process_eligible(rows):
     if not factory_state()["enabled"]:
         print("Factory paused; no publication");return
     eligible=[];rejected=[]
@@ -343,7 +359,7 @@ def main():
         elif a.command=="pending-count":print(pending_count(rows))
         elif a.command in ("pause","resume"):
             state=factory_state();state["enabled"]=(a.command=="resume");save_state(state);refresh_queue(rows)
-        elif a.command=="process":process_reviewed(rows)
+        elif a.command=="process":process_eligible(rows)
         elif a.command=="publish":
             if a.confirm!="PUBLISH":fail("manual confirmation PUBLISH is required")
             publish(ids_arg(a.ids,rows),rows)

@@ -73,7 +73,7 @@ jobs:
       - name: Check existing website, domain and navigation
         run: python3 scripts/qa.py
       - name: Validate exact 300-row plan and any staged drafts
-        run: python3 scripts/china_factory.py validate
+        run: python3 scripts/china_factory.py validate --drafts
       - name: Read-only progress
         run: python3 scripts/china_factory.py status
       - name: Manual read-only plan

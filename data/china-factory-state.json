@@ -2,5 +2,7 @@
   "schema_version": 1,
   "enabled": true,
   "target": 300,
-  "manual_review_required": true
+  "manual_review_required": false,
+  "publication_mode": "automatic_qa",
+  "publisher": "external_writer"
 }
