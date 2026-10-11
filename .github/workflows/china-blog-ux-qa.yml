@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '_data/site.json'
+      - 'scripts/china_factory.py'
+      - 'data/china-factory-state.json'
+      - '.github/workflows/china-factory-continuous.yml'
       - '_data/navigation.json'
       - 'topics/**'
       - '_data/i18n-en.json'
@@ -22,6 +25,9 @@ on:
     branches: [main]
     paths:
       - '_data/site.json'
+      - 'scripts/china_factory.py'
+      - 'data/china-factory-state.json'
+      - '.github/workflows/china-factory-continuous.yml'
       - '_data/navigation.json'
       - 'topics/**'
       - '_data/i18n-en.json'
