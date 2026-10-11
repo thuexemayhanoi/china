@@ -1,12 +1,14 @@
 # SEO Matrix — 26 URL hiện có / CHINA (zh-CN)
 
+**KẾT QUẢ MỚI NHẤT (11/10/2026): 26/26 hạng mục nội dung và QA HTML đạt; cả 26 URL đã publish `index,follow`, HTTP 200, self-canonical, có trong sitemap. Đây là trạng thái kỹ thuật cho phép index, KHÔNG phải bằng chứng Google/Baidu đã đưa 26 URL vào chỉ mục.**
+
 **Repo:** [thuexemayhanoi/china](https://github.com/thuexemayhanoi/china) · **Canonical:** https://zh.rentbikehanoi.com/  
 **Baseline:** `main` @ `dad8c4845c1ed361ff70a7d2a329e76781906eeb` · audit mã nguồn 2026-10-10.  
 **Phạm vi:** 26 trang hiện có; **KHÔNG** phải matrix 250 bài mới (`data/china-matrix.csv`).  
 **Hạn chế kiểm chứng:** Trạng thái bên dưới dựa trên front matter, template, JSON, sitemap trong repo; **chưa** xác thực HTTP trực tiếp từng URL, GSC/Bing, crawl thực tế, PSI hay độ index của Google/Baidu. Không được báo PASS cho các mục chưa đo.
 **Chủ trương:** Lập kế hoạch trước; chưa sửa nội dung HTML/SEO, chưa cài workflow SEO mới, chưa đổi deployment, CNAME hoặc DNS. Mỗi lượt tối ưu 2–5 URL và kiểm tra trước/sau.
 
-## A. Kết quả audit tĩnh có bằng chứng
+## A. Kết quả audit tĩnh ban đầu ngày 10/10 (LỊCH SỬ, đã được thay thế ở mục S)
 
 - **26 trang:** 8 trang nền tảng (home, prices, about, contact, FAQ, blog, privacy, terms); 5 danh mục cha; 13 danh mục con.
 - **12 URL** nằm trong `_data/site.json → sitemap_base`. Đây là **danh sách được cấu hình đưa vào sitemap**, không phải chứng nhận đã index.
@@ -33,22 +35,22 @@
 | SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | QA_PASS |
 | SEO-09 | `/contact/` | Liên hệ | index,follow theo template | Trong sitemap | Nguyễn Tú 河内租车联系方式 | P1 | Nổi bật địa chỉ, Zalo, điện thoại, giờ mở cửa, bản đồ; rà accessibility và mobile. | QA_PASS |
 | SEO-10 | `/faq/` | FAQ | index,follow theo template | Trong sitemap | 河内租摩托车常见问题 | P1 | Kiểm tra 12 câu FAQ và giá/đặt cọc/luật, đồng bộ JSON-LD; FAQ rich result không được bảo đảm. | QA_PASS |
-| SEO-11 | `/privacy/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 隐私政策 | P3 | Rà soát độ đúng của mô tả dữ liệu lưu trữ, dịch vụ ngoài, liên hệ yêu cầu; duyệt chính sách. | TODO |
-| SEO-12 | `/terms/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 使用条款 | P3 | Rà soát điều kiện đặt xe, trách nhiệm/đặt cọc và tuyên bố giới hạn; duyệt pháp lý. | TODO |
-| SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | QA_PASS |
-| SEO-14 | `/topics/rental/scooters/` | Danh mục con | noindex: true | Ngoài sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | QA_PASS |
-| SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
-| SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | QA_PASS |
-| SEO-17 | `/topics/pricing/daily/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | QA_PASS |
-| SEO-18 | `/topics/pricing/weekly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | QA_PASS |
-| SEO-19 | `/topics/pricing/deposits/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | QA_PASS |
-| SEO-20 | `/topics/50cc/models/` | Danh mục con | noindex: true | Ngoài sitemap | 河内50cc踏板车车型与价格 | P2 | Giá/ngày, mức cọc và mẫu 50cc thực tế, tình trạng xe cần xác minh. | QA_PASS |
-| SEO-21 | `/topics/50cc/requirements/` | Danh mục con | noindex: true | Ngoài sitemap | 越南50cc摩托车驾驶规定 | P2 | Tài liệu quy định VN hiện hành, nguồn có ngày, tuổi/giấy phép/định nghĩa xe. | QA_PASS |
-| SEO-22 | `/topics/old-quarter/directions/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区到Long Biên租车店路线 | P2 | Google Maps và địa chỉ đúng; không bịa thời gian di chuyển hoặc lộ trình cố định. | QA_PASS |
-| SEO-23 | `/topics/old-quarter/pickup/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区取还摩托车咨询 | P2 | Phân biệt nhận xe tại cửa hàng và giao xe khi được xác nhận; chi phí/địa điểm phải hỏi. | QA_PASS |
-| SEO-24 | `/topics/guides/contracts/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车证件与合同 | P2 | Checklist giấy tờ/hợp đồng và đặt cọc; không yêu cầu hộ chiếu nếu không có chính sách chính thức. | QA_PASS |
-| SEO-25 | `/topics/guides/safety/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车骑行安全 | P2 | Nguồn an toàn/pháp lý rõ; hướng dẫn kiểm tra xe và hạn chế hứa hẹn. | QA_PASS |
-| SEO-26 | `/topics/guides/returns/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车还车与押金退还 | P2 | Đặt điều kiện trả xe và hoàn cọc theo hợp đồng; quy trình có xác minh. | QA_PASS |
+| SEO-11 | `/privacy/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 隐私政策 | P3 | Rà soát độ đúng của mô tả dữ liệu lưu trữ, dịch vụ ngoài, liên hệ yêu cầu; duyệt chính sách. | QA_PASS |
+| SEO-12 | `/terms/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 使用条款 | P3 | Rà soát điều kiện đặt xe, trách nhiệm/đặt cọc và tuyên bố giới hạn; duyệt pháp lý. | QA_PASS |
+| SEO-13 | `/blog/` | Hub bài viết | index,follow (duyệt mở index) | Trong sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | QA_PASS |
+| SEO-14 | `/topics/rental/scooters/` | Danh mục con | index,follow | Trong sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | QA_PASS |
+| SEO-15 | `/topics/rental/monthly/` | Danh mục con | index,follow | Trong sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
+| SEO-16 | `/topics/rental/automatic/` | Danh mục con | index,follow | Trong sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | QA_PASS |
+| SEO-17 | `/topics/pricing/daily/` | Danh mục con | index,follow | Trong sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | QA_PASS |
+| SEO-18 | `/topics/pricing/weekly/` | Danh mục con | index,follow | Trong sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | QA_PASS |
+| SEO-19 | `/topics/pricing/deposits/` | Danh mục con | index,follow | Trong sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | QA_PASS |
+| SEO-20 | `/topics/50cc/models/` | Danh mục con | index,follow | Trong sitemap | 河内50cc踏板车车型与价格 | P2 | Giá/ngày, mức cọc và mẫu 50cc thực tế, tình trạng xe cần xác minh. | QA_PASS |
+| SEO-21 | `/topics/50cc/requirements/` | Danh mục con | index,follow | Trong sitemap | 越南50cc摩托车驾驶规定 | P2 | Tài liệu quy định VN hiện hành, nguồn có ngày, tuổi/giấy phép/định nghĩa xe. | QA_PASS |
+| SEO-22 | `/topics/old-quarter/directions/` | Danh mục con | index,follow | Trong sitemap | 河内老城区到Long Biên租车店路线 | P2 | Google Maps và địa chỉ đúng; không bịa thời gian di chuyển hoặc lộ trình cố định. | QA_PASS |
+| SEO-23 | `/topics/old-quarter/pickup/` | Danh mục con | index,follow | Trong sitemap | 河内老城区取还摩托车咨询 | P2 | Phân biệt nhận xe tại cửa hàng và giao xe khi được xác nhận; chi phí/địa điểm phải hỏi. | QA_PASS |
+| SEO-24 | `/topics/guides/contracts/` | Danh mục con | index,follow | Trong sitemap | 河内租摩托车证件与合同 | P2 | Checklist giấy tờ/hợp đồng và đặt cọc; không yêu cầu hộ chiếu nếu không có chính sách chính thức. | QA_PASS |
+| SEO-25 | `/topics/guides/safety/` | Danh mục con | index,follow | Trong sitemap | 河内摩托车骑行安全 | P2 | Nguồn an toàn/pháp lý rõ; hướng dẫn kiểm tra xe và hạn chế hứa hẹn. | QA_PASS |
+| SEO-26 | `/topics/guides/returns/` | Danh mục con | index,follow | Trong sitemap | 河内摩托车还车与押金退还 | P2 | Đặt điều kiện trả xe và hoàn cọc theo hợp đồng; quy trình có xác minh. | QA_PASS |
 
 **Lưu ý SEO:** từ khóa chỉ là ánh xạ ý định và đề xuất on-page, **chưa phải số liệu volume/ranking**. `/prices/` ưu tiên bảng giá thật, `/topics/pricing/` ưu tiên hướng dẫn hiểu giá để giảm cannibalization. `/topics/old-quarter/` không được trình bày sai rằng cửa hàng ở trong Phố Cổ.
 
@@ -316,3 +318,29 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 - QA live `maxAge=0`, sau deploy: `/topics/guides/returns/` HTTP 200, self canonical, `zh-CN`, `noindex,follow`, 1 H1/4 H2, JSON-LD LocalBusiness + BreadcrumbList hợp lệ và các liên kết đúng; `/blog/` HTTP 200, self canonical, `zh-CN`, `noindex,follow`, 1 H1/2 H2 (gồm thông báo rỗng), hiển thị 0 bài và 5 topic hubs thật. `/sitemap.xml` HTTP 200, XML `urlset` hợp lệ về cấu trúc, 12 URL trong `sitemap_base`, **không có blog**, không có URL bài giả.
 
 **Giới hạn QA:** Chưa kiểm tra trên thiết bị iPhone thực tế, GSC indexing, CWV, traffic/ranking, hợp đồng hoặc chính sách hoàn cọc của cửa hàng cho từng người, chưa test thực tế luồng blog sau khi thêm bài đầu tiên. Tiến độ nội dung/QA: **24/26 QA_PASS, còn SEO-11 Privacy và SEO-12 Terms**. Lịch SEO tự động vẫn OFF; tiếp tục theo phê duyệt thủ công.
+
+## S. Final SEO-11/12 + mở index 26 URL (duyệt và publish thủ công 11/10/2026)
+
+**Chỉ thị đã duyệt:** người dùng yêu cầu hoàn tất Privacy/Terms và **publish để index tất cả 26 URL**. Quyết định này **thay thế chính sách noindex dành cho 13 trang con và blog rỗng tại bản baseline**, nhưng không chứng minh index thành công hay traffic/ranking tăng. Mọi thay đổi bên dưới được kiểm tra sau deploy.
+
+### Privacy & Terms — QA_PASS
+
+- `SEO-11` `/privacy/`: Trang chính sách quyền riêng tư phản ánh cấu trúc thực tế của website tĩnh trên GitHub Pages, lưu lựa chọn ngôn ngữ/theme ở localStorage, trợ lý hỏi đáp dùng chỉ mục công khai phía trình duyệt không gọi AI API bên ngoài, liên kết điện thoại/Zalo/WhatsApp/Google Maps, xử lý kỹ thuật của nền tảng hosting và kênh liên hệ yêu cầu riêng tư. Không tự đặt cam kết về giữ hộ chiếu, lưu dữ liệu, hạn phản hồi hoặc Cookie ngoài kiểm chứng. Nội dung tiếng Trung, bản EN qua từ điển chung.
+- `SEO-12` `/terms/`: Phân định rõ tham khảo giá/đặt cọc và giao dịch thực tế; trang không có online booking tự xác nhận. Điều kiện cung cấp xe, giờ/địa điểm lấy trả, phí giao xe, gia hạn và hoàn cọc phải xác nhận với cửa hàng và hợp đồng thực tế; không bịa chính sách hoàn cọc hoặc cam kết giao miễn phí. Dẫn về contracts, returns và contact.
+- Hai URL live: HTTP 200, `index,follow`, `zh-CN`, self-canonical, lần lượt 1 H1/5 H2 và 1 H1/6 H2, LocalBusiness + WebPage + BreadcrumbList JSON-LD hợp lệ.
+
+### Chính sách index mới — đã thực hiện theo yêu cầu
+
+- Đã xóa thuộc tính front matter `noindex: true` của **đúng 13 danh mục con** từng nghiệm thu nội dung riêng các lượt trước. Không tạo URL mới hay thay nội dung đã QA.
+- `/blog/` hiện vẫn **0 bài trong `_posts`**; bổ sung hai phần hướng dẫn hữu ích độc lập (chuẩn bị thuê xe và nguyên tắc xuất bản), giữ thông báo 0 bài và liên kết 5 chuyên mục thật; sau khi chủ website yêu cầu mở index toàn bộ, meta robots cho trang blog đổi sang `index,follow`. **Rủi ro SEO:** Google có thể đánh giá blog chưa đủ chất lượng vì chưa có bài; cần bổ sung bài thật để củng cố, không giả tạo post hoặc hứa chắc chắn index.
+- `_data/site.json → sitemap_base` đã liệt kê **đủ 26 URL, không trùng**; `sitemap.xml` không có thêm một block điều kiện chèn `/blog/` lần thứ hai. Dòng post động `site.posts` vẫn giữ cho bài thật sau này. `robots.txt` giữ `Allow: /` và trỏ sitemap; meta xác minh Google `HwLeUnxn5y1nBbGQD-54b3hR_dw10qMQ12wfmuDPfBg` giữ nguyên. Không sửa CNAME/DNS, CSS/JS, QuickCall, chatbot, bảng giá, địa chỉ hay workflow 250 bài.
+- Nội dung chỉnh sửa thực tế: **20 file** gồm 13 child page front matter, privacy, terms, blog, `_layouts/default.html`, `_data/site.json`, `sitemap.xml` và `_data/i18n-en.json` (+30 EN entries). PR [#15](https://github.com/thuexemayhanoi/china/pull/15) squash-merge `4748832294af0ff578c750c727cc9d5d3407bb19`, [GitHub Pages run 38114004055](https://github.com/thuexemayhanoi/china/actions/runs/38114004055) **SUCCESS**.
+
+### Kiểm thử live sau deploy
+
+- **26/26 URL** có HTTP **200**, meta robots **`index,follow`**, canonical tự trỏ đúng URL HTTPS, `lang=zh-CN`, 1 H1, schema WebSite và LocalBusiness JSON-LD parse được; 13 trang con có 4 H2 nội dung riêng và breadcrumb; privacy/terms/blog có nội dung mới.
+- `https://zh.rentbikehanoi.com/sitemap.xml` HTTP 200, XML `urlset`, đủ **26 URL duy nhất** gồm trang blog, privacy, terms và 13 danh mục con; không đưa 0 post ảo vào sitemap. `robots.txt` HTTP 200, `Allow: /`, liên kết đúng sitemap.
+- **Phân biệt indexability với thực tế indexing:** `QA_PASS` ở đây là xác nhận meta robots/canonical/sitemap/deploy hợp lệ và nội dung đã rà; **không** phải GSC xác nhận trạng thái `Indexed`, không phải công cụ submit index và không hứa thứ hạng. GSC plugin SMEPost đang kết nối ba property khác (thuexemaynguyentu.com, GitHub và Webflow) nhưng chưa có property `zh.rentbikehanoi.com`; không thể xác nhận/submit URL của domain này qua connector hiện có. Người dùng cần thêm hoặc liên kết đúng property trong Google Search Console và gửi sitemap nếu muốn yêu cầu crawl qua GSC; Google có quyền chọn index.
+- **Chưa kiểm chứng:** Chrome/Android/iPhone tương tác thủ công, GSC index coverage, PSI Core Web Vitals, lưu lượng/ranking thực tế, và tính pháp lý đầy đủ từng hợp đồng.
+- **Lịch SEO tự động vẫn OFF theo yêu cầu duyệt thủ công.** Matrix nội dung/technical SEO **26/26 QA_PASS**; không bắt đầu đăng 250 bài.
+
