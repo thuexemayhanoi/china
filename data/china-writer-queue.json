@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 15,
-  "remaining": 285,
+  "published": 20,
+  "remaining": 280,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0016",
-      "title": "河内市区停车时需要注意什么",
-      "topic": "rental",
-      "subtopic": "scooters",
-      "primary_keyword": "河内踏板车租赁",
-      "hub": "/topics/rental/scooters/",
-      "draft": "_drafts/CN-0016.md",
-      "permalink": "/blog/hanoi-rental-scooters-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0017",
-      "title": "夜间骑踏板车前的照明检查",
-      "topic": "rental",
-      "subtopic": "scooters",
-      "primary_keyword": "河内踏板车租赁",
-      "hub": "/topics/rental/scooters/",
-      "draft": "_drafts/CN-0017.md",
-      "permalink": "/blog/hanoi-rental-scooters-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0018",
-      "title": "租踏板车如何记录交车时的划痕",
-      "topic": "rental",
-      "subtopic": "scooters",
-      "primary_keyword": "河内踏板车租赁",
-      "hub": "/topics/rental/scooters/",
-      "draft": "_drafts/CN-0018.md",
-      "permalink": "/blog/hanoi-rental-scooters-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0019",
-      "title": "租车行交车检查通常包含哪些步骤",
-      "topic": "rental",
-      "subtopic": "scooters",
-      "primary_keyword": "河内踏板车租赁",
-      "hub": "/topics/rental/scooters/",
-      "draft": "_drafts/CN-0019.md",
-      "permalink": "/blog/hanoi-rental-scooters-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0020",
-      "title": "如何根据行程长度选择踏板车",
-      "topic": "rental",
-      "subtopic": "scooters",
-      "primary_keyword": "河内踏板车租赁",
-      "hub": "/topics/rental/scooters/",
-      "draft": "_drafts/CN-0020.md",
-      "permalink": "/blog/hanoi-rental-scooters-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0021",
       "title": "骑行前如何熟悉踏板车的基本操作",
@@ -115,6 +60,61 @@
       "hub": "/topics/rental/scooters/",
       "draft": "_drafts/CN-0025.md",
       "permalink": "/blog/hanoi-rental-scooters-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0026",
+      "title": "河内摩托车月租适合什么样的旅客",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0026.md",
+      "permalink": "/blog/hanoi-rental-longterm-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0027",
+      "title": "月租前如何确认租期起止日期",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0027.md",
+      "permalink": "/blog/hanoi-rental-longterm-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0028",
+      "title": "河内摩托车月租费用有哪些组成",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0028.md",
+      "permalink": "/blog/hanoi-rental-longterm-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0029",
+      "title": "月租与按天租车应该怎样比较",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0029.md",
+      "permalink": "/blog/hanoi-rental-longterm-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0030",
+      "title": "连续租车两周该先询问什么",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0030.md",
+      "permalink": "/blog/hanoi-rental-longterm-05/",
       "review_required": false
     }
   ]
