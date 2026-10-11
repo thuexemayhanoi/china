@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 30,
-  "remaining": 270,
+  "published": 35,
+  "remaining": 265,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0031",
-      "title": "河内长期租车如何约定保养责任",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0031.md",
-      "permalink": "/blog/hanoi-rental-longterm-06/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0032",
-      "title": "月租摩托车期间出现机械问题怎么办",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0032.md",
-      "permalink": "/blog/hanoi-rental-longterm-07/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0033",
-      "title": "长期租车如何检查轮胎磨损",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0033.md",
-      "permalink": "/blog/hanoi-rental-longterm-08/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0034",
-      "title": "河内月租是否需要确认续租条件",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0034.md",
-      "permalink": "/blog/hanoi-rental-longterm-09/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0035",
-      "title": "月租踏板车和手动挡摩托车怎么选",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0035.md",
-      "permalink": "/blog/hanoi-rental-longterm-10/",
-      "review_required": false
-    },
     {
       "id": "CN-0036",
       "title": "长期骑行怎样安排车辆日常检查",
@@ -115,6 +60,61 @@
       "hub": "/topics/rental/monthly/",
       "draft": "_drafts/CN-0040.md",
       "permalink": "/blog/hanoi-rental-longterm-15/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0041",
+      "title": "月租车型暂时缺货时可以怎样咨询",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0041.md",
+      "permalink": "/blog/hanoi-rental-longterm-16/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0042",
+      "title": "长期租车前如何查看合同条款",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0042.md",
+      "permalink": "/blog/hanoi-rental-longterm-17/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0043",
+      "title": "月租期间临时更换车型要确认什么",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0043.md",
+      "permalink": "/blog/hanoi-rental-longterm-18/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0044",
+      "title": "月租车辆归还时应该检查什么",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0044.md",
+      "permalink": "/blog/hanoi-rental-longterm-19/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0045",
+      "title": "如何记录月租车辆交接照片",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0045.md",
+      "permalink": "/blog/hanoi-rental-longterm-20/",
       "review_required": false
     }
   ]
