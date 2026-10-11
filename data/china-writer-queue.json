@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 260,
-  "remaining": 40,
+  "published": 265,
+  "remaining": 35,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0261",
-      "title": "河内摩托车月租预算应该怎样规划",
-      "topic": "pricing",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租价格",
-      "hub": "/topics/pricing/monthly/",
-      "draft": "_drafts/CN-0261.md",
-      "permalink": "/blog/hanoi-pricing-monthly-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0262",
-      "title": "Honda Wave 月租参考价如何理解",
-      "topic": "pricing",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租价格",
-      "hub": "/topics/pricing/monthly/",
-      "draft": "_drafts/CN-0262.md",
-      "permalink": "/blog/hanoi-pricing-monthly-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0263",
-      "title": "Honda Vision 月租价格区间如何核对",
-      "topic": "pricing",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租价格",
-      "hub": "/topics/pricing/monthly/",
-      "draft": "_drafts/CN-0263.md",
-      "permalink": "/blog/hanoi-pricing-monthly-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0264",
-      "title": "Honda Air Blade 月租前应核实什么",
-      "topic": "pricing",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租价格",
-      "hub": "/topics/pricing/monthly/",
-      "draft": "_drafts/CN-0264.md",
-      "permalink": "/blog/hanoi-pricing-monthly-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0265",
-      "title": "Honda Click 和 Mio 月租预算比较",
-      "topic": "pricing",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租价格",
-      "hub": "/topics/pricing/monthly/",
-      "draft": "_drafts/CN-0265.md",
-      "permalink": "/blog/hanoi-pricing-monthly-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0266",
       "title": "月租和周租方案需要怎样对照",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/monthly/",
       "draft": "_drafts/CN-0270.md",
       "permalink": "/blog/hanoi-pricing-monthly-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0271",
+      "title": "租50cc摩托车前需要核实的项目",
+      "topic": "50cc",
+      "subtopic": "checklist",
+      "primary_keyword": "河内50cc摩托车检查",
+      "hub": "/topics/50cc/checklist/",
+      "draft": "_drafts/CN-0271.md",
+      "permalink": "/blog/hanoi-50cc-checklist-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0272",
+      "title": "50cc 踏板车取车时怎样检查刹车",
+      "topic": "50cc",
+      "subtopic": "checklist",
+      "primary_keyword": "河内50cc摩托车检查",
+      "hub": "/topics/50cc/checklist/",
+      "draft": "_drafts/CN-0272.md",
+      "permalink": "/blog/hanoi-50cc-checklist-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0273",
+      "title": "租50cc前如何检查灯光与转向灯",
+      "topic": "50cc",
+      "subtopic": "checklist",
+      "primary_keyword": "河内50cc摩托车检查",
+      "hub": "/topics/50cc/checklist/",
+      "draft": "_drafts/CN-0273.md",
+      "permalink": "/blog/hanoi-50cc-checklist-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0274",
+      "title": "50cc 车型轮胎状态怎样初步判断",
+      "topic": "50cc",
+      "subtopic": "checklist",
+      "primary_keyword": "河内50cc摩托车检查",
+      "hub": "/topics/50cc/checklist/",
+      "draft": "_drafts/CN-0274.md",
+      "permalink": "/blog/hanoi-50cc-checklist-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0275",
+      "title": "50cc 租车时头盔需要检查什么",
+      "topic": "50cc",
+      "subtopic": "checklist",
+      "primary_keyword": "河内50cc摩托车检查",
+      "hub": "/topics/50cc/checklist/",
+      "draft": "_drafts/CN-0275.md",
+      "permalink": "/blog/hanoi-50cc-checklist-05/",
       "review_required": false
     }
   ]
