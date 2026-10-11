@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 25,
-  "remaining": 275,
+  "published": 30,
+  "remaining": 270,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0026",
-      "title": "河内摩托车月租适合什么样的旅客",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0026.md",
-      "permalink": "/blog/hanoi-rental-longterm-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0027",
-      "title": "月租前如何确认租期起止日期",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0027.md",
-      "permalink": "/blog/hanoi-rental-longterm-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0028",
-      "title": "河内摩托车月租费用有哪些组成",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0028.md",
-      "permalink": "/blog/hanoi-rental-longterm-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0029",
-      "title": "月租与按天租车应该怎样比较",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0029.md",
-      "permalink": "/blog/hanoi-rental-longterm-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0030",
-      "title": "连续租车两周该先询问什么",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0030.md",
-      "permalink": "/blog/hanoi-rental-longterm-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0031",
       "title": "河内长期租车如何约定保养责任",
@@ -115,6 +60,61 @@
       "hub": "/topics/rental/monthly/",
       "draft": "_drafts/CN-0035.md",
       "permalink": "/blog/hanoi-rental-longterm-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0036",
+      "title": "长期骑行怎样安排车辆日常检查",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0036.md",
+      "permalink": "/blog/hanoi-rental-longterm-11/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0037",
+      "title": "河内一个月租 Honda Wave 的参考信息",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0037.md",
+      "permalink": "/blog/hanoi-rental-longterm-12/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0038",
+      "title": "河内一个月租 Honda Vision 需要确认什么",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0038.md",
+      "permalink": "/blog/hanoi-rental-longterm-13/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0039",
+      "title": "Air Blade 月租前的押金核对清单",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0039.md",
+      "permalink": "/blog/hanoi-rental-longterm-14/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0040",
+      "title": "Honda Click 与 Yamaha Mio 月租比较角度",
+      "topic": "rental",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租",
+      "hub": "/topics/rental/monthly/",
+      "draft": "_drafts/CN-0040.md",
+      "permalink": "/blog/hanoi-rental-longterm-15/",
       "review_required": false
     }
   ]
