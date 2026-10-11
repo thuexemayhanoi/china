@@ -35,7 +35,7 @@
 | SEO-10 | `/faq/` | FAQ | index,follow theo template | Trong sitemap | 河内租摩托车常见问题 | P1 | Kiểm tra 12 câu FAQ và giá/đặt cọc/luật, đồng bộ JSON-LD; FAQ rich result không được bảo đảm. | QA_PASS |
 | SEO-11 | `/privacy/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 隐私政策 | P3 | Rà soát độ đúng của mô tả dữ liệu lưu trữ, dịch vụ ngoài, liên hệ yêu cầu; duyệt chính sách. | TODO |
 | SEO-12 | `/terms/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 使用条款 | P3 | Rà soát điều kiện đặt xe, trách nhiệm/đặt cọc và tuyên bố giới hạn; duyệt pháp lý. | TODO |
-| SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | TODO |
+| SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | QA_PASS |
 | SEO-14 | `/topics/rental/scooters/` | Danh mục con | noindex: true | Ngoài sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | QA_PASS |
 | SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
 | SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | QA_PASS |
@@ -48,7 +48,7 @@
 | SEO-23 | `/topics/old-quarter/pickup/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区取还摩托车咨询 | P2 | Phân biệt nhận xe tại cửa hàng và giao xe khi được xác nhận; chi phí/địa điểm phải hỏi. | QA_PASS |
 | SEO-24 | `/topics/guides/contracts/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车证件与合同 | P2 | Checklist giấy tờ/hợp đồng và đặt cọc; không yêu cầu hộ chiếu nếu không có chính sách chính thức. | QA_PASS |
 | SEO-25 | `/topics/guides/safety/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车骑行安全 | P2 | Nguồn an toàn/pháp lý rõ; hướng dẫn kiểm tra xe và hạn chế hứa hẹn. | QA_PASS |
-| SEO-26 | `/topics/guides/returns/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车还车与押金退还 | P2 | Đặt điều kiện trả xe và hoàn cọc theo hợp đồng; quy trình có xác minh. | TODO |
+| SEO-26 | `/topics/guides/returns/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车还车与押金退还 | P2 | Đặt điều kiện trả xe và hoàn cọc theo hợp đồng; quy trình có xác minh. | QA_PASS |
 
 **Lưu ý SEO:** từ khóa chỉ là ánh xạ ý định và đề xuất on-page, **chưa phải số liệu volume/ranking**. `/prices/` ưu tiên bảng giá thật, `/topics/pricing/` ưu tiên hướng dẫn hiểu giá để giảm cannibalization. `/topics/old-quarter/` không được trình bày sai rằng cửa hàng ở trong Phố Cổ.
 
@@ -303,3 +303,16 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 - **Live QA** `maxAge=0` **sau deploy**: cả hai URL HTTP **200**, self-canonical đúng, `noindex,follow`, `zh-CN`, 1 H1/4 H2, LocalBusiness + BreadcrumbList JSON-LD hợp lệ, link nội bộ đến `/contact/` và `/topics/guides/` đúng; nội dung disclaimer hộ chiếu/hoàn cọc và nguồn WHO/luật hiển thị như thiết kế.
 
 **Giới hạn:** Chưa xác minh chính sách giấy tờ thực tế từng giao dịch của cửa hàng, không có tư vấn pháp lý riêng người/xe, chưa đo thứ hạng GSC, mobile interaction iPhone, Core Web Vitals, chuyển đổi/traffic. Hai hạng mục được nghiệm thu **về nội dung trang khi vẫn noindex**, không phải duyệt mở index. **Tiến độ 22/26, còn 4 hạng mục**, lịch SEO tự động tiếp tục OFF chờ duyệt thủ công.
+
+## R. SEO-26 & SEO-13 — Returns and empty Blog hub (duyệt thủ công 2026-10-11)
+
+**Trạng thái:** `SEO-26` `/topics/guides/returns/` và `SEO-13` `/blog/` → **QA_PASS trong phạm vi nội dung và hành vi index khi blog chưa có bài**, sau khi Jekyll build, GitHub Pages deploy và QA URL thật. Không kết luận Google/Baidu đã index, ranking/traffic tăng, hoặc đã nghiệm thu trạng thái blog sau khi đăng bài mới.
+
+- **SEO-26 (Returns):** Có hướng dẫn 4 phần: xác nhận thời gian/địa điểm trả xe, so sánh xe với ảnh giao nhận và ghi nhận tình trạng, tách tiền cọc khỏi tiền thuê/chi phí phát sinh, bảo quản chứng từ/trao đổi. Không tự dựng chính sách cố định về ngày hoàn cọc, hoàn đủ cọc hoặc miễn phí giao/trả xe. Links tới contracts, deposits, pricing, pickup/contact và guide hub; giữ `noindex: true`, ngoài sitemap.
+- **SEO-13 (Blog):** GitHub tree trước/sau thay đổi đều **không có tệp dưới `_posts/`** (0 bài). Trang hiển thị trạng thái trung thực `0 篇`, không tạo bài/hyperlink giả. H1, meta title/description và nội dung giới thiệu được tinh chỉnh, 5 category cards cập nhật mô tả đúng các chủ đề thực có. `_includes/blog-posts.html` **vẫn liệt kê đúng `site.posts` tự động**; không sửa bản sinh bài 250 bài hoặc giả số lượng nội dung.
+- **Robots & Sitemap:** `_layouts/default.html` hiện có quy tắc blog `noindex,follow` khi `site.posts.size == 0`; quy tắc này được **giữ nguyên**, không mở index khi rỗng. `sitemap.xml` có thêm điều kiện `{% if site.posts.size > 0 %}` trước khi xuất URL `/blog/`. Khi 0 bài, sitemap xuất đúng **12 URL cơ sở** và không chứa blog. Chỉ khi có post thật thì Jekyll mới dự kiến xuất blog hub và URL post. **Nhánh có bài thật chưa được chạy QA live** và vẫn phải xác nhận nội dung hub hữu ích/quality trước khi coi là index-ready cho Google.
+- Đã bổ sung 41 mục EN translation vào `_data/i18n-en.json`. Chỉ 4 file thay đổi: `topics/guides/returns/index.html`, `blog/index.html`, `sitemap.xml`, `_data/i18n-en.json`. Không sửa dữ liệu giá/NAP, CNAME/DNS, template robot, JS/CSS, thiết kế, Quick Call, chatbot, các post hay repo khác.
+- [PR #14](https://github.com/thuexemayhanoi/china/pull/14) squash merged `822eea3ebf9093a2caf1f98180a8c112424bfd45`; [GitHub Pages run 38113177712](https://github.com/thuexemayhanoi/china/actions/runs/38113177712) **Build & Deploy SUCCESS**.
+- QA live `maxAge=0`, sau deploy: `/topics/guides/returns/` HTTP 200, self canonical, `zh-CN`, `noindex,follow`, 1 H1/4 H2, JSON-LD LocalBusiness + BreadcrumbList hợp lệ và các liên kết đúng; `/blog/` HTTP 200, self canonical, `zh-CN`, `noindex,follow`, 1 H1/2 H2 (gồm thông báo rỗng), hiển thị 0 bài và 5 topic hubs thật. `/sitemap.xml` HTTP 200, XML `urlset` hợp lệ về cấu trúc, 12 URL trong `sitemap_base`, **không có blog**, không có URL bài giả.
+
+**Giới hạn QA:** Chưa kiểm tra trên thiết bị iPhone thực tế, GSC indexing, CWV, traffic/ranking, hợp đồng hoặc chính sách hoàn cọc của cửa hàng cho từng người, chưa test thực tế luồng blog sau khi thêm bài đầu tiên. Tiến độ nội dung/QA: **24/26 QA_PASS, còn SEO-11 Privacy và SEO-12 Terms**. Lịch SEO tự động vẫn OFF; tiếp tục theo phê duyệt thủ công.
