@@ -25,9 +25,9 @@
 |---|---|---|---|---|---|---|---|---|
 | SEO-01 | `/` | Trang chủ | index,follow theo template | Trong sitemap | 河内摩托车租赁 | P0 | Tối ưu giới thiệu dịch vụ/CTA, xác thực giá và NAP; tránh trùng ý định với trang giá. | QA_PASS |
 | SEO-02 | `/prices/` | Giá và chuyển đổi | index,follow theo template | Trong sitemap | 河内摩托车租赁价格表 | P0 | Làm rõ bảng giá theo ngày/tuần/tháng, khoản đặt cọc tách biệt; nguồn giá tập trung, FAQ đúng thực tế. | QA_PASS |
-| SEO-03 | `/topics/rental/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁服务 | P0 | Làm rõ xe tay ga, số sàn, thuê dài hạn, chính sách giao nhận chỉ khi xác nhận. | TODO |
+| SEO-03 | `/topics/rental/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁服务 | P0 | Làm rõ xe tay ga, số sàn, thuê dài hạn, chính sách giao nhận chỉ khi xác nhận. | QA_PASS |
 | SEO-04 | `/topics/pricing/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租金指南 | P1 | Tập trung cách so sánh giá/đặt cọc; phân biệt rõ với /prices/ là bảng giá giao dịch. | QA_PASS |
-| SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | TODO |
+| SEO-05 | `/topics/50cc/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内50cc摩托车租赁 | P0 | Trình bày mẫu xe, chi phí, yêu cầu pháp lý kiểm chứng; không khẳng định miễn bằng lái. | QA_PASS |
 | SEO-06 | `/topics/old-quarter/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内老城区附近租摩托车 | P0 | Giải thích cửa hàng ở Long Biên, không nằm trong Phố Cổ; thêm dẫn đường thực tế, điều kiện giao xe. | TODO |
 | SEO-07 | `/topics/guides/` | Danh mục cha | index,follow theo template | Trong sitemap | 河内摩托车租赁指南 | P1 | Cấu trúc hướng dẫn/kiểm tra xe/an toàn và câu hỏi trước thuê, hạn chế trùng nội dung trang con. | QA_PASS |
 | SEO-08 | `/about/` | Giới thiệu | index,follow theo template | Trong sitemap | Nguyễn Tú 河内摩托车租赁店 | P1 | Entity/NAP, thông tin cửa hàng có thể kiểm chứng, liên kết Maps và bằng chứng thực tế khi có. | QA_PASS |
@@ -177,3 +177,21 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 | `/topics/guides/` | 200 | self | index,follow / zh-CN | `河内摩托车租赁实用指南` | 5 | parse hợp lệ: WebSite, LocalBusiness, WebPage, BreadcrumbList | QA_PASS |
 
 **Không thay đổi:** CNAME, DNS, canonical URL, robots, sitemap, template/schema chung, CSS, JS, header/footer, chatbot, Quick Call, 6 danh mục con vẫn `noindex` và 250 bài trong factory. **Chưa thực hiện** Google Search Console, PSI/Core Web Vitals, QA chạm thực tế iPhone hoặc xác minh luật 50cc theo nguồn văn bản pháp lý chuyên sâu. Dừng tại SEO-04 theo phạm vi duyệt.
+
+## J. Lượt thủ công SEO-05 — Rental & 50cc hub (2026-10-11)
+
+**Trạng thái:** `SEO-03` (`/topics/rental/`) và `SEO-05` (`/topics/50cc/`) → `QA_PASS` sau kiểm tra HTML trực tiếp. Đây là nghiệm thu thay đổi on-page/kỹ thuật của đúng hai trang, không chứng minh Google/Baidu đã index, thứ hạng tăng, Core Web Vitals hoặc rich results.
+
+- Trang `/topics/rental/`: định vị từ khóa tiếng Trung về dịch vụ thuê xe Hà Nội, chọn Honda Wave/xe tay ga/50cc và xe điện dựa trên kinh nghiệm, các loại thời hạn, xác minh địa chỉ Long Biên và điều kiện giao/nhận, checklist trước hợp đồng; không cam kết tồn kho hoặc giao xe miễn phí.
+- Trang `/topics/50cc/`: trả lời giá ngày 200,000 ₫ và cọc 4 triệu ₫ từ `_data/vehicles.json`; tuần/tháng báo giá riêng, kiểm tra thông số/xe, tuổi/điều kiện giấy phép theo luật hiện hành (không khẳng định miễn bằng lái); liên kết đến giá, FAQ thông qua những trang phù hợp và liên hệ.
+- Cập nhật `_data/i18n-en.json` bổ sung 49 mục ngôn ngữ EN cho nội dung mới; không sửa CSS/JS, schema template, tên miền, sitemap, CNAME, giá/đặt cọc hay matrix bài viết 250 chủ đề. Giữ `site.posts` dynamic và sidebar.
+- PR [#6](https://github.com/thuexemayhanoi/china/pull/6) squash-merge `385e684cf31195a7928f210eedd7c16b0300726d`. GitHub Pages Jekyll build/deploy **SUCCESS**: [run 38108353715](https://github.com/thuexemayhanoi/china/actions/runs/38108353715).
+- QA tĩnh: đúng 3 file, mỗi trang 1 H1, 5/4 H2, link đến URL hợp lệ, từ điển EN đầy đủ cho text mới, nội dung tiếng Trung khoảng 912/721 Hán tự ở source (có phần UI chung), giá/cọc 50cc lấy dữ liệu tập trung.
+- Kiểm tra live `maxAge=0` **sau deploy**:
+
+| URL | HTTP | Canonical | Robots/lang | H1 | JSON-LD | Kết quả |
+|---|---:|---|---|---|---|---|
+| `/topics/rental/` | 200 | Self canonical đúng | index,follow / zh-CN | 1, đúng chủ đề | LocalBusiness + BreadcrumbList parse hợp lệ | QA_PASS |
+| `/topics/50cc/` | 200 | Self canonical đúng | index,follow / zh-CN | 1, đúng chủ đề | LocalBusiness + BreadcrumbList parse hợp lệ | QA_PASS |
+
+**Không nghiệm thu:** tương tác iPhone thực tế, GSC/Bing index, đo traffic/conversion, xác thực pháp lý riêng từng trường hợp hoặc Core Web Vitals. Không đổi robots/noindex của 13 trang con. **Dừng lượt thủ công tại 9/26**, chờ duyệt bước kế tiếp.
