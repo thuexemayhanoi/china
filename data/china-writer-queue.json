@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 90,
-  "remaining": 210,
+  "published": 95,
+  "remaining": 205,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0091",
-      "title": "长租价格区间为什么不能视为固定报价",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0091.md",
-      "permalink": "/blog/hanoi-pricing-periods-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0092",
-      "title": "押金退还条件应写进哪些合同条款",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0092.md",
-      "permalink": "/blog/hanoi-pricing-periods-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0093",
-      "title": "河内摩托车押金通常怎么按车型比较",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0093.md",
-      "permalink": "/blog/hanoi-pricing-periods-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0094",
-      "title": "交接服务可能产生费用时如何确认",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0094.md",
-      "permalink": "/blog/hanoi-pricing-periods-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0095",
-      "title": "周租结束续租三天该怎样协商",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0095.md",
-      "permalink": "/blog/hanoi-pricing-periods-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0096",
       "title": "租车取消计划是否有费用需要核实",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/weekly/",
       "draft": "_drafts/CN-0100.md",
       "permalink": "/blog/hanoi-pricing-periods-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0101",
+      "title": "河内50cc 踏板车租赁前的车型确认清单",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0101.md",
+      "permalink": "/blog/hanoi-fifty-models-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0102",
+      "title": "50cc 摩托车的实际排量如何核实",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0102.md",
+      "permalink": "/blog/hanoi-fifty-models-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0103",
+      "title": "50cc 自动挡车型适合哪类市区行程",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0103.md",
+      "permalink": "/blog/hanoi-fifty-models-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0104",
+      "title": "河内租50cc 一天参考价格说明",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0104.md",
+      "permalink": "/blog/hanoi-fifty-models-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0105",
+      "title": "50cc 租车押金与日租费用有什么区别",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0105.md",
+      "permalink": "/blog/hanoi-fifty-models-05/",
       "review_required": false
     }
   ]
