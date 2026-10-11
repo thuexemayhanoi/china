@@ -6,7 +6,6 @@ permalink: "/topics/rental/scooters/"
 breadcrumbs: [{"label":"租赁服务","href":"/topics/rental/"},{"label":"踏板车租赁"}]
 topic: "rental"
 subtopic: "scooters"
-noindex: true
 ---
 <div class="page-head"><span class="eyebrow">SUBCATEGORY · Rental services</span><h1>河内踏板车租赁：车型、参考租金与取车检查</h1><p class="lead">在河内租踏板车，可以先比较公开列出的 Honda Vision、Air Blade、Honda Click / Yamaha Mio，再根据驾车经验、车辆状态和取还车地点决定。所有价格均为参考，不能代表即时库存或已确认预订。</p><span class="pill">{% assign current_posts = site.posts | where: 'topic', page.topic | where: 'subtopic', page.subtopic %}{% if current_posts.size == 0 %}子分类 · 暂无文章{% else %}子分类 · {{ current_posts.size }} 篇文章{% endif %}</span></div><div class="two-col"><div class="prose"><section class="inner-panel"><h2>可咨询哪些踏板车？</h2><p>以下是网站公开列出的车型与参考金额，押金与日租分开计算。车型是否在租、实际车况和当日报价以门店答复为准。</p><ul>
 <li>Honda Vision：日租参考 <strong>{{ site.data.vehicles[1].display.day }}</strong>；押金参考 <strong>{{ site.data.vehicles[1].deposit }}</strong>。</li>
