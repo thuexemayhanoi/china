@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 220,
-  "remaining": 80,
+  "published": 225,
+  "remaining": 75,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0221",
-      "title": "押金扣减规则需要提前了解哪些项目",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0221.md",
-      "permalink": "/blog/hanoi-guides-contracts-21/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0222",
-      "title": "双方签收车辆时应记录哪些附件",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0222.md",
-      "permalink": "/blog/hanoi-guides-contracts-22/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0223",
-      "title": "车型替换时合同应该核对哪些信息",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0223.md",
-      "permalink": "/blog/hanoi-guides-contracts-23/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0224",
-      "title": "租赁协议中哪些承诺需要书面确认",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0224.md",
-      "permalink": "/blog/hanoi-guides-contracts-24/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0225",
-      "title": "还车与押金结算应该保存什么证明",
-      "topic": "guides",
-      "subtopic": "contracts",
-      "primary_keyword": "河内租摩托车合同押金",
-      "hub": "/topics/guides/contracts/",
-      "draft": "_drafts/CN-0225.md",
-      "permalink": "/blog/hanoi-guides-contracts-25/",
-      "review_required": false
-    },
     {
       "id": "CN-0226",
       "title": "河内摩托车新手骑行前安全检查表",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/safety/",
       "draft": "_drafts/CN-0230.md",
       "permalink": "/blog/hanoi-guides-safety-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0231",
+      "title": "租来的摩托车轮胎磨损怎么看",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0231.md",
+      "permalink": "/blog/hanoi-guides-safety-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0232",
+      "title": "摩托车刹车异常时应该怎么处理",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0232.md",
+      "permalink": "/blog/hanoi-guides-safety-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0233",
+      "title": "骑车前后视镜应该怎样调节",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0233.md",
+      "permalink": "/blog/hanoi-guides-safety-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0234",
+      "title": "城市短途骑行如何规划合理路线",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0234.md",
+      "permalink": "/blog/hanoi-guides-safety-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0235",
+      "title": "河内道路标志不熟悉时如何安全出行",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0235.md",
+      "permalink": "/blog/hanoi-guides-safety-10/",
       "review_required": false
     }
   ]
