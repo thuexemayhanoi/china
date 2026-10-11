@@ -122,6 +122,30 @@ def validate_matrix():
     actual_names = {p.name for p in POSTS.glob("*.md")} if POSTS.is_dir() else set()
     if actual_names != expected_names:
         fail("untracked published posts or missing matrix rows: "+str(sorted(actual_names ^ expected_names)[:5]))
+    # Validate the actual Jekyll front matter of EVERY published file.
+    # Filename/matrix-only QA previously allowed impossible times (e.g. 21:61),
+    # silently leaving both Jekyll and GitHub Pages unable to build.
+    invalid_posts = []
+    for r in published:
+        filename = r["published_date"] + "-" + r["slug"] + ".md"
+        try:
+            front, _ = parse_draft(POSTS / filename)
+            if front.get("article_id") != r["article_id"]:
+                invalid_posts.append(r["article_id"] + ": article_id differs from matrix")
+            if front.get("permalink") != r["permalink"]:
+                invalid_posts.append(r["article_id"] + ": permalink differs from matrix")
+            raw_date = str(front.get("date", "")).strip()
+            try:
+                parsed_date = dt.datetime.strptime(raw_date, "%Y-%m-%d %H:%M:%S %z")
+                if parsed_date.date().isoformat() != r["published_date"]:
+                    invalid_posts.append(r["article_id"] + ": front matter date differs from Matrix: " + raw_date)
+            except ValueError:
+                invalid_posts.append(r["article_id"] + ": invalid Jekyll date: " + raw_date)
+        except (ValueError, OSError) as exc:
+            invalid_posts.append(r["article_id"] + ": invalid published front matter: " + str(exc))
+    if invalid_posts:
+        fail("published post source QA FAIL: " + "; ".join(invalid_posts[:35]) +
+             ("; and %d more" % (len(invalid_posts) - 35) if len(invalid_posts) > 35 else ""))
     for r in rows:
         if r["status"] == "PLANNED" and r["published_date"]:
             fail(r["article_id"]+": unpublished row has published_date")
