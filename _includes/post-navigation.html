@@ -1,0 +1,21 @@
+{% comment %}Use published Jekyll posts only. Prefer an explicit SEO silo, falling back to actual topic. Newest-first collection.{% endcomment %}
+{% assign previous_post = nil %}{% assign next_post = nil %}{% assign recently_seen = nil %}{% assign found_post = false %}
+{% if page.seo_silo and page.seo_silo != "" %}
+  {% assign siblings = site.posts | where: "seo_silo", page.seo_silo %}
+{% elsif page.topic and page.topic != "" %}
+  {% assign siblings = site.posts | where: "topic", page.topic %}
+{% else %}
+  {% assign siblings = "" | split: "," %}
+{% endif %}
+{% for sibling in siblings %}
+  {% if sibling.url == page.url %}
+    {% assign next_post = recently_seen %}{% assign found_post = true %}
+  {% elsif found_post and previous_post == nil %}
+    {% assign previous_post = sibling %}
+  {% endif %}
+  {% assign recently_seen = sibling %}
+{% endfor %}
+{% if previous_post or next_post %}<nav class="post-navigation section" aria-label="文章前后导航">
+{% if previous_post %}<a class="post-navigation-item post-navigation-previous" rel="prev" href="{{ site.data.site.domain }}{{ previous_post.url }}"><span class="post-navigation-label">← 上一文章</span><strong>{{ previous_post.title | escape }}</strong></a>{% endif %}
+{% if next_post %}<a class="post-navigation-item post-navigation-next" rel="next" href="{{ site.data.site.domain }}{{ next_post.url }}"><span class="post-navigation-label">下一文章 →</span><strong>{{ next_post.title | escape }}</strong></a>{% endif %}
+</nav>{% endif %}

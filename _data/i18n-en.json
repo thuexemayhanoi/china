@@ -122,7 +122,7 @@
   "如需核对具体租赁条件，请查看": "For specific rental terms, see the ",
   "最新参考价格": "latest indicative prices",
   "或": " or ",
-  "联系门店": "contact the shop",
+  "联系门店": "Contact the Shop",
   "网站信息用于租车前准备；最终报价与服务内容以门店及签署合同为准。": "This information is for planning. Final rates and services depend on shop confirmation and the rental agreement.",
   "想进一步了解？": "Want to Know More?",
   "可返回专题或向门店咨询实际租车条件。": "Return to the topic or contact the shop for current rental terms.",
@@ -870,5 +870,16 @@
   "查看老城区出行与门店信息 →": "Old Quarter and Shop Info →",
   "博客文章发布原则": "How the Blog Publishes Articles",
   "博客只显示 Jekyll 网站中真正发布的文章。当前文章数量为零，因此上方的空状态是准确的信息；您仍可浏览下方五类专题指南。我们不会把未发布标题或空白链接冒充已完成的文章。": "This blog displays only actual published Jekyll posts. The current count is zero, so the empty state above is accurate; the five topic categories remain available. We do not present unpublished titles or empty links as real articles.",
-  "未来的博客文章可围绕车况、费用、法规与河内出行编写，发布前应检查事实和出处。网页信息不保证实时库存、免费配送或自动确认预订，需要实际租车时请与门店核实。": "Future posts may cover vehicle conditions, prices, laws and Hanoi travel, with facts and sources checked before publication. Site information does not promise live inventory, free delivery or automatic bookings; confirm rentals with the shop."
+  "未来的博客文章可围绕车况、费用、法规与河内出行编写，发布前应检查事实和出处。网页信息不保证实时库存、免费配送或自动确认预订，需要实际租车时请与门店核实。": "Future posts may cover vehicle conditions, prices, laws and Hanoi travel, with facts and sources checked before publication. Site information does not promise live inventory, free delivery or automatic bookings; confirm rentals with the shop.",
+  "Nguyễn Tú 河内摩托车租赁信息发布方。提供车型、价格及安全出行参考；实际租赁安排请联系门店确认。": "Published by Nguyễn Tú Motorbike Rental, providing vehicle, pricing and riding guidance. Confirm actual rental arrangements with the shop.",
+  "全站博客搜索": "Search the Blog",
+  "搜索已发布文章": "Search published posts",
+  "搜索标题、关键词和章节…": "Search titles, keywords and headings…",
+  "搜索结果": "Search Results",
+  "输入关键词，搜索真实已发布的文章。": "Enter a keyword to find published articles.",
+  "上一文章": "Previous Article",
+  "下一文章": "Next Article",
+  "发布方": "Publisher",
+  "打开博客搜索": "Open Blog Search",
+  "关闭搜索": "Close Search"
 }

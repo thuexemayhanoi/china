@@ -26,7 +26,10 @@
     "show_related_posts": true,
     "related_limit": 4,
     "quick_contact": true,
-    "local_chatbot": true
+    "local_chatbot": true,
+    "smart_search": true,
+    "show_post_navigation": true,
+    "show_author_box": true
   },
   "sitemap_base": [
     "/",
@@ -55,5 +58,9 @@
     "/topics/guides/contracts/",
     "/topics/guides/safety/",
     "/topics/guides/returns/"
-  ]
+  ],
+  "publisher": {
+    "description": "Nguyễn Tú 河内摩托车租赁信息发布方。提供车型、价格及安全出行参考；实际租赁安排请联系门店确认。",
+    "logo": "/assets/favicon.svg"
+  }
 }

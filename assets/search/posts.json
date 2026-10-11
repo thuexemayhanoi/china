@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /assets/search/posts.json
+---
+[
+{%- for p in site.posts -%}
+  {%- assign rendered = p.content | markdownify -%}
+  {%- assign h2_parts = rendered | split: '<h2' -%}
+  {%- assign h3_parts = rendered | split: '<h3' -%}
+  {%- unless forloop.first -%},{%- endunless -%}
+  {"url":{{ p.url | jsonify }},"title":{{ p.title | jsonify }},"description":{{ p.description | default: "" | jsonify }},"keyword":{{ p.primary_keyword | default: p.keyword | default: p.seo_keyword | default: "" | jsonify }},"topic":{{ p.topic | default: "" | jsonify }},"headings":[
+  {%- assign heading_first = true -%}
+  {%- for part in h2_parts offset:1 -%}
+    {%- assign fragment = part | split: '</h2>' | first -%}
+    {%- assign heading = fragment | prepend: '<h2' | append: '</h2>' | strip_html | strip -%}
+    {%- if heading != "" -%}
+      {%- unless heading_first -%},{%- endunless -%}{{ heading | jsonify }}{%- assign heading_first = false -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for part in h3_parts offset:1 -%}
+    {%- assign fragment = part | split: '</h3>' | first -%}
+    {%- assign heading = fragment | prepend: '<h3' | append: '</h3>' | strip_html | strip -%}
+    {%- if heading != "" -%}
+      {%- unless heading_first -%},{%- endunless -%}{{ heading | jsonify }}{%- assign heading_first = false -%}
+    {%- endif -%}
+  {%- endfor -%}]}
+{%- endfor -%}
+]
