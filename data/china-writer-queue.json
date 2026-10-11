@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 110,
-  "remaining": 190,
+  "published": 115,
+  "remaining": 185,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0111",
-      "title": "50cc 踏板车的轮胎检查步骤",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0111.md",
-      "permalink": "/blog/hanoi-fifty-models-11/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0112",
-      "title": "50cc 车型刹车测试有哪些注意事项",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0112.md",
-      "permalink": "/blog/hanoi-fifty-models-12/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0113",
-      "title": "拿到50cc 车后灯光检查怎么做",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0113.md",
-      "permalink": "/blog/hanoi-fifty-models-13/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0114",
-      "title": "租50cc 是否适合携带大件行李",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0114.md",
-      "permalink": "/blog/hanoi-fifty-models-14/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0115",
-      "title": "50cc 车辆交接照片应该拍哪些角度",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0115.md",
-      "permalink": "/blog/hanoi-fifty-models-15/",
-      "review_required": false
-    },
     {
       "id": "CN-0116",
       "title": "50cc 租赁合同中应出现哪些车型信息",
@@ -115,6 +60,61 @@
       "hub": "/topics/50cc/models/",
       "draft": "_drafts/CN-0120.md",
       "permalink": "/blog/hanoi-fifty-models-20/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0121",
+      "title": "50cc 租期超过一天要确认哪些费用",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0121.md",
+      "permalink": "/blog/hanoi-fifty-models-21/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0122",
+      "title": "50cc 租车还车时如何核对外观",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0122.md",
+      "permalink": "/blog/hanoi-fifty-models-22/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0123",
+      "title": "50cc 摩托车续租需要确认哪些事项",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0123.md",
+      "permalink": "/blog/hanoi-fifty-models-23/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0124",
+      "title": "50cc 踏板车与电动两轮车差异在哪里",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0124.md",
+      "permalink": "/blog/hanoi-fifty-models-24/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0125",
+      "title": "在河内租50cc 前有哪些常见误解",
+      "topic": "50cc",
+      "subtopic": "models",
+      "primary_keyword": "河内50cc摩托车租赁",
+      "hub": "/topics/50cc/models/",
+      "draft": "_drafts/CN-0125.md",
+      "permalink": "/blog/hanoi-fifty-models-25/",
       "review_required": false
     }
   ]
