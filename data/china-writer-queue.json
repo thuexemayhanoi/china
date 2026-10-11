@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 85,
-  "remaining": 215,
+  "published": 90,
+  "remaining": 210,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0086",
-      "title": "50cc 摩托车周租能否直接按日租推算",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0086.md",
-      "permalink": "/blog/hanoi-pricing-periods-11/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0087",
-      "title": "河内月租 Honda Wave 的价格区间",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0087.md",
-      "permalink": "/blog/hanoi-pricing-periods-12/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0088",
-      "title": "Honda Vision 月租价格区间如何核实",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0088.md",
-      "permalink": "/blog/hanoi-pricing-periods-13/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0089",
-      "title": "Honda Air Blade 月租参考金额",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0089.md",
-      "permalink": "/blog/hanoi-pricing-periods-14/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0090",
-      "title": "不同车型的月租押金有哪些差别",
-      "topic": "pricing",
-      "subtopic": "weekly",
-      "primary_keyword": "河内摩托车周租月租价格",
-      "hub": "/topics/pricing/weekly/",
-      "draft": "_drafts/CN-0090.md",
-      "permalink": "/blog/hanoi-pricing-periods-15/",
-      "review_required": false
-    },
     {
       "id": "CN-0091",
       "title": "长租价格区间为什么不能视为固定报价",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/weekly/",
       "draft": "_drafts/CN-0095.md",
       "permalink": "/blog/hanoi-pricing-periods-20/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0096",
+      "title": "租车取消计划是否有费用需要核实",
+      "topic": "pricing",
+      "subtopic": "weekly",
+      "primary_keyword": "河内摩托车周租月租价格",
+      "hub": "/topics/pricing/weekly/",
+      "draft": "_drafts/CN-0096.md",
+      "permalink": "/blog/hanoi-pricing-periods-21/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0097",
+      "title": "损坏责任与押金扣减条款如何阅读",
+      "topic": "pricing",
+      "subtopic": "weekly",
+      "primary_keyword": "河内摩托车周租月租价格",
+      "hub": "/topics/pricing/weekly/",
+      "draft": "_drafts/CN-0097.md",
+      "permalink": "/blog/hanoi-pricing-periods-22/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0098",
+      "title": "租车付款凭据应该保留哪些信息",
+      "topic": "pricing",
+      "subtopic": "weekly",
+      "primary_keyword": "河内摩托车周租月租价格",
+      "hub": "/topics/pricing/weekly/",
+      "draft": "_drafts/CN-0098.md",
+      "permalink": "/blog/hanoi-pricing-periods-23/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0099",
+      "title": "周租和月租总费用如何做出行预算",
+      "topic": "pricing",
+      "subtopic": "weekly",
+      "primary_keyword": "河内摩托车周租月租价格",
+      "hub": "/topics/pricing/weekly/",
+      "draft": "_drafts/CN-0099.md",
+      "permalink": "/blog/hanoi-pricing-periods-24/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0100",
+      "title": "河内长期租赁最终结算核对清单",
+      "topic": "pricing",
+      "subtopic": "weekly",
+      "primary_keyword": "河内摩托车周租月租价格",
+      "hub": "/topics/pricing/weekly/",
+      "draft": "_drafts/CN-0100.md",
+      "permalink": "/blog/hanoi-pricing-periods-25/",
       "review_required": false
     }
   ]
