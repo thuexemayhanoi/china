@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 290,
-  "remaining": 10,
+  "published": 295,
+  "remaining": 5,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0291",
-      "title": "租摩托车前检查车况的完整步骤",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0291.md",
-      "permalink": "/blog/hanoi-guides-maintenance-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0292",
-      "title": "如何检查摩托车前后轮胎的外观",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0292.md",
-      "permalink": "/blog/hanoi-guides-maintenance-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0293",
-      "title": "摩托车刹车手感异常该怎样处理",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0293.md",
-      "permalink": "/blog/hanoi-guides-maintenance-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0294",
-      "title": "租车途中发现灯光异常怎么办",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0294.md",
-      "permalink": "/blog/hanoi-guides-maintenance-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0295",
-      "title": "摩托车出现异响时应该注意什么",
-      "topic": "guides",
-      "subtopic": "maintenance",
-      "primary_keyword": "河内摩托车车况检查",
-      "hub": "/topics/guides/maintenance/",
-      "draft": "_drafts/CN-0295.md",
-      "permalink": "/blog/hanoi-guides-maintenance-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0296",
       "title": "租车途中发现漏油应采取什么措施",
