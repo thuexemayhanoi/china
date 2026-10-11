@@ -182,7 +182,7 @@ def audit_draft(r):
         req(fm.get("reviewed_by")=="thuexemayhanoi", "human reviewer missing")
     elif fm.get("editor_approved") is True:
         req(fm.get("reviewed_by")=="thuexemayhanoi", "do not claim approval without an actual reviewer")
-    req(not re.search(r"(?i)\\b(?:todo|lorem ipsum|placeholder)\\b|待补充|待填写|示例正文",body),
+    req(not re.search(r"todo|lorem ipsum|placeholder|待补充|待填写|示例正文",body,re.I),
         "placeholder or unfinished text")
     valid_blog={x["permalink"] for x in read_rows() if x["status"]=="PUBLISHED"}
     for link in links:
@@ -254,8 +254,8 @@ def publish(selected,rows):
         if mode=="automated_qa":fm.pop("reviewed_by",None)
         newfront="---\n"+"\n".join(k+": "+json.dumps(v,ensure_ascii=False) for k,v in fm.items())+"\n---\n"
         operations.append((r,ROOT/r["draft_path"],target,newfront+body,report))
-    # This changes a GitHub Actions disposable checkout. Only the workflow makes a
-    # single fast-forward Git commit if validation passes; never force-push.
+    # External writer performs and verifies the authenticated main-branch push.
+    # Never use a GITHUB_TOKEN self-push to publish native Pages.
     POSTS.mkdir(exist_ok=True)
     for r,draft,target,content,rep in operations:
         target.write_text(content,encoding="utf-8")
