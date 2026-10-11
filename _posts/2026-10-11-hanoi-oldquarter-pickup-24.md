@@ -7,7 +7,7 @@ permalink: "/blog/hanoi-oldquarter-pickup-24/"
 title: "老城区交车与门店交车的合同区别"
 description: "老城区交车与门店交车有什么合同区别？本文对比两种交接方式在条款、记录方式与售后沟通上的差异，帮助骑手选择更合适的方式。"
 primary_keyword: "河内老城区取车还车"
-date: "2026-10-11 21:61:00 +0700"
+date: "2026-10-11 22:01:00 +0700"
 seo_silo: "old-quarter/pickup"
 breadcrumbs:
   - label: "博客"

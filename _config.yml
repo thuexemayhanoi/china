@@ -4,6 +4,9 @@ baseurl: ""
 permalink: "/blog/:title/"
 markdown: kramdown
 timezone: Asia/Ho_Chi_Minh
+# _posts files are explicitly published by the QA-gated Matrix;
+# include same-day timestamps ahead of Jekyll build clock.
+future: true
 exclude:
   - scripts
   - data
