@@ -1,4 +1,4 @@
-name: CHINA 250 Matrix QA
+name: CHINA 300 Matrix QA
 
 on:
   push:
@@ -7,6 +7,13 @@ on:
       - '_drafts/**'
       - '_posts/**'
       - '_data/china-plan.json'
+      - '_data/china-plan-extra.json'
+      - 'data/china-matrix-extra.csv'
+      - '_data/navigation.json'
+      - '_data/site.json'
+      - 'topics/**'
+      - 'data/china-factory-state.json'
+      - 'data/china-writer-queue.json'
       - 'data/china-matrix.csv'
       - 'scripts/china_factory.py'
       - 'scripts/qa.py'
@@ -17,6 +24,13 @@ on:
       - '_drafts/**'
       - '_posts/**'
       - '_data/china-plan.json'
+      - '_data/china-plan-extra.json'
+      - 'data/china-matrix-extra.csv'
+      - '_data/navigation.json'
+      - '_data/site.json'
+      - 'topics/**'
+      - 'data/china-factory-state.json'
+      - 'data/china-writer-queue.json'
       - 'data/china-matrix.csv'
       - 'scripts/china_factory.py'
       - 'scripts/qa.py'
@@ -33,7 +47,7 @@ on:
           - plan
           - validate
       batch:
-        description: 'Batch for plan (B01..B10)'
+        description: 'Batch for plan (B01..B12)'
         required: false
         default: 'B01'
         type: string
@@ -58,8 +72,8 @@ jobs:
         run: python3 -m py_compile scripts/china_factory.py
       - name: Check existing website, domain and navigation
         run: python3 scripts/qa.py
-      - name: Validate exact 250-row plan and any staged drafts
-        run: python3 scripts/china_factory.py validate --drafts
+      - name: Validate exact 300-row plan and any staged drafts
+        run: python3 scripts/china_factory.py validate
       - name: Read-only progress
         run: python3 scripts/china_factory.py status
       - name: Manual read-only plan
