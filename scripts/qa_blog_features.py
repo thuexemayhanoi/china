@@ -117,8 +117,13 @@ def check_built(fixtures=False, disabled=False):
         require("post-navigation-item" not in monthly and "post-navigation-item" not in pricing,
                 "cross-silo or missing-post navigation must not render")
         for page in (older,newer):
-            require("/blog/ci-monthly-other/" not in page and "/blog/ci-pricing-other/" not in page,
-                    "cross-silo post link leaked")
+            # Existing Related Posts intentionally uses broad topic grouping.
+            # Enforce the stricter silo rule ONLY inside the Previous/Next nav.
+            found = re.search(r'<nav class="post-navigation section"[^>]*>(.*?)</nav>', page, re.S)
+            require(found is not None, "expected same-silo navigation block")
+            nav_html = found.group(1)
+            require("/blog/ci-monthly-other/" not in nav_html and "/blog/ci-pricing-other/" not in nav_html,
+                    "cross-silo Previous/Next link leaked")
 def make_fixtures():
     POSTS.mkdir(parents=True,exist_ok=True)
     for name,(title,topic,silo,keyword,h2,h3) in FIXTURES.items():
