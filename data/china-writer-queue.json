@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 115,
-  "remaining": 185,
+  "published": 120,
+  "remaining": 180,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0116",
-      "title": "50cc 租赁合同中应出现哪些车型信息",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0116.md",
-      "permalink": "/blog/hanoi-fifty-models-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0117",
-      "title": "50cc 出现故障时应如何联系门店",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0117.md",
-      "permalink": "/blog/hanoi-fifty-models-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0118",
-      "title": "50cc 车型取车时如何确认头盔",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0118.md",
-      "permalink": "/blog/hanoi-fifty-models-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0119",
-      "title": "河内50cc 与 Honda Wave 怎么比较",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0119.md",
-      "permalink": "/blog/hanoi-fifty-models-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0120",
-      "title": "50cc 踏板车适合何种骑行经验",
-      "topic": "50cc",
-      "subtopic": "models",
-      "primary_keyword": "河内50cc摩托车租赁",
-      "hub": "/topics/50cc/models/",
-      "draft": "_drafts/CN-0120.md",
-      "permalink": "/blog/hanoi-fifty-models-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0121",
       "title": "50cc 租期超过一天要确认哪些费用",
@@ -115,6 +60,61 @@
       "hub": "/topics/50cc/models/",
       "draft": "_drafts/CN-0125.md",
       "permalink": "/blog/hanoi-fifty-models-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0126",
+      "title": "在越南骑50cc 摩托车要核实哪些法规",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0126.md",
+      "permalink": "/blog/hanoi-fifty-rules-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0127",
+      "title": "50cc 摩托车是否一定不需要驾照",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0127.md",
+      "permalink": "/blog/hanoi-fifty-rules-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0128",
+      "title": "外国旅客骑50cc 应先确认哪些证件",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0128.md",
+      "permalink": "/blog/hanoi-fifty-rules-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0129",
+      "title": "50cc 与不同车辆类别的法律区别",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0129.md",
+      "permalink": "/blog/hanoi-fifty-rules-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0130",
+      "title": "在河内骑50cc 前如何核实年龄要求",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0130.md",
+      "permalink": "/blog/hanoi-fifty-rules-05/",
       "review_required": false
     }
   ]
