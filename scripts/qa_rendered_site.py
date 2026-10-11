@@ -17,14 +17,17 @@ class Parse(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.title=False;self.titles=[];self.h1=0
-        self.canon=[];self.desc=[];self.links=[];self.imgs=[]
+        self.canon=[];self.desc=[];self.robots=[];self.langs=[];self.verifications=[];self.links=[];self.imgs=[]
         self.script=False;self.scripts=[];self.buff=""
     def handle_starttag(self,tag,attrs):
         d=dict(attrs)
         if tag=="title":self.title=True
+        if tag=="html":self.langs.append(d.get("lang",""))
         if tag=="h1":self.h1+=1
         if tag=="link" and d.get("rel")=="canonical":self.canon.append(d.get("href",""))
         if tag=="meta" and d.get("name")=="description":self.desc.append(d.get("content",""))
+        if tag=="meta" and d.get("name")=="robots":self.robots.append(d.get("content",""))
+        if tag=="meta" and d.get("name")=="google-site-verification":self.verifications.append(d.get("content",""))
         if tag=="a" and d.get("href"):self.links.append(d["href"])
         if tag=="img":self.imgs.append(d)
         if tag=="script" and d.get("type")=="application/ld+json":self.script=True;self.buff=""
@@ -65,6 +68,9 @@ def main():
         parser=Parse();parser.feed(raw)
         check(parser.h1==1,f"{route}: expected 1 H1, got {parser.h1}")
         check(len(parser.canon)==1 and parser.canon[0]==ORIGIN+route,f"{route}: invalid canonical {parser.canon}")
+        check(parser.langs==["zh-CN"],f"{route}: expected default Simplified Chinese HTML lang, got {parser.langs}")
+        check([r.lower().replace(" ","") for r in parser.robots]==["index,follow"],f"{route}: robots indexability regressed {parser.robots}")
+        check(parser.verifications==["HwLeUnxn5y1nBbGQD-54b3hR_dw10qMQ12wfmuDPfBg"],f"{route}: Google site verification tag changed or missing")
         check(len(parser.titles)>=1 and 0<len("".join(parser.titles).strip())<155,route+": blank/excessively long title")
         check(len(parser.desc)==1 and parser.desc[0].strip(),route+": missing meta description")
         check(all("alt" in img for img in parser.imgs),route+": image missing alt attribute")
@@ -75,6 +81,8 @@ def main():
                 types=[n.get("@type") for n in obj.get("@graph",[])]
                 check("LocalBusiness" in types,route+": existing LocalBusiness schema missing")
                 check("WebSite" in types,route+": existing WebSite schema missing")
+                if route not in EXPECTED:
+                    check("BlogPosting" in types,route+": published article schema missing")
             except (json.JSONDecodeError,AttributeError) as exc:
                 errors.append(f"{route}: invalid JSON-LD {exc}")
         for href in parser.links:
@@ -90,5 +98,5 @@ def main():
         print("Rendered CHINA SEO/links QA FAIL:")
         print("\n".join(" - "+e for e in errors[:60]))
         sys.exit(1)
-    print(f"Rendered CHINA SEO/links QA PASS: {len(intended)} pages, {len(posts)} real posts, valid sitemap, canonicals, schema, H1, titles, alt and links.")
+    print(f"Rendered CHINA SEO/links QA PASS: {len(intended)} pages, {len(posts)} real posts, valid sitemap, canonicals, zh-CN, indexability, Google verification, schema, H1, titles, alt and links.")
 if __name__=="__main__":main()
