@@ -13,6 +13,8 @@ on:
       - 'assets/search/**'
       - '_posts/**'
       - 'scripts/qa_blog_features.py'
+      - 'scripts/qa_rendered_site.py'
+      - 'docs/CHINA-BLOG-ARCHITECTURE.md'
       - '.github/workflows/china-blog-ux-qa.yml'
   push:
     branches: [main]
@@ -53,6 +55,7 @@ jobs:
       - name: QA actual rendered site (existing published posts only)
         run: |
           python3 scripts/qa_blog_features.py built
+          python3 scripts/qa_rendered_site.py
           cp -a _site /tmp/china-blog-site-first-build
           sudo rm -rf _site
       - name: Native GitHub Pages Jekyll build 2
@@ -76,6 +79,7 @@ jobs:
       - name: Verify generated search H2/H3/keywords, links, publisher and canonical
         run: |
           python3 scripts/qa_blog_features.py fixtures
+          python3 scripts/qa_rendered_site.py
           python3 scripts/qa_blog_features.py disable
           sudo rm -rf _site
       - name: Build with all three feature flags disabled
@@ -84,4 +88,6 @@ jobs:
           source: ./
           destination: ./_site
       - name: Verify feature flags disable UI without breaking posts
-        run: python3 scripts/qa_blog_features.py disabled
+        run: |
+          python3 scripts/qa_blog_features.py disabled
+          python3 scripts/qa_rendered_site.py

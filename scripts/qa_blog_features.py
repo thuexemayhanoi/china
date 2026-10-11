@@ -51,6 +51,9 @@ def check_source():
     require("rel=\"prev\"" in read("_includes/post-navigation.html"), "missing previous article")
     require("rel=\"next\"" in read("_includes/post-navigation.html"), "missing next article")
     require("post-footer.html" in post, "post layout must use shared post-footer hook")
+    require("post-slot.html" in post and "show_post_slots" in post, "shared optional post slot missing")
+    require(flags.get("show_post_slots") is False, "new optional slots must default OFF")
+    require("slot.enabled == true" in read("_includes/post-slot.html"), "slot must be opt-in")
     footer = read("_includes/post-footer.html")
     for slot in ("post-navigation.html", "author-box.html", "cta.html", "related-posts.html", "post-hub-links.html"):
         require(slot in footer, "post footer missing reusable slot "+slot)
@@ -125,6 +128,7 @@ def check_built(fixtures=False, disabled=False):
     pricing=(SITE/"blog/ci-pricing-other/index.html").read_text(encoding="utf-8")
     if disabled:
         for page in (older,newer,monthly,pricing):
+            require("post-content-slot" not in page, "disabled shared slot leaked")
             require("post-publisher-card" not in page, "disabled publisher leaked")
             require("post-navigation-item" not in page, "disabled post navigation leaked")
             require("post-hub-links" not in page, "disabled contextual hub links leaked")
@@ -133,6 +137,7 @@ def check_built(fixtures=False, disabled=False):
             require('class="card-id">相关阅读' not in page, "disabled related posts leaked")
     else:
         for page in (older,newer,monthly,pricing):
+            require(page.count('class="post-content-slot"')==2, "before/after shared slots missing")
             require("确认租车需求" in page, "centralized default CTA missing")
             require("租金、车型、押金与取还车安排均需在签约前确认。" in page,
                     "centralized CTA copy changed")
@@ -163,6 +168,11 @@ def check_built(fixtures=False, disabled=False):
             require("/blog/ci-monthly-other/" not in nav_html and "/blog/ci-pricing-other/" not in nav_html,
                     "cross-silo Previous/Next link leaked")
 def make_fixtures():
+    config_file=ROOT/"_data/site.json"
+    config=json.loads(config_file.read_text(encoding="utf-8"))
+    config["features"]["show_post_slots"]=True
+    for slot in config["post_ui"]["slots"].values():slot["enabled"]=True
+    config_file.write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     POSTS.mkdir(parents=True,exist_ok=True)
     for name,(title,topic,silo,keyword,h2,h3) in FIXTURES.items():
         dst=POSTS/name
@@ -178,7 +188,7 @@ def make_fixtures():
 def disable():
     p=ROOT/"_data/site.json"
     config=json.loads(p.read_text(encoding="utf-8"))
-    for key in ("smart_search","show_post_navigation","show_author_box","show_post_hub_links","show_related_posts","show_post_cta"):
+    for key in ("smart_search","show_post_navigation","show_author_box","show_post_hub_links","show_related_posts","show_post_cta","show_post_slots"):
         config["features"][key]=False
     p.write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 def main():
