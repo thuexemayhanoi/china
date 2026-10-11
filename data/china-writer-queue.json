@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 245,
-  "remaining": 55,
+  "published": 250,
+  "remaining": 50,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0246",
-      "title": "长距离骑行前应该考虑哪些体力问题",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0246.md",
-      "permalink": "/blog/hanoi-guides-safety-21/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0247",
-      "title": "河内骑摩托车发生突发情况怎么联系门店",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0247.md",
-      "permalink": "/blog/hanoi-guides-safety-22/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0248",
-      "title": "还车前怎样检查摩托车安全部件",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0248.md",
-      "permalink": "/blog/hanoi-guides-safety-23/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0249",
-      "title": "租车期间发现轮胎漏气应该怎么办",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0249.md",
-      "permalink": "/blog/hanoi-guides-safety-24/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0250",
-      "title": "外国旅客在河内骑车需要核对的安全与法规事项",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0250.md",
-      "permalink": "/blog/hanoi-guides-safety-25/",
-      "review_required": false
-    },
     {
       "id": "CN-0251",
       "title": "河内租电动车前应确认哪些车型信息",
@@ -115,6 +60,61 @@
       "hub": "/topics/rental/electric/",
       "draft": "_drafts/CN-0255.md",
       "permalink": "/blog/hanoi-rental-electric-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0256",
+      "title": "租电动车时如何记录交接车况",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0256.md",
+      "permalink": "/blog/hanoi-rental-electric-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0257",
+      "title": "电动车租期与押金需要确认的事项",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0257.md",
+      "permalink": "/blog/hanoi-rental-electric-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0258",
+      "title": "电动车雨天使用有哪些安全注意点",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0258.md",
+      "permalink": "/blog/hanoi-rental-electric-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0259",
+      "title": "电动自行车停放和保管有哪些建议",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0259.md",
+      "permalink": "/blog/hanoi-rental-electric-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0260",
+      "title": "归还电动车前需要检查哪些项目",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0260.md",
+      "permalink": "/blog/hanoi-rental-electric-10/",
       "review_required": false
     }
   ]
