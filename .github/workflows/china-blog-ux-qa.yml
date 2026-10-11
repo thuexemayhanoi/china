@@ -28,6 +28,7 @@ on:
       - 'assets/search/**'
       - '_posts/**'
       - 'scripts/qa_blog_features.py'
+      - 'scripts/qa_rendered_site.py'
       - '.github/workflows/china-blog-ux-qa.yml'
   workflow_dispatch:
 
