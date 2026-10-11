@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 235,
-  "remaining": 65,
+  "published": 240,
+  "remaining": 60,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0236",
-      "title": "摩托车骑行遇到大雨应该如何应对",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0236.md",
-      "permalink": "/blog/hanoi-guides-safety-11/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0237",
-      "title": "载人前要确认哪些摩托车安全事项",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0237.md",
-      "permalink": "/blog/hanoi-guides-safety-12/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0238",
-      "title": "携带旅行背包骑车有什么风险",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0238.md",
-      "permalink": "/blog/hanoi-guides-safety-13/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0239",
-      "title": "河内摩托车停车时怎样加强防护",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0239.md",
-      "permalink": "/blog/hanoi-guides-safety-14/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0240",
-      "title": "摩托车长期租赁期间怎样做日常检查",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0240.md",
-      "permalink": "/blog/hanoi-guides-safety-15/",
-      "review_required": false
-    },
     {
       "id": "CN-0241",
       "title": "第一次驾驶自动挡踏板车前的准备",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/safety/",
       "draft": "_drafts/CN-0245.md",
       "permalink": "/blog/hanoi-guides-safety-20/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0246",
+      "title": "长距离骑行前应该考虑哪些体力问题",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0246.md",
+      "permalink": "/blog/hanoi-guides-safety-21/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0247",
+      "title": "河内骑摩托车发生突发情况怎么联系门店",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0247.md",
+      "permalink": "/blog/hanoi-guides-safety-22/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0248",
+      "title": "还车前怎样检查摩托车安全部件",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0248.md",
+      "permalink": "/blog/hanoi-guides-safety-23/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0249",
+      "title": "租车期间发现轮胎漏气应该怎么办",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0249.md",
+      "permalink": "/blog/hanoi-guides-safety-24/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0250",
+      "title": "外国旅客在河内骑车需要核对的安全与法规事项",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0250.md",
+      "permalink": "/blog/hanoi-guides-safety-25/",
       "review_required": false
     }
   ]
