@@ -23,6 +23,10 @@
       {
         "label": "自动挡与手动挡",
         "href": "/topics/rental/automatic/"
+      },
+      {
+        "label": "电动车与电动自行车",
+        "href": "/topics/rental/electric/"
       }
     ]
   },
@@ -46,6 +50,10 @@
       {
         "label": "完整价格表",
         "href": "/prices/"
+      },
+      {
+        "label": "月租价格与预算",
+        "href": "/topics/pricing/monthly/"
       }
     ]
   },
@@ -61,6 +69,10 @@
       {
         "label": "50cc 驾驶注意事项",
         "href": "/topics/50cc/requirements/"
+      },
+      {
+        "label": "50cc 取车检查",
+        "href": "/topics/50cc/checklist/"
       }
     ]
   },
@@ -76,6 +88,10 @@
       {
         "label": "取车与还车咨询",
         "href": "/topics/old-quarter/pickup/"
+      },
+      {
+        "label": "老城区出行规划",
+        "href": "/topics/old-quarter/planning/"
       }
     ]
   },
@@ -95,6 +111,10 @@
       {
         "label": "还车与押金退还",
         "href": "/topics/guides/returns/"
+      },
+      {
+        "label": "车况与故障处理",
+        "href": "/topics/guides/maintenance/"
       }
     ]
   },

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "target": 300,
+  "manual_review_required": true
+}

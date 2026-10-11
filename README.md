@@ -19,7 +19,7 @@ Native Jekyll from GitHub Pages' existing branch build; optional editorial QA/pu
 - `assets/site.js`: existing interactions, reading price data embedded from central JSON.
 
 ## Current editorial scope
-**Editorial capacity: exactly 250 planned Simplified Chinese articles, in 10 batches × 25.** Allocated equally to rental, pricing, 50cc, Old Quarter and guides (50 each). Actual progress is tracked in `data/china-matrix.csv`; run `python3 scripts/china_factory.py status`. **Installing the factory publishes no posts.**
+**Editorial capacity: exactly 300 planned Simplified Chinese articles, in 12 batches × 25.** Allocated equally to rental, pricing, 50cc, Old Quarter and guides (60 per parent category). Actual progress is tracked in `data/china-matrix.csv`; run `python3 scripts/china_factory.py status`. **Installing the factory publishes no posts.**
 
 ## Adding posts later (do not generate empty posts)
 **Do not write directly to `_posts/`.** Create `_drafts/CN-xxxx.md` for the approved matrix ID and topic; run matrix QA and manual human review, then the `CHINA Publish Reviewed Posts` Action moves it to `_posts/YYYY-MM-DD-<planned-slug>.md` and updates the matrix atomically. Existing Jekyll templates then update `/blog/<planned-slug>/`, blog lists, categories, schema, CTA and sitemap automatically. See `docs/CHINA-FACTORY-250.md`.
@@ -64,5 +64,15 @@ Run `python3 scripts/qa.py` before merging/publishing. GitHub Pages' original Je
 - **Manifest:** `_data/china-plan.json`: 250 unique planned Chinese article titles and canonical slugs.
 - **Matrix:** `data/china-matrix.csv`: immutable brief identifiers + actual publication state.
 - **Manual writer flow:** create `_drafts/CN-xxxx.md` → quality QA → human review → Actions **CHINA Publish Reviewed Posts** with 1–5 IDs and explicit PUBLISH → native Jekyll auto rebuild.
-- **Progress/QA from iPhone:** Actions **CHINA 250 Matrix QA** (Run workflow → status/plan/validate).
-- **Guardrails:** no posts created by setup, no cross-repo text reuse, no false prices or legal claims, no forced push, max 250 published, CNAME and GitHub Pages mode untouched.
+- **Progress/QA from iPhone:** Actions **CHINA 300 Matrix QA** (Run workflow → status/plan/validate).
+- **Guardrails:** no posts created by setup, no cross-repo text reuse, no false prices or legal claims, no forced push, max 300 published, CNAME and GitHub Pages mode untouched.
+
+## CHINA 300 — continuous editorial queue (adapted from /web)
+
+- **300 total:** original CN-0001..CN-0250 remain intact in the original plan/matrix; CN-0251..CN-0300 are in `_data/china-plan-extra.json` and `data/china-matrix-extra.csv`.
+- Five additional live child categories under existing parent categories; total 31 indexable core routes. Navigation and footer share the same source.
+- `data/china-writer-queue.json`: next 10 briefs for an external writer; auto-refilled after reviewed posts publish. `data/china-factory-state.json` supports pause/resume.
+- `CHINA Continuous Article Factory`: scans physical drafts after push and on a 15-minute recovery schedule; processes up to five drafts that passed editorial/source QA and were **actually reviewed**. It does not generate article text or contact an external AI.
+- Manual publish workflow still works; native Jekyll/GitHub Pages remains the deployment source.
+
+Detailed runbook: [docs/CHINA-FACTORY-300.md](docs/CHINA-FACTORY-300.md).

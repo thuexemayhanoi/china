@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '_data/site.json'
+      - '_data/navigation.json'
+      - 'topics/**'
       - '_data/i18n-en.json'
       - '_layouts/**'
       - '_includes/**'
@@ -20,6 +22,8 @@ on:
     branches: [main]
     paths:
       - '_data/site.json'
+      - '_data/navigation.json'
+      - 'topics/**'
       - '_data/i18n-en.json'
       - '_layouts/**'
       - '_includes/**'

@@ -1,0 +1,105 @@
+name: CHINA Continuous Article Factory
+
+# Adapted from /web recovery watchdog. Publisher only, not an AI writer.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_drafts/**'
+      - '.github/workflows/china-factory-continuous.yml'
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Factory control: reviewed drafts only'
+        required: true
+        default: status
+        type: choice
+        options: [status, process, refresh-queue, pause, resume]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: china-factory-publisher
+  cancel-in-progress: false
+
+jobs:
+  factory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate both matrices and website source
+        run: |
+          python3 scripts/qa.py
+          python3 scripts/china_factory.py validate
+      - name: Choose control
+        id: choose
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "action=${{ inputs.action }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "action=process" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check physical drafts
+        id: pending
+        if: steps.choose.outputs.action == 'process'
+        run: |
+          count="$(python3 scripts/china_factory.py pending-count | tail -1)"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Pending drafts: $count"
+      - name: Update factory control
+        if: steps.choose.outputs.action == 'pause' || steps.choose.outputs.action == 'resume' || steps.choose.outputs.action == 'refresh-queue'
+        run: python3 scripts/china_factory.py "${{ steps.choose.outputs.action }}"
+      - name: Process reviewed drafts
+        if: steps.choose.outputs.action == 'process' && steps.pending.outputs.count != '0'
+        run: |
+          python3 scripts/china_factory.py process
+          python3 scripts/china_factory.py validate
+          python3 scripts/qa.py
+      - name: Check tracked changes
+        id: change
+        if: steps.choose.outputs.action != 'status'
+        run: |
+          if test -n "$(git status --porcelain --untracked-files=no)"; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Native Jekyll build when publishing
+        if: steps.change.outputs.changed == 'true' && steps.choose.outputs.action == 'process'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Verify generated SEO and links
+        if: steps.change.outputs.changed == 'true' && steps.choose.outputs.action == 'process'
+        run: python3 scripts/qa_rendered_site.py
+      - name: Fast-forward only commit
+        if: steps.change.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || {
+            echo "main moved, watchdog will safely retry later" >&2
+            exit 1
+          }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- data/china-matrix.csv data/china-matrix-extra.csv data/china-writer-queue.json data/china-factory-state.json _drafts _posts
+          if ! git diff --cached --quiet; then
+            git commit -m "china: update reviewed editorial queue"
+            git push origin HEAD:main
+          fi
+      - name: Progress summary
+        if: always()
+        run: python3 scripts/china_factory.py status

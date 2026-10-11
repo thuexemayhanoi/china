@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "READY",
+  "target": 300,
+  "published": 0,
+  "remaining": 300,
+  "batch_size": 5,
+  "queue": [
+    {
+      "id": "CN-0001",
+      "title": "河内首次租踏板车前应该确认的八个问题",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0001.md",
+      "permalink": "/blog/hanoi-rental-scooters-01/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0002",
+      "title": "自动挡踏板车适合哪些河内短途出行",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0002.md",
+      "permalink": "/blog/hanoi-rental-scooters-02/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0003",
+      "title": "Honda Vision 与 Honda Click 租赁怎么比较",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0003.md",
+      "permalink": "/blog/hanoi-rental-scooters-03/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0004",
+      "title": "河内租踏板车如何核实实际车况",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0004.md",
+      "permalink": "/blog/hanoi-rental-scooters-04/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0005",
+      "title": "租踏板车时刹车和轮胎怎么检查",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0005.md",
+      "permalink": "/blog/hanoi-rental-scooters-05/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0006",
+      "title": "雨季在河内使用踏板车需注意什么",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0006.md",
+      "permalink": "/blog/hanoi-rental-scooters-06/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0007",
+      "title": "河内踏板车的座高和骑行体验如何判断",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0007.md",
+      "permalink": "/blog/hanoi-rental-scooters-07/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0008",
+      "title": "两人出行租踏板车前应核实什么",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0008.md",
+      "permalink": "/blog/hanoi-rental-scooters-08/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0009",
+      "title": "携带背包租踏板车需要考虑哪些限制",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0009.md",
+      "permalink": "/blog/hanoi-rental-scooters-09/",
+      "review_required": true
+    },
+    {
+      "id": "CN-0010",
+      "title": "河内短距离通勤如何选择踏板车",
+      "topic": "rental",
+      "subtopic": "scooters",
+      "primary_keyword": "河内踏板车租赁",
+      "hub": "/topics/rental/scooters/",
+      "draft": "_drafts/CN-0010.md",
+      "permalink": "/blog/hanoi-rental-scooters-10/",
+      "review_required": true
+    }
+  ]
+}

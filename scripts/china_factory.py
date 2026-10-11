@@ -22,7 +22,9 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 MATRIX = ROOT / "data" / "china-matrix.csv"
+EXTRA_MATRIX = ROOT / "data" / "china-matrix-extra.csv"
 SOURCE = ROOT / "_data" / "china-plan.json"
+EXTRA_SOURCE = ROOT / "_data" / "china-plan-extra.json"
 DRAFTS = ROOT / "_drafts"
 POSTS = ROOT / "_posts"
 DOMAIN = "https://zh.rentbikehanoi.com"
@@ -40,7 +42,8 @@ ALLOWED_LINKS = {"/", "/blog/", "/prices/", "/contact/", "/faq/", "/about/",
                  "/topics/50cc/models/", "/topics/50cc/requirements/", "/topics/old-quarter/",
                  "/topics/old-quarter/directions/", "/topics/old-quarter/pickup/",
                  "/topics/guides/", "/topics/guides/contracts/", "/topics/guides/safety/",
-                 "/topics/guides/returns/"}
+                 "/topics/guides/returns/", "/topics/rental/electric/", "/topics/pricing/monthly/",
+                 "/topics/50cc/checklist/", "/topics/old-quarter/planning/", "/topics/guides/maintenance/"}
 
 def fail(msg):
     raise ValueError(msg)
@@ -49,23 +52,31 @@ def count_han(s):
     return len(HAN.findall(s))
 
 def read_rows():
-    with MATRIX.open(encoding="utf-8", newline="") as f:
-        rd = csv.DictReader(f)
-        if rd.fieldnames != list(FIELDS):
-            fail("matrix columns mismatch (do not reorder)")
-        return list(rd)
+    combined=[]
+    for source in (MATRIX,EXTRA_MATRIX):
+        with source.open(encoding="utf-8",newline="") as f:
+            rd=csv.DictReader(f)
+            if rd.fieldnames!=list(FIELDS):
+                fail("matrix columns mismatch in "+str(source))
+            combined.extend(list(rd))
+    return combined
 
 def source_rows():
     d = json.loads(SOURCE.read_text(encoding="utf-8"))
     if d.get("article_limit") != 250 or d.get("batch_size") != 25 or d.get("domain") != DOMAIN:
         fail("manifest must be 250 Chinese articles / 25 per batch / target domain")
-    return d["planned_articles"]
+    ext=json.loads(EXTRA_SOURCE.read_text(encoding="utf-8"))
+    if ext.get("article_limit_extra")!=50 or ext.get("batch_size")!=25 or ext.get("domain")!=DOMAIN:
+        fail("extra manifest must contain 50 Chinese briefs for the same domain")
+    if len(d["planned_articles"])!=250 or len(ext["planned_articles"])!=50:
+        fail("original 250 and additional 50 must be retained exactly")
+    return d["planned_articles"]+ext["planned_articles"]
 
 def validate_matrix():
     planned = source_rows()
     rows = read_rows()
-    if len(planned) != 250 or len(rows) != 250:
-        fail("expected exactly 250 matrix rows")
+    if len(planned) != 300 or len(rows) != 300:
+        fail("expected exactly 300 matrix rows")
     ids, titles, slugs, urls = set(), set(), set(), set()
     for i, (r, p) in enumerate(zip(rows, planned), 1):
         for k in IMMUTABLE:
@@ -74,7 +85,7 @@ def validate_matrix():
         aid = "CN-%04d" % i
         bid = "B%02d" % ((i-1)//25 + 1)
         if r["article_id"] != aid or r["batch_id"] != bid:
-            fail("matrix sequence must be CN-0001..CN-0250, batches B01..B10")
+            fail("matrix sequence must be CN-0001..CN-0300, batches B01..B12")
         if r["topic"] not in ("rental", "pricing", "50cc", "old-quarter", "guides"):
             fail(aid + ": topic not in live menu")
         if r["status"] not in STATUSES:
@@ -183,14 +194,14 @@ def status(rows):
     counts={state:sum(r["status"]==state for r in rows) for state in STATUSES}
     drafts=sum((ROOT / r["draft_path"]).is_file() for r in rows if r["status"]=="PLANNED")
     print(json.dumps({"total":len(rows),"published":counts["PUBLISHED"],
-      "planned":counts["PLANNED"],"drafts_prepared":drafts,"remaining":250-counts["PUBLISHED"],
+      "planned":counts["PLANNED"],"drafts_prepared":drafts,"remaining":300-counts["PUBLISHED"],
       "next_id":next((r["article_id"] for r in rows if r["status"]=="PLANNED"),None),
       "batches":[{"batch":"B%02d"%i,
        "published":sum(r["status"]=="PUBLISHED" for r in rows if r["batch_id"]=="B%02d"%i)}
-       for i in range(1,11)]},ensure_ascii=False,indent=2))
+       for i in range(1,13)]},ensure_ascii=False,indent=2))
 
 def plan(rows,batch,limit):
-    if batch and not re.fullmatch(r"B(0[1-9]|10)",batch): fail("batch must be B01..B10")
+    if batch and not re.fullmatch(r"B(0[1-9]|1[0-2])",batch): fail("batch must be B01..B12")
     if limit<1 or limit>25: fail("limit must be 1..25")
     pool=[r for r in rows if r["status"]=="PLANNED" and (not batch or r["batch_id"]==batch)]
     # Do not silently jump to future batches with unfinished drafts.
@@ -201,10 +212,11 @@ def plan(rows,batch,limit):
       "permalink":r["permalink"]} for r in pool[:limit]],ensure_ascii=False,indent=2))
 
 def save_matrix(rows):
-    MATRIX.parent.mkdir(parents=True,exist_ok=True)
-    with MATRIX.open("w",encoding="utf-8",newline="") as f:
-        w=csv.DictWriter(f,fieldnames=FIELDS,lineterminator="\n")
-        w.writeheader();w.writerows(rows)
+    if len(rows)!=300:fail("refuse to save a non-300 row matrix")
+    for path,part in ((MATRIX,rows[:250]),(EXTRA_MATRIX,rows[250:])):
+        with path.open("w",encoding="utf-8",newline="") as f:
+            w=csv.DictWriter(f,fieldnames=FIELDS,lineterminator="\n")
+            w.writeheader();w.writerows(part)
 
 def publish(selected,rows):
     today=dt.datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
@@ -219,6 +231,7 @@ def publish(selected,rows):
         fm, body=parse_draft(ROOT/r["draft_path"])
         # We own publication date and breadcrumb linkage; one central schema/layout.
         fm["date"]=today.strftime("%Y-%m-%d %H:%M:%S %z")
+        fm["seo_silo"]=r["topic"]+"/"+r["subtopic"]
         fm["breadcrumbs"]=[{"label":"博客","href":"/blog/"},
                            {"label":"专题","href":r["parent_hub"]},
                            {"label":r["working_title"]}]
@@ -238,13 +251,71 @@ def publish(selected,rows):
         r["notes"]="Manually approved and batch-published by GitHub Actions"
     save_matrix(rows)
     validate_matrix()
+    refresh_queue(rows)
     print(json.dumps({"published":[r["article_id"] for r,_,_,_,_ in operations],
       "new_urls":[DOMAIN+r["permalink"] for r,_,_,_,_ in operations],
-      "matrix_total":250},ensure_ascii=False,indent=2))
+      "matrix_total":300},ensure_ascii=False,indent=2))
+
+
+STATE = ROOT / "data" / "china-factory-state.json"
+QUEUE = ROOT / "data" / "china-writer-queue.json"
+AUTO_BATCH = 5
+QUEUE_SIZE = 10
+
+def factory_state():
+    return json.loads(STATE.read_text(encoding="utf-8"))
+
+def save_state(state):
+    STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+def queue_payload(rows):
+    state=factory_state()
+    published=sum(r["status"]=="PUBLISHED" for r in rows)
+    waiting=[r for r in rows if r["status"]=="PLANNED"]
+    status=("TARGET_REACHED" if published==300 else "PAUSED" if not state["enabled"] else "READY")
+    return {"schema_version":1,"status":status,"target":300,"published":published,
+        "remaining":300-published,"batch_size":AUTO_BATCH,"queue":[
+        {"id":r["article_id"],"title":r["working_title"],"topic":r["topic"],"subtopic":r["subtopic"],
+         "primary_keyword":r["primary_keyword"],"hub":r["parent_hub"],"draft":r["draft_path"],
+         "permalink":r["permalink"],"review_required":True}
+        for r in waiting[:QUEUE_SIZE]]}
+
+def refresh_queue(rows):
+    payload=queue_payload(rows)
+    serialized=json.dumps(payload,ensure_ascii=False,indent=2)+"\n"
+    if not QUEUE.exists() or QUEUE.read_text(encoding="utf-8")!=serialized:
+        QUEUE.write_text(serialized,encoding="utf-8")
+    return payload
+
+def pending_count(rows):
+    if not factory_state()["enabled"]:return 0
+    return sum((ROOT/r["draft_path"]).is_file() for r in rows if r["status"]=="PLANNED")
+
+def process_reviewed(rows):
+    if not factory_state()["enabled"]:
+        print("Factory paused; no publication");return
+    eligible=[];rejected=[]
+    for r in rows:
+        if r["status"]!="PLANNED" or not (ROOT/r["draft_path"]).is_file():continue
+        try:
+            qa=audit_draft(r)
+        except (ValueError,OSError) as exc:
+            rejected.append({"id":r["article_id"],"errors":[str(exc)]})
+            continue
+        if qa["passed"]:
+            eligible.append(r)
+            if len(eligible)==AUTO_BATCH:break
+        else:
+            rejected.append({"id":r["article_id"],"errors":qa["errors"]})
+    if eligible:publish(eligible,rows)
+    q=refresh_queue(rows)
+    print(json.dumps({"processed":[r["article_id"] for r in eligible],
+        "invalid_or_unapproved":rejected[:15],"queue_status":q["status"],
+        "remaining":q["remaining"]},ensure_ascii=False,indent=2))
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("command",choices=("status","plan","validate","qa","publish"))
+    ap.add_argument("command",choices=("status","plan","validate","qa","publish","queue","refresh-queue","pause","resume","pending-count","process"))
     ap.add_argument("--batch",default=None)
     ap.add_argument("--limit",type=int,default=5)
     ap.add_argument("--ids",default="")
@@ -262,11 +333,17 @@ def main():
                 bad=[r for r in reports if not r["passed"]]
                 print(json.dumps({"staged_drafts":len(reports),"failed":bad},ensure_ascii=False))
                 if bad:return 1
-            print("CHINA FACTORY VALIDATION PASS: exactly 250 matrix entries")
+            print("CHINA FACTORY VALIDATION PASS: exactly 300 matrix entries")
         elif a.command=="qa":
             reports=[audit_draft(r) for r in ids_arg(a.ids,rows)]
             print(json.dumps(reports,ensure_ascii=False,indent=2))
             return 0 if all(x["passed"] for x in reports) else 1
+        elif a.command=="queue":print(json.dumps(queue_payload(rows),ensure_ascii=False,indent=2))
+        elif a.command=="refresh-queue":refresh_queue(rows)
+        elif a.command=="pending-count":print(pending_count(rows))
+        elif a.command in ("pause","resume"):
+            state=factory_state();state["enabled"]=(a.command=="resume");save_state(state);refresh_queue(rows)
+        elif a.command=="process":process_reviewed(rows)
         elif a.command=="publish":
             if a.confirm!="PUBLISH":fail("manual confirmation PUBLISH is required")
             publish(ids_arg(a.ids,rows),rows)
