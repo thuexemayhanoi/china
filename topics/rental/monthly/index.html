@@ -6,7 +6,6 @@ permalink: "/topics/rental/monthly/"
 breadcrumbs: [{"label":"租赁服务","href":"/topics/rental/"},{"label":"月租摩托车"}]
 topic: "rental"
 subtopic: "monthly"
-noindex: true
 ---
 <div class="page-head"><span class="eyebrow">SUBCATEGORY · Rental services</span><h1>河内摩托车月租：参考费用与合同检查指南</h1><p class="lead">如果计划在河内连续用车较长时间，先比较不同车型的月租参考区间，再核实合同中的起止日期、维修责任、押金与续租方式。这里是月租决策指南，不是在线预订或最终报价。</p><span class="pill">{% assign current_posts = site.posts | where: 'topic', page.topic | where: 'subtopic', page.subtopic %}{% if current_posts.size == 0 %}子分类 · 暂无文章{% else %}子分类 · {{ current_posts.size }} 篇文章{% endif %}</span></div><div class="two-col"><div class="prose"><section class="inner-panel"><h2>不同车型的月租参考价是多少？</h2><p>以下金额来自本网站的公开参考价格，适用租期、库存及最后报价请与门店单独核实。押金不是租金的一部分。</p><ul>
 <li>Honda Wave：月租参考 <strong>{{ site.data.vehicles[0].display.month }}</strong>；押金参考 <strong>{{ site.data.vehicles[0].deposit }}</strong>。</li>
