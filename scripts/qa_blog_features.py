@@ -39,7 +39,7 @@ def check_source():
     js = read("assets/blog-search.js")
     require("smart-search-trigger.html" in header, "missing shared header search trigger")
     require("smart-search.html" in layout and "blog-search.js" in layout, "missing lazy search integration")
-    require("post-navigation.html" in post and "author-box.html" in post, "missing post layout hooks")
+    require("post-footer.html" in post, "post layout missing centralized post-footer hook")
     require("site.posts" in index and "p.content | markdownify" in index, "search index not generated from published post HTML")
     require("primary_keyword" in index and "h2_parts" in index and "h3_parts" in index, "search index fields missing")
     require("fetch(\"/assets/search/posts.json\"" in js, "search doesn't fetch generated index")
