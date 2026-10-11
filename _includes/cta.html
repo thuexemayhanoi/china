@@ -1,1 +1,6 @@
-<div class="simple-band" style="margin-top:32px"><div><span class="eyebrow">NGUYỄN TÚ</span><h2>确认租车需求</h2><p class="muted" style="margin:0">租金、车型、押金与取还车安排均需在签约前确认。</p></div><a class="btn btn-primary" href="{{ site.data.site.domain }}/contact/">联系门店 →</a></div>
+{% comment %}Configure once in _data/site.json. The default variant preserves existing UX. Future post variants may set page.cta_variant (only predefined config keys).{% endcomment %}
+{% assign cta = site.data.site.post_ui.cta.default %}
+{% if page.cta_variant and site.data.site.post_ui.cta[page.cta_variant] %}{% assign cta = site.data.site.post_ui.cta[page.cta_variant] %}{% endif %}
+{% if cta and cta.title and cta.href %}
+<div class="simple-band" style="margin-top:32px"><div><span class="eyebrow">{{ cta.eyebrow | escape }}</span><h2>{{ cta.title | escape }}</h2><p class="muted" style="margin:0">{{ cta.description | escape }}</p></div><a class="btn btn-primary" href="{{ site.data.site.domain }}{{ cta.href }}">{{ cta.button | escape }}</a></div>
+{% endif %}

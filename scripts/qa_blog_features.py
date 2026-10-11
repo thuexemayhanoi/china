@@ -39,7 +39,7 @@ def check_source():
     js = read("assets/blog-search.js")
     require("smart-search-trigger.html" in header, "missing shared header search trigger")
     require("smart-search.html" in layout and "blog-search.js" in layout, "missing lazy search integration")
-    require("post-navigation.html" in post and "author-box.html" in post, "missing post layout hooks")
+    require("post-footer.html" in post, "post layout missing centralized post-footer hook")
     require("site.posts" in index and "p.content | markdownify" in index, "search index not generated from published post HTML")
     require("primary_keyword" in index and "h2_parts" in index and "h3_parts" in index, "search index fields missing")
     require("fetch(\"/assets/search/posts.json\"" in js, "search doesn't fetch generated index")
@@ -50,6 +50,24 @@ def check_source():
     require("site.data.site.business.name" in read("_includes/author-box.html"), "publisher not using shared actual business")
     require("rel=\"prev\"" in read("_includes/post-navigation.html"), "missing previous article")
     require("rel=\"next\"" in read("_includes/post-navigation.html"), "missing next article")
+    require("post-footer.html" in post, "post layout must use shared post-footer hook")
+    footer = read("_includes/post-footer.html")
+    for slot in ("post-navigation.html", "author-box.html", "cta.html", "related-posts.html", "post-hub-links.html"):
+        require(slot in footer, "post footer missing reusable slot "+slot)
+    require(flags.get("show_post_hub_links") is True, "hub link feature flag not enabled")
+    cta = config["post_ui"]["cta"]["default"]
+    require(cta["title"]=="确认租车需求" and cta["href"]=="/contact/", "default CTA source config or destination changed")
+    require("site.data.site.post_ui.cta.default" in read("_includes/cta.html"), "CTA not read from shared site config")
+    require("where: \"seo_silo\"" in read("_includes/related-posts.html"), "related posts must prefer same SEO silo")
+    require("where: \"topic\"" in read("_includes/related-posts.html"), "related posts missing topic fallback")
+    hubs=config["post_ui"]["hub_links"]
+    require(set(hubs)=={"rental","pricing","50cc","old-quarter","guides"}, "hub mappings must follow existing topics")
+    for topic,links in hubs.items():
+        require(3<=len(links)<=8, "links outside curated 3-8 range: "+topic)
+        urls=[l["href"] for l in links]
+        require(len(set(urls))==len(urls), "duplicate hub links "+topic)
+        require(all(u in config["sitemap_base"] for u in urls), "hub must point at existing indexed pages "+topic)
+    require("site.data.site.sitemap_base contains hub.href" in read("_includes/post-hub-links.html"), "hub partial must refuse stale URLs")
     for path in ("CNAME", "assets/assistant-cn.js", "assets/assistant-cn.css", "assets/chat/site-index.json"):
         require((ROOT / path).exists(), "missing protected integration "+path)
 
@@ -109,7 +127,27 @@ def check_built(fixtures=False, disabled=False):
         for page in (older,newer,monthly,pricing):
             require("post-publisher-card" not in page, "disabled publisher leaked")
             require("post-navigation-item" not in page, "disabled post navigation leaked")
+            require("post-hub-links" not in page, "disabled contextual hub links leaked")
+            require('<div class="simple-band" style="margin-top:32px">' not in page,
+                    "disabled CTA component leaked")
+            require('class="card-id">相关阅读' not in page, "disabled related posts leaked")
     else:
+        for page in (older,newer,monthly,pricing):
+            require("确认租车需求" in page, "centralized default CTA missing")
+            require("租金、车型、押金与取还车安排均需在签约前确认。" in page,
+                    "centralized CTA copy changed")
+            require('href="'+URL_BASE+'/contact/"' in page, "central CTA destination broken")
+            require("post-hub-links" in page, "contextual hub links missing")
+        require('href="'+URL_BASE+'/topics/rental/"' in older, "rental topic hub missing")
+        require('href="'+URL_BASE+'/topics/pricing/"' in pricing, "pricing topic hub missing")
+        require(older.count('class="card-id">相关阅读')==1,
+                "expected exactly one same-silo related post")
+        require(newer.count('class="card-id">相关阅读')==1,
+                "expected exactly one reciprocal related post")
+        require('class="card-id">相关阅读' not in monthly,
+                "isolated monthly silo must not link to a different silo")
+        require('class="card-id">相关阅读' not in pricing,
+                "isolated pricing silo must not invent related posts")
         require('rel="next" href="'+URL_BASE+'/blog/ci-scooter-two/"' in older,
                 "older post must link to newer article in same silo")
         require('rel="prev" href="'+URL_BASE+'/blog/ci-scooter-one/"' in newer,
@@ -140,7 +178,7 @@ def make_fixtures():
 def disable():
     p=ROOT/"_data/site.json"
     config=json.loads(p.read_text(encoding="utf-8"))
-    for key in ("smart_search","show_post_navigation","show_author_box"):
+    for key in ("smart_search","show_post_navigation","show_author_box","show_post_hub_links","show_related_posts","show_post_cta"):
         config["features"][key]=False
     p.write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 def main():

@@ -29,7 +29,8 @@
     "local_chatbot": true,
     "smart_search": true,
     "show_post_navigation": true,
-    "show_author_box": true
+    "show_author_box": true,
+    "show_post_hub_links": true
   },
   "sitemap_base": [
     "/",
@@ -62,5 +63,88 @@
   "publisher": {
     "description": "Nguyễn Tú 河内摩托车租赁信息发布方。提供车型、价格及安全出行参考；实际租赁安排请联系门店确认。",
     "logo": "/assets/favicon.svg"
+  },
+  "post_ui": {
+    "cta": {
+      "default": {
+        "eyebrow": "NGUYỄN TÚ",
+        "title": "确认租车需求",
+        "description": "租金、车型、押金与取还车安排均需在签约前确认。",
+        "button": "联系门店 →",
+        "href": "/contact/"
+      }
+    },
+    "hub_links": {
+      "rental": [
+        {
+          "href": "/topics/rental/",
+          "label": "租赁车型与租期指南"
+        },
+        {
+          "href": "/prices/",
+          "label": "各车型租金参考价格"
+        },
+        {
+          "href": "/topics/guides/",
+          "label": "租车前检查清单"
+        }
+      ],
+      "pricing": [
+        {
+          "href": "/topics/pricing/",
+          "label": "租金与租期比较"
+        },
+        {
+          "href": "/prices/",
+          "label": "公开车型参考价格"
+        },
+        {
+          "href": "/topics/pricing/deposits/",
+          "label": "押金与费用说明"
+        }
+      ],
+      "50cc": [
+        {
+          "href": "/topics/50cc/",
+          "label": "50cc车型租赁指南"
+        },
+        {
+          "href": "/topics/50cc/requirements/",
+          "label": "50cc驾驶资格注意事项"
+        },
+        {
+          "href": "/contact/",
+          "label": "向门店确认实际车型"
+        }
+      ],
+      "old-quarter": [
+        {
+          "href": "/topics/old-quarter/",
+          "label": "从河内老城区租车指南"
+        },
+        {
+          "href": "/topics/old-quarter/directions/",
+          "label": "前往龙编区门店的路线"
+        },
+        {
+          "href": "/topics/old-quarter/pickup/",
+          "label": "取还车地点与费用提示"
+        }
+      ],
+      "guides": [
+        {
+          "href": "/topics/guides/",
+          "label": "完整租车安全指南"
+        },
+        {
+          "href": "/topics/guides/contracts/",
+          "label": "证件与合同检查清单"
+        },
+        {
+          "href": "/topics/guides/returns/",
+          "label": "还车与押金结算"
+        }
+      ]
+    }
   }
 }

@@ -1,0 +1,11 @@
+{% comment %}Curated hubs are real pages from site.sitemap_base. Topic-specific: no keyword auto-spam, no guessed article URLs. Can be disabled globally. {% endcomment %}
+{% assign hubs = site.data.site.post_ui.hub_links[page.topic] %}
+{% if hubs and hubs.size > 0 %}
+<section class="section post-hub-links" aria-label="相关主题指南"><h2>相关主题指南</h2><div class="cards">
+{% for hub in hubs %}
+  {% if site.data.site.sitemap_base contains hub.href %}
+    <a class="card" href="{{ site.data.site.domain }}{{ hub.href }}"><span class="card-id">专题指南</span><h3>{{ hub.label | escape }}</h3><span class="card-link">了解更多 →</span></a>
+  {% endif %}
+{% endfor %}
+</div></section>
+{% endif %}

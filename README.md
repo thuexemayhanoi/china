@@ -10,6 +10,10 @@ Native Jekyll from GitHub Pages' existing branch build; optional editorial QA/pu
 - `_data/vehicles.json`: published reference rents and calculator (no invented rates).
 - `_data/faqs.json`: visible FAQ answers and FAQPage schema.
 - `_layouts/default.html`: SEO and shared site structure; `_layouts/post.html`: future posts.
+- `_includes/post-footer.html`: one ordered shared slot for post navigation, Author Box, CTA, related articles and useful hub links (all independently feature-flagged).
+- `_data/site.json → post_ui.cta.default`: single shared banner/CTA text/button/contact destination; optional approved `page.cta_variant`. `post_ui.hub_links`: exactly 3 verified live hub links per topic, never auto-spam or guessed articles.
+- `_includes/related-posts.html`: real `site.posts` only, strict same `seo_silo` when present; falls back to same `topic` only when no silo exists. Limit is `features.related_limit`. Existing Previous/Next, schema, post content and URLs remain unchanged.
+- `features.show_post_hub_links`, `show_post_cta`, `show_related_posts`: disable any section globally without editing articles. All Chinese UI captions have English keys in `_data/i18n-en.json`.
 - `_includes/*.html`: reusable header/footer/nav/sidebar/breadcrumbs/schema/CTA/pricing/related posts.
 - `assets/site.css`: existing black/white/gold design tokens and responsive UI.
 - `assets/site.js`: existing interactions, reading price data embedded from central JSON.
@@ -21,7 +25,7 @@ Native Jekyll from GitHub Pages' existing branch build; optional editorial QA/pu
 **Do not write directly to `_posts/`.** Create `_drafts/CN-xxxx.md` for the approved matrix ID and topic; run matrix QA and manual human review, then the `CHINA Publish Reviewed Posts` Action moves it to `_posts/YYYY-MM-DD-<planned-slug>.md` and updates the matrix atomically. Existing Jekyll templates then update `/blog/<planned-slug>/`, blog lists, categories, schema, CTA and sitemap automatically. See `docs/CHINA-FACTORY-250.md`.
 
 ## SEO/QA safeguards
-Preserve all existing page URLs, titles, descriptions, canonical domain, visible content and design. Canonical: https://zh.rentbikehanoi.com/. Sitemap base: 9 indexed pages. No false prices, waived deposits, fabricated reviews or assumed 50cc license exemptions.
+Preserve all existing page URLs, titles, descriptions, canonical domain, visible content and design. Canonical: https://zh.rentbikehanoi.com/. Sitemap base: 26 existing index-eligible pages (actual Google indexing is not guaranteed). No false prices, waived deposits, fabricated reviews or assumed 50cc license exemptions.
 
 No changes to `CNAME`, DNS, Pages deployment mode or other repositories. Always verify native Jekyll build results and rollback if failing.
 
