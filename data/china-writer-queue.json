@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 60,
-  "remaining": 240,
+  "published": 65,
+  "remaining": 235,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0061",
-      "title": "河内短租押金是否包含在日租里",
-      "topic": "pricing",
-      "subtopic": "daily",
-      "primary_keyword": "河内摩托车日租价格",
-      "hub": "/topics/pricing/daily/",
-      "draft": "_drafts/CN-0061.md",
-      "permalink": "/blog/hanoi-pricing-daily-11/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0062",
-      "title": "租车费用计算器与实际报价有何不同",
-      "topic": "pricing",
-      "subtopic": "daily",
-      "primary_keyword": "河内摩托车日租价格",
-      "hub": "/topics/pricing/daily/",
-      "draft": "_drafts/CN-0062.md",
-      "permalink": "/blog/hanoi-pricing-daily-12/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0063",
-      "title": "河内租车半天能否按日租计费",
-      "topic": "pricing",
-      "subtopic": "daily",
-      "primary_keyword": "河内摩托车日租价格",
-      "hub": "/topics/pricing/daily/",
-      "draft": "_drafts/CN-0063.md",
-      "permalink": "/blog/hanoi-pricing-daily-13/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0064",
-      "title": "租车两天与一天如何核实具体租期",
-      "topic": "pricing",
-      "subtopic": "daily",
-      "primary_keyword": "河内摩托车日租价格",
-      "hub": "/topics/pricing/daily/",
-      "draft": "_drafts/CN-0064.md",
-      "permalink": "/blog/hanoi-pricing-daily-14/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0065",
-      "title": "节假日的日租报价该如何确认",
-      "topic": "pricing",
-      "subtopic": "daily",
-      "primary_keyword": "河内摩托车日租价格",
-      "hub": "/topics/pricing/daily/",
-      "draft": "_drafts/CN-0065.md",
-      "permalink": "/blog/hanoi-pricing-daily-15/",
-      "review_required": false
-    },
     {
       "id": "CN-0066",
       "title": "租车时油费由谁承担需要问清什么",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/daily/",
       "draft": "_drafts/CN-0070.md",
       "permalink": "/blog/hanoi-pricing-daily-20/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0071",
+      "title": "归还车辆超出约定时间如何询价",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0071.md",
+      "permalink": "/blog/hanoi-pricing-daily-21/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0072",
+      "title": "河内日租车辆头盔费用应如何确认",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0072.md",
+      "permalink": "/blog/hanoi-pricing-daily-22/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0073",
+      "title": "网上参考价格为何不等于最终合同价",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0073.md",
+      "permalink": "/blog/hanoi-pricing-daily-23/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0074",
+      "title": "河内日租咨询前需要准备哪些资料",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0074.md",
+      "permalink": "/blog/hanoi-pricing-daily-24/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0075",
+      "title": "在河内比较日租报价时别忽略押金",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0075.md",
+      "permalink": "/blog/hanoi-pricing-daily-25/",
       "review_required": false
     }
   ]
