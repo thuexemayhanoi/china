@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 125,
-  "remaining": 175,
+  "published": 130,
+  "remaining": 170,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0126",
-      "title": "在越南骑50cc 摩托车要核实哪些法规",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0126.md",
-      "permalink": "/blog/hanoi-fifty-rules-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0127",
-      "title": "50cc 摩托车是否一定不需要驾照",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0127.md",
-      "permalink": "/blog/hanoi-fifty-rules-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0128",
-      "title": "外国旅客骑50cc 应先确认哪些证件",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0128.md",
-      "permalink": "/blog/hanoi-fifty-rules-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0129",
-      "title": "50cc 与不同车辆类别的法律区别",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0129.md",
-      "permalink": "/blog/hanoi-fifty-rules-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0130",
-      "title": "在河内骑50cc 前如何核实年龄要求",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0130.md",
-      "permalink": "/blog/hanoi-fifty-rules-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0131",
       "title": "50cc 道路通行规则该去哪里查",
@@ -115,6 +60,61 @@
       "hub": "/topics/50cc/requirements/",
       "draft": "_drafts/CN-0135.md",
       "permalink": "/blog/hanoi-fifty-rules-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0136",
+      "title": "河内50cc 新手出发前检查表",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0136.md",
+      "permalink": "/blog/hanoi-fifty-rules-11/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0137",
+      "title": "雨天驾驶50cc 应怎样降低风险",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0137.md",
+      "permalink": "/blog/hanoi-fifty-rules-12/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0138",
+      "title": "50cc 夜间骑行要注意哪些照明事项",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0138.md",
+      "permalink": "/blog/hanoi-fifty-rules-13/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0139",
+      "title": "50cc 经过复杂路口时的安全提醒",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0139.md",
+      "permalink": "/blog/hanoi-fifty-rules-14/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0140",
+      "title": "50cc 车辆速度与安全距离如何理解",
+      "topic": "50cc",
+      "subtopic": "requirements",
+      "primary_keyword": "河内50cc驾驶要求",
+      "hub": "/topics/50cc/requirements/",
+      "draft": "_drafts/CN-0140.md",
+      "permalink": "/blog/hanoi-fifty-rules-15/",
       "review_required": false
     }
   ]
