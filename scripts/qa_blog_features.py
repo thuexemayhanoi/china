@@ -128,7 +128,8 @@ def check_built(fixtures=False, disabled=False):
             require("post-publisher-card" not in page, "disabled publisher leaked")
             require("post-navigation-item" not in page, "disabled post navigation leaked")
             require("post-hub-links" not in page, "disabled contextual hub links leaked")
-            require("确认租车需求" not in page, "disabled CTA leaked")
+            require('<div class="simple-band" style="margin-top:32px">' not in page,
+                    "disabled CTA component leaked")
             require('class="card-id">相关阅读' not in page, "disabled related posts leaked")
     else:
         for page in (older,newer,monthly,pricing):
