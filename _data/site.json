@@ -31,15 +31,29 @@
   "sitemap_base": [
     "/",
     "/prices/",
-    "/contact/",
-    "/faq/",
     "/topics/rental/",
     "/topics/pricing/",
     "/topics/50cc/",
     "/topics/old-quarter/",
     "/topics/guides/",
     "/about/",
+    "/contact/",
+    "/faq/",
     "/privacy/",
-    "/terms/"
+    "/terms/",
+    "/blog/",
+    "/topics/rental/scooters/",
+    "/topics/rental/monthly/",
+    "/topics/rental/automatic/",
+    "/topics/pricing/daily/",
+    "/topics/pricing/weekly/",
+    "/topics/pricing/deposits/",
+    "/topics/50cc/models/",
+    "/topics/50cc/requirements/",
+    "/topics/old-quarter/directions/",
+    "/topics/old-quarter/pickup/",
+    "/topics/guides/contracts/",
+    "/topics/guides/safety/",
+    "/topics/guides/returns/"
   ]
 }
