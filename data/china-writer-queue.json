@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 285,
-  "remaining": 15,
+  "published": 290,
+  "remaining": 10,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0286",
-      "title": "老城区到门店的路线为什么要实时查看",
-      "topic": "old-quarter",
-      "subtopic": "planning",
-      "primary_keyword": "河内老城区租摩托车",
-      "hub": "/topics/old-quarter/planning/",
-      "draft": "_drafts/CN-0286.md",
-      "permalink": "/blog/hanoi-old-quarter-planning-06/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0287",
-      "title": "老城区出发雨天行程如何合理安排",
-      "topic": "old-quarter",
-      "subtopic": "planning",
-      "primary_keyword": "河内老城区租摩托车",
-      "hub": "/topics/old-quarter/planning/",
-      "draft": "_drafts/CN-0287.md",
-      "permalink": "/blog/hanoi-old-quarter-planning-07/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0288",
-      "title": "老城区周边停车前应核实的事项",
-      "topic": "old-quarter",
-      "subtopic": "planning",
-      "primary_keyword": "河内老城区租摩托车",
-      "hub": "/topics/old-quarter/planning/",
-      "draft": "_drafts/CN-0288.md",
-      "permalink": "/blog/hanoi-old-quarter-planning-08/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0289",
-      "title": "老城区酒店交接车辆如何询问费用",
-      "topic": "old-quarter",
-      "subtopic": "planning",
-      "primary_keyword": "河内老城区租摩托车",
-      "hub": "/topics/old-quarter/planning/",
-      "draft": "_drafts/CN-0289.md",
-      "permalink": "/blog/hanoi-old-quarter-planning-09/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0290",
-      "title": "老城区行程结束后如何确认还车安排",
-      "topic": "old-quarter",
-      "subtopic": "planning",
-      "primary_keyword": "河内老城区租摩托车",
-      "hub": "/topics/old-quarter/planning/",
-      "draft": "_drafts/CN-0290.md",
-      "permalink": "/blog/hanoi-old-quarter-planning-10/",
-      "review_required": false
-    },
     {
       "id": "CN-0291",
       "title": "租摩托车前检查车况的完整步骤",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/maintenance/",
       "draft": "_drafts/CN-0295.md",
       "permalink": "/blog/hanoi-guides-maintenance-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0296",
+      "title": "租车途中发现漏油应采取什么措施",
+      "topic": "guides",
+      "subtopic": "maintenance",
+      "primary_keyword": "河内摩托车车况检查",
+      "hub": "/topics/guides/maintenance/",
+      "draft": "_drafts/CN-0296.md",
+      "permalink": "/blog/hanoi-guides-maintenance-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0297",
+      "title": "怎样判断后视镜是否固定稳妥",
+      "topic": "guides",
+      "subtopic": "maintenance",
+      "primary_keyword": "河内摩托车车况检查",
+      "hub": "/topics/guides/maintenance/",
+      "draft": "_drafts/CN-0297.md",
+      "permalink": "/blog/hanoi-guides-maintenance-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0298",
+      "title": "租车遇到电瓶问题应如何联系门店",
+      "topic": "guides",
+      "subtopic": "maintenance",
+      "primary_keyword": "河内摩托车车况检查",
+      "hub": "/topics/guides/maintenance/",
+      "draft": "_drafts/CN-0298.md",
+      "permalink": "/blog/hanoi-guides-maintenance-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0299",
+      "title": "骑行途中车辆故障如何保障自身安全",
+      "topic": "guides",
+      "subtopic": "maintenance",
+      "primary_keyword": "河内摩托车车况检查",
+      "hub": "/topics/guides/maintenance/",
+      "draft": "_drafts/CN-0299.md",
+      "permalink": "/blog/hanoi-guides-maintenance-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0300",
+      "title": "还车前怎样整理车况记录和照片",
+      "topic": "guides",
+      "subtopic": "maintenance",
+      "primary_keyword": "河内摩托车车况检查",
+      "hub": "/topics/guides/maintenance/",
+      "draft": "_drafts/CN-0300.md",
+      "permalink": "/blog/hanoi-guides-maintenance-10/",
       "review_required": false
     }
   ]
