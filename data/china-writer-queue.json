@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 195,
-  "remaining": 105,
+  "published": 200,
+  "remaining": 100,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0196",
-      "title": "预定取车时间前怎样确认营业时间",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0196.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-21/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0197",
-      "title": "老城区取还车能否通过 Zalo 咨询",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0197.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-22/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0198",
-      "title": "离开老城区之前的租车文件清单",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0198.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-23/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0199",
-      "title": "老城区交车与门店交车的合同区别",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0199.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-24/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0200",
-      "title": "老城区摩托车租赁交接沟通模板",
-      "topic": "old-quarter",
-      "subtopic": "pickup",
-      "primary_keyword": "河内老城区取车还车",
-      "hub": "/topics/old-quarter/pickup/",
-      "draft": "_drafts/CN-0200.md",
-      "permalink": "/blog/hanoi-oldquarter-pickup-25/",
-      "review_required": false
-    },
     {
       "id": "CN-0201",
       "title": "第一次在河内租摩托车需要准备哪些资料",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/contracts/",
       "draft": "_drafts/CN-0205.md",
       "permalink": "/blog/hanoi-guides-contracts-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0206",
+      "title": "河内租车证件要求为什么要逐车型确认",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0206.md",
+      "permalink": "/blog/hanoi-guides-contracts-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0207",
+      "title": "租车付款前如何保存收据和凭证",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0207.md",
+      "permalink": "/blog/hanoi-guides-contracts-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0208",
+      "title": "租车合同发生变更时怎样留存记录",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0208.md",
+      "permalink": "/blog/hanoi-guides-contracts-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0209",
+      "title": "租车时如何约定责任分配事项",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0209.md",
+      "permalink": "/blog/hanoi-guides-contracts-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0210",
+      "title": "河内租摩托车是否可以直接在线付款",
+      "topic": "guides",
+      "subtopic": "contracts",
+      "primary_keyword": "河内租摩托车合同押金",
+      "hub": "/topics/guides/contracts/",
+      "draft": "_drafts/CN-0210.md",
+      "permalink": "/blog/hanoi-guides-contracts-10/",
       "review_required": false
     }
   ]
