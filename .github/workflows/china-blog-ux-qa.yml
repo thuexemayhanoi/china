@@ -1,0 +1,87 @@
+name: CHINA Blog UX Build QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '_data/site.json'
+      - '_data/i18n-en.json'
+      - '_layouts/**'
+      - '_includes/**'
+      - 'assets/blog-search.js'
+      - 'assets/blog-enhancements.css'
+      - 'assets/search/**'
+      - '_posts/**'
+      - 'scripts/qa_blog_features.py'
+      - '.github/workflows/china-blog-ux-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - '_data/site.json'
+      - '_data/i18n-en.json'
+      - '_layouts/**'
+      - '_includes/**'
+      - 'assets/blog-search.js'
+      - 'assets/blog-enhancements.css'
+      - 'assets/search/**'
+      - '_posts/**'
+      - 'scripts/qa_blog_features.py'
+      - '.github/workflows/china-blog-ux-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blog-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout CHINA without changing Pages deploy source
+        uses: actions/checkout@v4
+      - name: Python source invariants
+        run: |
+          python3 scripts/qa.py
+          python3 scripts/qa_blog_features.py source
+      - name: Validate dependency-free search JavaScript
+        run: node --check assets/blog-search.js
+      - name: Native GitHub Pages Jekyll build 1
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: QA actual rendered site (existing published posts only)
+        run: |
+          python3 scripts/qa_blog_features.py built
+          cp -a _site /tmp/china-blog-site-first-build
+          rm -rf _site
+      - name: Native GitHub Pages Jekyll build 2
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Idempotent identical output and sitemap
+        run: |
+          diff -qr /tmp/china-blog-site-first-build _site
+          python3 scripts/qa_blog_features.py built
+      - name: Create disposable tests for two articles in one silo and two separate silos
+        run: |
+          python3 scripts/qa_blog_features.py make-fixtures
+          rm -rf _site
+      - name: Build with disposable synthetic posts (never push fixture posts)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Verify generated search H2/H3/keywords, links, publisher and canonical
+        run: |
+          python3 scripts/qa_blog_features.py fixtures
+          python3 scripts/qa_blog_features.py disable
+          rm -rf _site
+      - name: Build with all three feature flags disabled
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Verify feature flags disable UI without breaking posts
+        run: python3 scripts/qa_blog_features.py disabled
