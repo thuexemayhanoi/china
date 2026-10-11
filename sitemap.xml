@@ -4,5 +4,6 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for path in site.data.site.sitemap_base %}  <url><loc>{{ site.data.site.domain }}{{ path }}</loc></url>
-{% endfor %}{% for p in site.posts %}  <url><loc>{{ site.data.site.domain }}{{ p.url }}</loc></url>
+{% endfor %}{% if site.posts.size > 0 %}  <url><loc>{{ site.data.site.domain }}/blog/</loc></url>
+{% endif %}{% for p in site.posts %}  <url><loc>{{ site.data.site.domain }}{{ p.url }}</loc></url>
 {% endfor %}</urlset>
