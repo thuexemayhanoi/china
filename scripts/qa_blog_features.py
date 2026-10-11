@@ -151,11 +151,11 @@ def check_built(fixtures=False, disabled=False):
         silo_for_url={}
         for source in POSTS.glob("*.md"):
             content=source.read_text(encoding="utf-8")
-            front=re.match(r"^---\\s*\\n(.*?)\\n---\\s*\\n",content,re.S)
+            front=re.match(r"^---\s*\n(.*?)\n---\s*\n",content,re.S)
             require(front is not None,"post missing front matter "+source.name)
             fields={}
             for key in ("permalink","seo_silo"):
-                found=re.search(r"(?m)^"+key+r":\\s*(.+?)\\s*$",front.group(1))
+                found=re.search(r"(?m)^"+key+r":\s*(.+?)\s*$",front.group(1))
                 if found:
                     raw=found.group(1).strip()
                     fields[key]=json.loads(raw) if raw.startswith('"') else raw
