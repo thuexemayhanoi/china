@@ -57,9 +57,9 @@ jobs:
           IDS: ${{ inputs.ids }}
           CONFIRM: ${{ inputs.confirm }}
         run: python3 scripts/china_factory.py publish --ids "$IDS" --confirm "$CONFIRM"
-      - name: Validate 250-row invariants after promotion
+      - name: Validate 300-row invariants after promotion
         run: |
-          python3 scripts/china_factory.py validate --drafts
+          python3 scripts/china_factory.py validate
           python3 scripts/qa.py
       - name: Fast-forward commit (no force, no rebase of other writers)
         env:
@@ -67,7 +67,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- data/china-matrix.csv _drafts _posts
+          git add -A -- data/china-matrix.csv data/china-matrix-extra.csv data/china-writer-queue.json _drafts _posts
           if git diff --cached --quiet; then
             echo "No reviewed article changes; refusing empty publication"
             exit 1
