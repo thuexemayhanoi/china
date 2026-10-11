@@ -1,0 +1,6 @@
+{% comment %}One shared post-bottom hook, ordered in one file. Article body and H1/H2 inside post remain unchanged. Defaults are feature-flagged in _data/site.json.{% endcomment %}
+{% if site.data.site.features.show_post_navigation %}{% include post-navigation.html %}{% endif %}
+{% if site.data.site.features.show_author_box %}{% include author-box.html %}{% endif %}
+{% if site.data.site.features.show_post_cta %}{% include cta.html %}{% endif %}
+{% if site.data.site.features.show_related_posts %}{% include related-posts.html %}{% endif %}
+{% if site.data.site.features.show_post_hub_links %}{% include post-hub-links.html %}{% endif %}
