@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 250,
-  "remaining": 50,
+  "published": 255,
+  "remaining": 45,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0251",
-      "title": "河内租电动车前应确认哪些车型信息",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0251.md",
-      "permalink": "/blog/hanoi-rental-electric-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0252",
-      "title": "电动自行车和电动摩托车的使用差异",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0252.md",
-      "permalink": "/blog/hanoi-rental-electric-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0253",
-      "title": "租电动车如何核对充电方式与续航",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0253.md",
-      "permalink": "/blog/hanoi-rental-electric-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0254",
-      "title": "河内电动自行车适合哪些短途需求",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0254.md",
-      "permalink": "/blog/hanoi-rental-electric-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0255",
-      "title": "取电动车前如何检查刹车与轮胎",
-      "topic": "rental",
-      "subtopic": "electric",
-      "primary_keyword": "河内电动车租赁",
-      "hub": "/topics/rental/electric/",
-      "draft": "_drafts/CN-0255.md",
-      "permalink": "/blog/hanoi-rental-electric-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0256",
       "title": "租电动车时如何记录交接车况",
@@ -115,6 +60,61 @@
       "hub": "/topics/rental/electric/",
       "draft": "_drafts/CN-0260.md",
       "permalink": "/blog/hanoi-rental-electric-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0261",
+      "title": "河内摩托车月租预算应该怎样规划",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0261.md",
+      "permalink": "/blog/hanoi-pricing-monthly-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0262",
+      "title": "Honda Wave 月租参考价如何理解",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0262.md",
+      "permalink": "/blog/hanoi-pricing-monthly-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0263",
+      "title": "Honda Vision 月租价格区间如何核对",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0263.md",
+      "permalink": "/blog/hanoi-pricing-monthly-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0264",
+      "title": "Honda Air Blade 月租前应核实什么",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0264.md",
+      "permalink": "/blog/hanoi-pricing-monthly-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0265",
+      "title": "Honda Click 和 Mio 月租预算比较",
+      "topic": "pricing",
+      "subtopic": "monthly",
+      "primary_keyword": "河内摩托车月租价格",
+      "hub": "/topics/pricing/monthly/",
+      "draft": "_drafts/CN-0265.md",
+      "permalink": "/blog/hanoi-pricing-monthly-05/",
       "review_required": false
     }
   ]

@@ -1,9 +1,9 @@
 article_id,batch_id,topic,subtopic,primary_keyword,search_intent,working_title,slug,draft_path,permalink,parent_hub,status,qa_score,published_date,notes
-CN-0251,B11,rental,electric,河内电动车租赁,informational,河内租电动车前应确认哪些车型信息,hanoi-rental-electric-01,_drafts/CN-0251.md,/blog/hanoi-rental-electric-01/,/topics/rental/electric/,PLANNED,,,
-CN-0252,B11,rental,electric,河内电动车租赁,informational,电动自行车和电动摩托车的使用差异,hanoi-rental-electric-02,_drafts/CN-0252.md,/blog/hanoi-rental-electric-02/,/topics/rental/electric/,PLANNED,,,
-CN-0253,B11,rental,electric,河内电动车租赁,informational,租电动车如何核对充电方式与续航,hanoi-rental-electric-03,_drafts/CN-0253.md,/blog/hanoi-rental-electric-03/,/topics/rental/electric/,PLANNED,,,
-CN-0254,B11,rental,electric,河内电动车租赁,informational,河内电动自行车适合哪些短途需求,hanoi-rental-electric-04,_drafts/CN-0254.md,/blog/hanoi-rental-electric-04/,/topics/rental/electric/,PLANNED,,,
-CN-0255,B11,rental,electric,河内电动车租赁,informational,取电动车前如何检查刹车与轮胎,hanoi-rental-electric-05,_drafts/CN-0255.md,/blog/hanoi-rental-electric-05/,/topics/rental/electric/,PLANNED,,,
+CN-0251,B11,rental,electric,河内电动车租赁,informational,河内租电动车前应确认哪些车型信息,hanoi-rental-electric-01,_drafts/CN-0251.md,/blog/hanoi-rental-electric-01/,/topics/rental/electric/,PUBLISHED,100,2026-10-12,Published via automated structural QA; human factual review not asserted
+CN-0252,B11,rental,electric,河内电动车租赁,informational,电动自行车和电动摩托车的使用差异,hanoi-rental-electric-02,_drafts/CN-0252.md,/blog/hanoi-rental-electric-02/,/topics/rental/electric/,PUBLISHED,100,2026-10-12,Published via automated structural QA; human factual review not asserted
+CN-0253,B11,rental,electric,河内电动车租赁,informational,租电动车如何核对充电方式与续航,hanoi-rental-electric-03,_drafts/CN-0253.md,/blog/hanoi-rental-electric-03/,/topics/rental/electric/,PUBLISHED,100,2026-10-12,Published via automated structural QA; human factual review not asserted
+CN-0254,B11,rental,electric,河内电动车租赁,informational,河内电动自行车适合哪些短途需求,hanoi-rental-electric-04,_drafts/CN-0254.md,/blog/hanoi-rental-electric-04/,/topics/rental/electric/,PUBLISHED,100,2026-10-12,Published via automated structural QA; human factual review not asserted
+CN-0255,B11,rental,electric,河内电动车租赁,informational,取电动车前如何检查刹车与轮胎,hanoi-rental-electric-05,_drafts/CN-0255.md,/blog/hanoi-rental-electric-05/,/topics/rental/electric/,PUBLISHED,100,2026-10-12,Published via automated structural QA; human factual review not asserted
 CN-0256,B11,rental,electric,河内电动车租赁,informational,租电动车时如何记录交接车况,hanoi-rental-electric-06,_drafts/CN-0256.md,/blog/hanoi-rental-electric-06/,/topics/rental/electric/,PLANNED,,,
 CN-0257,B11,rental,electric,河内电动车租赁,informational,电动车租期与押金需要确认的事项,hanoi-rental-electric-07,_drafts/CN-0257.md,/blog/hanoi-rental-electric-07/,/topics/rental/electric/,PLANNED,,,
 CN-0258,B11,rental,electric,河内电动车租赁,informational,电动车雨天使用有哪些安全注意点,hanoi-rental-electric-08,_drafts/CN-0258.md,/blog/hanoi-rental-electric-08/,/topics/rental/electric/,PLANNED,,,
