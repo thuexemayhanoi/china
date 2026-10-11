@@ -166,7 +166,7 @@ def check_built(fixtures=False, disabled=False):
         expected_silos={"rental/scooters":(older,newer),
                         "rental/monthly":(monthly,),
                         "pricing/daily":(pricing,)}
-        limit=int(config["features"].get("related_limit",4))
+        limit=int(json.loads(read("_data/site.json"))["features"].get("related_limit",4))
         for silo,pages in expected_silos.items():
             for html in pages:
                 rel=re.search(r'<section class="section"><h2>相关文章</h2><div class="cards">(.*?)</div></section>',html,re.S)
