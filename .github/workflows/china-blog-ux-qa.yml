@@ -54,7 +54,7 @@ jobs:
         run: |
           python3 scripts/qa_blog_features.py built
           cp -a _site /tmp/china-blog-site-first-build
-          rm -rf _site
+          sudo rm -rf _site
       - name: Native GitHub Pages Jekyll build 2
         uses: actions/jekyll-build-pages@v1
         with:
@@ -67,7 +67,7 @@ jobs:
       - name: Create disposable tests for two articles in one silo and two separate silos
         run: |
           python3 scripts/qa_blog_features.py make-fixtures
-          rm -rf _site
+          sudo rm -rf _site
       - name: Build with disposable synthetic posts (never push fixture posts)
         uses: actions/jekyll-build-pages@v1
         with:
@@ -77,7 +77,7 @@ jobs:
         run: |
           python3 scripts/qa_blog_features.py fixtures
           python3 scripts/qa_blog_features.py disable
-          rm -rf _site
+          sudo rm -rf _site
       - name: Build with all three feature flags disabled
         uses: actions/jekyll-build-pages@v1
         with:
