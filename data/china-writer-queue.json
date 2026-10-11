@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 225,
-  "remaining": 75,
+  "published": 230,
+  "remaining": 70,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0226",
-      "title": "河内摩托车新手骑行前安全检查表",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0226.md",
-      "permalink": "/blog/hanoi-guides-safety-01/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0227",
-      "title": "雨季骑摩托车应检查哪些车辆部件",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0227.md",
-      "permalink": "/blog/hanoi-guides-safety-02/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0228",
-      "title": "河内拥堵路段骑行时如何保持安全距离",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0228.md",
-      "permalink": "/blog/hanoi-guides-safety-03/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0229",
-      "title": "摩托车夜间骑行灯光检查步骤",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0229.md",
-      "permalink": "/blog/hanoi-guides-safety-04/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0230",
-      "title": "在河内骑车时头盔怎么正确选择",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0230.md",
-      "permalink": "/blog/hanoi-guides-safety-05/",
-      "review_required": false
-    },
     {
       "id": "CN-0231",
       "title": "租来的摩托车轮胎磨损怎么看",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/safety/",
       "draft": "_drafts/CN-0235.md",
       "permalink": "/blog/hanoi-guides-safety-10/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0236",
+      "title": "摩托车骑行遇到大雨应该如何应对",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0236.md",
+      "permalink": "/blog/hanoi-guides-safety-11/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0237",
+      "title": "载人前要确认哪些摩托车安全事项",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0237.md",
+      "permalink": "/blog/hanoi-guides-safety-12/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0238",
+      "title": "携带旅行背包骑车有什么风险",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0238.md",
+      "permalink": "/blog/hanoi-guides-safety-13/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0239",
+      "title": "河内摩托车停车时怎样加强防护",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0239.md",
+      "permalink": "/blog/hanoi-guides-safety-14/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0240",
+      "title": "摩托车长期租赁期间怎样做日常检查",
+      "topic": "guides",
+      "subtopic": "safety",
+      "primary_keyword": "河内摩托车骑行安全",
+      "hub": "/topics/guides/safety/",
+      "draft": "_drafts/CN-0240.md",
+      "permalink": "/blog/hanoi-guides-safety-15/",
       "review_required": false
     }
   ]
