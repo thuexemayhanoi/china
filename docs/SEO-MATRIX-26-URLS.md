@@ -44,8 +44,8 @@
 | SEO-19 | `/topics/pricing/deposits/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车押金 | P2 | Bảng đặt cọc tham khảo theo mẫu, quy trình trả cọc đúng hợp đồng, nguồn công khai. | QA_PASS |
 | SEO-20 | `/topics/50cc/models/` | Danh mục con | noindex: true | Ngoài sitemap | 河内50cc踏板车车型与价格 | P2 | Giá/ngày, mức cọc và mẫu 50cc thực tế, tình trạng xe cần xác minh. | QA_PASS |
 | SEO-21 | `/topics/50cc/requirements/` | Danh mục con | noindex: true | Ngoài sitemap | 越南50cc摩托车驾驶规定 | P2 | Tài liệu quy định VN hiện hành, nguồn có ngày, tuổi/giấy phép/định nghĩa xe. | QA_PASS |
-| SEO-22 | `/topics/old-quarter/directions/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区到Long Biên租车店路线 | P2 | Google Maps và địa chỉ đúng; không bịa thời gian di chuyển hoặc lộ trình cố định. | TODO |
-| SEO-23 | `/topics/old-quarter/pickup/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区取还摩托车咨询 | P2 | Phân biệt nhận xe tại cửa hàng và giao xe khi được xác nhận; chi phí/địa điểm phải hỏi. | TODO |
+| SEO-22 | `/topics/old-quarter/directions/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区到Long Biên租车店路线 | P2 | Google Maps và địa chỉ đúng; không bịa thời gian di chuyển hoặc lộ trình cố định. | QA_PASS |
+| SEO-23 | `/topics/old-quarter/pickup/` | Danh mục con | noindex: true | Ngoài sitemap | 河内老城区取还摩托车咨询 | P2 | Phân biệt nhận xe tại cửa hàng và giao xe khi được xác nhận; chi phí/địa điểm phải hỏi. | QA_PASS |
 | SEO-24 | `/topics/guides/contracts/` | Danh mục con | noindex: true | Ngoài sitemap | 河内租摩托车证件与合同 | P2 | Checklist giấy tờ/hợp đồng và đặt cọc; không yêu cầu hộ chiếu nếu không có chính sách chính thức. | TODO |
 | SEO-25 | `/topics/guides/safety/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车骑行安全 | P2 | Nguồn an toàn/pháp lý rõ; hướng dẫn kiểm tra xe và hạn chế hứa hẹn. | TODO |
 | SEO-26 | `/topics/guides/returns/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车还车与押金退还 | P2 | Đặt điều kiện trả xe và hoàn cọc theo hợp đồng; quy trình có xác minh. | TODO |
@@ -278,3 +278,17 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 - **Chưa QA:** GSC indexing, legal interpretation cho từng người/xe, thực tế ảnh đội xe/thông số xe cụ thể, iPhone tương tác, Core Web Vitals, chuyển đổi hoặc SEO ranking.
 
 **Sau lượt này: 18/26 `QA_PASS`, còn 8 hạng mục.** Các trang con vẫn noindex trừ khi được duyệt mở index riêng; lịch chạy tự động vẫn OFF.
+
+## P. SEO-22/23 — Directions & Pickup Old Quarter (duyệt thủ công 2026-10-11)
+
+**Đánh dấu:** `SEO-22` `/topics/old-quarter/directions/` và `SEO-23` `/topics/old-quarter/pickup/` thành **QA_PASS chỉ về nội dung + cấu trúc HTML đã kiểm chứng sau deploy**. Hai trang con vẫn **`noindex,follow`** và **ngoài sitemap**, không có tuyên bố Google/Baidu đã index hay lưu lượng, ranking, Core Web Vitals cải thiện.
+
+- `/topics/old-quarter/directions/`: H1/meta tập trung truy vấn hướng dẫn từ Phố Cổ đến cửa hàng Long Biên. Nêu **địa chỉ 112 Nguyễn Văn Cừ, Bồ Đề, Long Biên** và giờ 09:00–21:00 từ `_data/site.json`, link trực tiếp Google Maps CID và hướng dẫn nhập **điểm xuất phát thật** để kiểm tra tuyến, giao thông và thời gian từ bản đồ. Không bịa km, thời gian di chuyển, cây cầu/lộ trình bắt buộc. Thêm danh sách xác minh tồn kho, báo giá, giao xe và kiểm tra tình trạng xe trước ký hợp đồng.
+- `/topics/old-quarter/pickup/`: Giải thích nhận/trả tại **cửa hàng ở Long Biên** khác với trường hợp xin giao/nhận tại khách sạn, Phố Cổ hay địa điểm khác. Giao nhận ngoài cửa hàng không mặc định được cung cấp; phải **xác nhận rõ vị trí, thời gian, người giao nhận và mọi khoản phí** với cửa hàng. Không cam kết giao miễn phí, hàng sẵn có, đặt chỗ tự động, thời hạn hoặc hoàn đủ tiền cọc. Nêu checklist kiểm tra xe, chứng từ và đối chiếu hợp đồng khi trả.
+- Mỗi trang 1 H1, 4 H2 nội dung riêng (trước sửa chỉ 1 H2); bản dịch EN bổ sung 60 mục trong `_data/i18n-en.json`. Diff chỉ **ba file**: `topics/old-quarter/directions/index.html`, `topics/old-quarter/pickup/index.html` và `_data/i18n-en.json`. Không sửa dữ liệu giá, địa chỉ nguồn, sidebar/layout/JSON-LD, CSS/JS, Quick Call/chatbot, sitemap/robots, CNAME/DNS hoặc workflow 250 bài.
+- [PR #12](https://github.com/thuexemayhanoi/china/pull/12) squash merge `2825593223ce9f3d6bf66fe108ccddd513d65c7f`. [GitHub Pages run 38112068491](https://github.com/thuexemayhanoi/china/actions/runs/38112068491) **Jekyll build + deploy SUCCESS**.
+- **Live QA** sau deploy `maxAge=0`:
+  - `/topics/old-quarter/directions/`: HTTP 200, self canonical, `noindex,follow`, `zh-CN`, 1 H1/4 H2, valid LocalBusiness + BreadcrumbList JSON-LD; đúng NAP, Maps, links giá/contact, cảnh báo không đưa thời gian tuyến cố định.
+  - `/topics/old-quarter/pickup/`: HTTP 200, self canonical, `noindex,follow`, `zh-CN`, 1 H1/4 H2, valid LocalBusiness + BreadcrumbList JSON-LD; đúng NAP, Maps/contact và lời giải thích không có cam kết giao miễn phí hoặc hoàn cọc tự động.
+
+**Giới hạn QA:** Không đo thiết bị thật iPhone, GSC index/hiệu suất từ khóa, Core Web Vitals, chất lượng đường đi thực tế từng điểm xuất phát hoặc khả năng cung cấp giao nhận của cửa hàng. Giữ lịch SEO tự động OFF. **Tiến độ sau lượt này: 20/26 QA_PASS; còn 6 hạng mục**.
