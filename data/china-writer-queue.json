@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 165,
-  "remaining": 135,
+  "published": 170,
+  "remaining": 130,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0166",
-      "title": "在河内找租车店为什么要看实际地图",
-      "topic": "old-quarter",
-      "subtopic": "directions",
-      "primary_keyword": "河内老城区附近租摩托车",
-      "hub": "/topics/old-quarter/directions/",
-      "draft": "_drafts/CN-0166.md",
-      "permalink": "/blog/hanoi-oldquarter-routes-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0167",
-      "title": "老城区短租旅客如何规划取还车线路",
-      "topic": "old-quarter",
-      "subtopic": "directions",
-      "primary_keyword": "河内老城区附近租摩托车",
-      "hub": "/topics/old-quarter/directions/",
-      "draft": "_drafts/CN-0167.md",
-      "permalink": "/blog/hanoi-oldquarter-routes-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0168",
-      "title": "从龙编门店返程到老城区如何查看路况",
-      "topic": "old-quarter",
-      "subtopic": "directions",
-      "primary_keyword": "河内老城区附近租摩托车",
-      "hub": "/topics/old-quarter/directions/",
-      "draft": "_drafts/CN-0168.md",
-      "permalink": "/blog/hanoi-oldquarter-routes-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0169",
-      "title": "老城区到门店路线是否可提前固定",
-      "topic": "old-quarter",
-      "subtopic": "directions",
-      "primary_keyword": "河内老城区附近租摩托车",
-      "hub": "/topics/old-quarter/directions/",
-      "draft": "_drafts/CN-0169.md",
-      "permalink": "/blog/hanoi-oldquarter-routes-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0170",
-      "title": "夜间前往龙编门店前的出行核对",
-      "topic": "old-quarter",
-      "subtopic": "directions",
-      "primary_keyword": "河内老城区附近租摩托车",
-      "hub": "/topics/old-quarter/directions/",
-      "draft": "_drafts/CN-0170.md",
-      "permalink": "/blog/hanoi-oldquarter-routes-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0171",
       "title": "旅行行李多时如何安排前往租车门店",
@@ -115,6 +60,61 @@
       "hub": "/topics/old-quarter/directions/",
       "draft": "_drafts/CN-0175.md",
       "permalink": "/blog/hanoi-oldquarter-routes-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0176",
+      "title": "河内老城区可以安排摩托车送车吗",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0176.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0177",
+      "title": "老城区送车服务为什么需要提前确认",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0177.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0178",
+      "title": "从老城区取车和到店取车怎么比较",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0178.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0179",
+      "title": "在河内异地取车前应核对什么费用",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0179.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0180",
+      "title": "老城区租车旅客怎样预约咨询时间",
+      "topic": "old-quarter",
+      "subtopic": "pickup",
+      "primary_keyword": "河内老城区取车还车",
+      "hub": "/topics/old-quarter/pickup/",
+      "draft": "_drafts/CN-0180.md",
+      "permalink": "/blog/hanoi-oldquarter-pickup-05/",
       "review_required": false
     }
   ]
