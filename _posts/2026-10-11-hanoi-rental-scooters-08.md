@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0008"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-08/
-title: 两人出行租踏板车前应核实什么
-description: 两人共用一台踏板车,核实的不只是车辆。本文把两人出行的准备分成车辆状态、费用规则和骑行习惯三层清单,帮助同行者在出发前达成共识。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-08/"
+title: "两人出行租踏板车前应核实什么"
+description: "两人共用一台踏板车,核实的不只是车辆。本文把两人出行的准备分成车辆状态、费用规则和骑行习惯三层清单,帮助同行者在出发前达成共识。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:34 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"两人出行租踏板车前应核实什么"}]
+publication_method: "automated_qa"
 ---
-
 两个人共用一台踏板车,是河内旅行中常见的安排:骑手负责驾驶,同伴坐在后座。但两人出行的核实质远多于单人,取车前需要核实的内容也更多。本文把两人出行的核实清单分成车辆、规则和习惯三层,帮助同行两人在出发前就把分工说清楚。
 
 ## 车辆本身要核实什么
