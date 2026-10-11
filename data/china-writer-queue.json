@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 240,
-  "remaining": 60,
+  "published": 245,
+  "remaining": 55,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0241",
-      "title": "第一次驾驶自动挡踏板车前的准备",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0241.md",
-      "permalink": "/blog/hanoi-guides-safety-16/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0242",
-      "title": "摩托车雨天制动需要了解什么",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0242.md",
-      "permalink": "/blog/hanoi-guides-safety-17/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0243",
-      "title": "从河内市区外出骑车前要准备什么",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0243.md",
-      "permalink": "/blog/hanoi-guides-safety-18/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0244",
-      "title": "摩托车车辆异响出现时怎么沟通维修",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0244.md",
-      "permalink": "/blog/hanoi-guides-safety-19/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0245",
-      "title": "骑行前如何核对油量与行驶计划",
-      "topic": "guides",
-      "subtopic": "safety",
-      "primary_keyword": "河内摩托车骑行安全",
-      "hub": "/topics/guides/safety/",
-      "draft": "_drafts/CN-0245.md",
-      "permalink": "/blog/hanoi-guides-safety-20/",
-      "review_required": false
-    },
     {
       "id": "CN-0246",
       "title": "长距离骑行前应该考虑哪些体力问题",
@@ -115,6 +60,61 @@
       "hub": "/topics/guides/safety/",
       "draft": "_drafts/CN-0250.md",
       "permalink": "/blog/hanoi-guides-safety-25/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0251",
+      "title": "河内租电动车前应确认哪些车型信息",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0251.md",
+      "permalink": "/blog/hanoi-rental-electric-01/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0252",
+      "title": "电动自行车和电动摩托车的使用差异",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0252.md",
+      "permalink": "/blog/hanoi-rental-electric-02/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0253",
+      "title": "租电动车如何核对充电方式与续航",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0253.md",
+      "permalink": "/blog/hanoi-rental-electric-03/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0254",
+      "title": "河内电动自行车适合哪些短途需求",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0254.md",
+      "permalink": "/blog/hanoi-rental-electric-04/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0255",
+      "title": "取电动车前如何检查刹车与轮胎",
+      "topic": "rental",
+      "subtopic": "electric",
+      "primary_keyword": "河内电动车租赁",
+      "hub": "/topics/rental/electric/",
+      "draft": "_drafts/CN-0255.md",
+      "permalink": "/blog/hanoi-rental-electric-05/",
       "review_required": false
     }
   ]
