@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0003"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-03/
-title: Honda Vision 与 Honda Click 租赁怎么比较
-description: Honda Vision 与 Honda Click 是河内租车门店的常见车型。本文从座高、座桶、仪表灯光、重量和刹车五个维度给出到店比较方法,帮你按身高和行程选车。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-03/"
+title: "Honda Vision 与 Honda Click 租赁怎么比较"
+description: "Honda Vision 与 Honda Click 是河内租车门店的常见车型。本文从座高、座桶、仪表灯光、重量和刹车五个维度给出到店比较方法,帮你按身高和行程选车。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:06 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"Honda Vision 与 Honda Click 租赁怎么比较"}]
+publication_method: "automated_qa"
 ---
-
 在河内的租车门店里,Honda Vision 和 Honda Click 是出镜率很高的两款自动挡踏板车。对游客来说,它们看起来大同小异,租金也常在同一档位。本文给出一套到店比较的思路,帮助你根据自己的身高、行李和骑行习惯做选择,而不是只凭外观下决定。
 
 ## 先了解两款车的共同点

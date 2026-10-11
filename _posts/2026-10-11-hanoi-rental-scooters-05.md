@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0005"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-05/
-title: 租踏板车时刹车和轮胎怎么检查
-description: 刹车和轮胎是租踏板车时不能妥协的部件。本文拆解刹车四步检查、轮胎三个检查要点、发现问题后的沟通方式和取车后的日常确认习惯。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-05/"
+title: "租踏板车时刹车和轮胎怎么检查"
+description: "刹车和轮胎是租踏板车时不能妥协的部件。本文拆解刹车四步检查、轮胎三个检查要点、发现问题后的沟通方式和取车后的日常确认习惯。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:28:06 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"租踏板车时刹车和轮胎怎么检查"}]
+publication_method: "automated_qa"
 ---
-
 刹车和轮胎是租踏板车时唯二不能妥协的部件。外观旧一点不影响安全,刹车偏软、轮胎老化则直接关系骑行安全。本文把取车时的检查动作拆成具体步骤,十分钟内可以完成,适合每一位在河内取车的骑行者。
 
 ## 刹车检查的四个动作
