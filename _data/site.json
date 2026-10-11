@@ -170,5 +170,11 @@
         "href": "/prices/"
       }
     }
+  },
+  "branding": {
+    "mark": "NT",
+    "wordmark": "NGUYỄN TÚ",
+    "header_subtitle": "HANOI MOTORBIKE RENTAL",
+    "footer_subtitle": "河内摩托车租赁"
   }
 }

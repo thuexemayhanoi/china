@@ -17,7 +17,7 @@ class Parse(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.title=False;self.titles=[];self.h1=0
-        self.canon=[];self.desc=[];self.robots=[];self.langs=[];self.verifications=[];self.links=[];self.imgs=[]
+        self.canon=[];self.alternates=[];self.desc=[];self.robots=[];self.langs=[];self.verifications=[];self.links=[];self.imgs=[]
         self.script=False;self.scripts=[];self.buff=""
     def handle_starttag(self,tag,attrs):
         d=dict(attrs)
@@ -25,6 +25,7 @@ class Parse(HTMLParser):
         if tag=="html":self.langs.append(d.get("lang",""))
         if tag=="h1":self.h1+=1
         if tag=="link" and d.get("rel")=="canonical":self.canon.append(d.get("href",""))
+        if tag=="link" and d.get("rel")=="alternate" and d.get("type")=="text/plain":self.alternates.append(d.get("href",""))
         if tag=="meta" and d.get("name")=="description":self.desc.append(d.get("content",""))
         if tag=="meta" and d.get("name")=="robots":self.robots.append(d.get("content",""))
         if tag=="meta" and d.get("name")=="google-site-verification":self.verifications.append(d.get("content",""))
@@ -49,6 +50,17 @@ def main():
     def check(cond,msg):
         if not cond:errors.append(msg)
     sitemap=DEST/"sitemap.xml"
+    guide=DEST/"llms.txt"
+    check(guide.is_file(),"Missing Jekyll-rendered llms.txt")
+    if guide.is_file():
+        guide_text=guide.read_text(encoding="utf-8")
+        check("{{" not in guide_text and "{%" not in guide_text,
+              "llms.txt Liquid templates were not rendered")
+        for required in ("/blog/", "/prices/", "/faq/", "/contact/", "/sitemap.xml"):
+            check("]("+ORIGIN+required+")" in guide_text,
+                  "llms.txt missing important discovery route "+required)
+        check(CONFIG["business"]["name"] in guide_text,
+              "llms.txt business name not sourced from central config")
     check(sitemap.exists(),"Missing sitemap.xml")
     if not sitemap.exists():raise AssertionError(errors)
     data=ET.parse(sitemap).getroot()
@@ -68,6 +80,7 @@ def main():
         parser=Parse();parser.feed(raw)
         check(parser.h1==1,f"{route}: expected 1 H1, got {parser.h1}")
         check(len(parser.canon)==1 and parser.canon[0]==ORIGIN+route,f"{route}: invalid canonical {parser.canon}")
+        check(parser.alternates==[ORIGIN+"/llms.txt"],f"{route}: llms discovery link missing/duplicate {parser.alternates}")
         check(parser.langs==["zh-CN"],f"{route}: expected default Simplified Chinese HTML lang, got {parser.langs}")
         check([r.lower().replace(" ","") for r in parser.robots]==["index,follow"],f"{route}: robots indexability regressed {parser.robots}")
         check(parser.verifications==["HwLeUnxn5y1nBbGQD-54b3hR_dw10qMQ12wfmuDPfBg"],f"{route}: Google site verification tag changed or missing")

@@ -18,6 +18,24 @@ faq = json.loads((root / "_data/faqs.json").read_text(encoding="utf-8"))
 pages = sorted(root.rglob("index.html"))
 check(site["domain"] == "https://zh.rentbikehanoi.com", "canonical domain")
 check((root / "CNAME").read_text(encoding="utf-8").strip() == "zh.rentbikehanoi.com", "CNAME")
+branding = site.get("branding", {})
+for key in ("mark", "wordmark", "header_subtitle", "footer_subtitle"):
+    check(isinstance(branding.get(key), str) and bool(branding[key].strip()), "shared branding missing " + key)
+for filename in ("_includes/header.html", "_includes/footer.html"):
+    source = (root / filename).read_text(encoding="utf-8")
+    check("site.data.site.branding.mark" in source and "site.data.site.branding.wordmark" in source,
+          filename + " must use shared brand")
+author_box = (root / "_includes/author-box.html").read_text(encoding="utf-8")
+check("site.data.site.post_ui.cta.default" in author_box, "publisher CTA not shared")
+llms_source = (root / "llms.txt")
+check(llms_source.is_file(), "llms.txt missing")
+if llms_source.is_file():
+    guide = llms_source.read_text(encoding="utf-8")
+    check("site.data.navigation" in guide and "site.data.site.business" in guide,
+          "llms guide must use shared navigation and business data")
+    check(guide.startswith("---\n") and "permalink: /llms.txt" in guide,
+          "llms guide requires Jekyll front matter and fixed URL")
+
 check(len(pages) == 31, "expected 31 core HTML pages, got %d" % len(pages))
 check(len(site["sitemap_base"]) == 31, "31 sitemap base URLs")
 check(sum(len(n.get("children",[])) for n in nav) >= 19, "new child categories missing from navigation")
