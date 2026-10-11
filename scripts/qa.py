@@ -33,7 +33,7 @@ if llms_source.is_file():
     guide = llms_source.read_text(encoding="utf-8")
     check("site.data.navigation" in guide and "site.data.site.business" in guide,
           "llms guide must use shared navigation and business data")
-    check(guide.startswith("---\\n") and "permalink: /llms.txt" in guide,
+    check(guide.startswith("---\n") and "permalink: /llms.txt" in guide,
           "llms guide requires Jekyll front matter and fixed URL")
 
 check(len(pages) == 31, "expected 31 core HTML pages, got %d" % len(pages))
