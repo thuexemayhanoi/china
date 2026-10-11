@@ -30,7 +30,8 @@
     "smart_search": true,
     "show_post_navigation": true,
     "show_author_box": true,
-    "show_post_hub_links": true
+    "show_post_hub_links": true,
+    "show_post_slots": false
   },
   "sitemap_base": [
     "/",
@@ -145,6 +146,24 @@
           "label": "还车与押金结算"
         }
       ]
+    },
+    "slots": {
+      "before_body": {
+        "enabled": false,
+        "eyebrow": "READ BEFORE RIDING",
+        "title": "租车前请确认",
+        "description": "车型、驾驶资格和取还车条件，应在签约前与门店核实。",
+        "button": "阅读租前指南 →",
+        "href": "/topics/guides/"
+      },
+      "after_body": {
+        "enabled": false,
+        "eyebrow": "RENTAL GUIDE",
+        "title": "需要进一步了解租车？",
+        "description": "查看真实价格与证件、押金及安全须知；网站不能自动确认预订。",
+        "button": "查看租金与押金 →",
+        "href": "/prices/"
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
 ---
 layout: default
 ---
-<article class="prose"><header class="page-head"><span class="eyebrow">BLOG · {{ page.topic | default: 'GUIDE' }}</span><h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p><p class="muted small">{{ page.date | date: '%Y-%m-%d' }}</p></header><div class="inner-panel">{{ content }}</div></article>{% include post-footer.html %}
+<article class="prose"><header class="page-head"><span class="eyebrow">BLOG · {{ page.topic | default: 'GUIDE' }}</span><h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p><p class="muted small">{{ page.date | date: '%Y-%m-%d' }}</p></header>{% if site.data.site.features.show_post_slots %}{% include post-slot.html position="before_body" %}{% endif %}<div class="inner-panel">{{ content }}</div>{% if site.data.site.features.show_post_slots %}{% include post-slot.html position="after_body" %}{% endif %}</article>{% include post-footer.html %}

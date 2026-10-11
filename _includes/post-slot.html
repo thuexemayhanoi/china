@@ -1,0 +1,12 @@
+{% comment %}Globally configured optional before/after post slot. Content escaped; only existing indexed destinations accepted.{% endcomment %}
+{% assign slot = site.data.site.post_ui.slots[include.position] %}
+{% if slot and slot.enabled == true and slot.title and slot.href %}
+  {% if site.data.site.sitemap_base contains slot.href %}
+<aside class="post-content-slot" aria-label="{{ slot.title | escape }}">
+  {% if slot.eyebrow %}<span class="post-slot-eyebrow">{{ slot.eyebrow | escape }}</span>{% endif %}
+  <strong class="post-slot-title">{{ slot.title | escape }}</strong>
+  {% if slot.description %}<p>{{ slot.description | escape }}</p>{% endif %}
+  {% if slot.button %}<a href="{{ site.data.site.domain }}{{ slot.href }}">{{ slot.button | escape }}</a>{% endif %}
+</aside>
+  {% endif %}
+{% endif %}
