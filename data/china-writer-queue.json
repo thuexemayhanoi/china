@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 45,
-  "remaining": 255,
+  "published": 50,
+  "remaining": 250,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0046",
-      "title": "长租旅客如何规划门店取车时间",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0046.md",
-      "permalink": "/blog/hanoi-rental-longterm-21/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0047",
-      "title": "河内月租如何避免误解押金用途",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0047.md",
-      "permalink": "/blog/hanoi-rental-longterm-22/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0048",
-      "title": "月租时间延长时如何重新核算费用",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0048.md",
-      "permalink": "/blog/hanoi-rental-longterm-23/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0049",
-      "title": "月租摩托车适合哪些市区通勤需求",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0049.md",
-      "permalink": "/blog/hanoi-rental-longterm-24/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0050",
-      "title": "结束长租后如何核对押金结算",
-      "topic": "rental",
-      "subtopic": "monthly",
-      "primary_keyword": "河内摩托车月租",
-      "hub": "/topics/rental/monthly/",
-      "draft": "_drafts/CN-0050.md",
-      "permalink": "/blog/hanoi-rental-longterm-25/",
-      "review_required": false
-    },
     {
       "id": "CN-0051",
       "title": "河内摩托车日租多少钱以及报价怎么看",
@@ -115,6 +60,61 @@
       "hub": "/topics/pricing/daily/",
       "draft": "_drafts/CN-0055.md",
       "permalink": "/blog/hanoi-pricing-daily-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0056",
+      "title": "Yamaha Mio 日租与押金参考",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0056.md",
+      "permalink": "/blog/hanoi-pricing-daily-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0057",
+      "title": "50cc 踏板车一天的参考租金是多少",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0057.md",
+      "permalink": "/blog/hanoi-pricing-daily-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0058",
+      "title": "不同车型的日租报价为什么要核对",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0058.md",
+      "permalink": "/blog/hanoi-pricing-daily-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0059",
+      "title": "河内租车一天如何算开始和结束时间",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0059.md",
+      "permalink": "/blog/hanoi-pricing-daily-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0060",
+      "title": "一天租车如何确认是否存在额外费用",
+      "topic": "pricing",
+      "subtopic": "daily",
+      "primary_keyword": "河内摩托车日租价格",
+      "hub": "/topics/pricing/daily/",
+      "draft": "_drafts/CN-0060.md",
+      "permalink": "/blog/hanoi-pricing-daily-10/",
       "review_required": false
     }
   ]
