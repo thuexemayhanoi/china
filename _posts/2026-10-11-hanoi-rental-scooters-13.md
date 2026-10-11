@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0013"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-13/
-title: Honda Click 与 Yamaha Mio 租赁选择思路
-description: Click 和 Mio 怎么选?本文给出四条选择思路:车况优先于品牌、按场景判断适配、两台都试骑、为换车留备选,帮你得到自己能负责的答案。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-13/"
+title: "Honda Click 与 Yamaha Mio 租赁选择思路"
+description: "Click 和 Mio 怎么选?本文给出四条选择思路:车况优先于品牌、按场景判断适配、两台都试骑、为换车留备选,帮你得到自己能负责的答案。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:29:04 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"Honda Click 与 Yamaha Mio 租赁选择思路"}]
+publication_method: "automated_qa"
 ---
-
 Honda Click 和 Yamaha Mio 都是河内街道上的熟面孔,也都是租车门店常备的自动挡踏板车。很多骑行者在两者之间反复纠结,其实选择思路比车型本身更重要:车况、适配和试骑,远比车标更能决定你的体验。本文给出一套从需求出发的选择思路。
 
 ## 思路一:把车况放在品牌前面

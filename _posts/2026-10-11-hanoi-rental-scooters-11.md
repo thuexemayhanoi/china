@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0011"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-11/
-title: 租 Honda Air Blade 前的车型确认清单
-description: Honda Air Blade 的操作方式与踏板车不同,租车前要先确认操作方式、具体车况、座高重量和换挡节奏,避免带错预期上路。本文提供完整确认清单。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-11/"
+title: "租 Honda Air Blade 前的车型确认清单"
+description: "Honda Air Blade 的操作方式与踏板车不同,租车前要先确认操作方式、具体车况、座高重量和换挡节奏,避免带错预期上路。本文提供完整确认清单。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:29:04 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"租 Honda Air Blade 前的车型确认清单"}]
+publication_method: "automated_qa"
 ---
-
 Honda Air Blade 是河内租车市场里经常出现的车型,但它和常见的踏板车并不完全是一类车。很多游客把它当成"另一款自动挡踏板车"来订,取车时才发现操作方式和自己预期不同。本文提供一份取车前的车型确认清单,帮助你避免订错车,也避免带错预期上路。
 
 ## 先确认操作方式的差异

@@ -1,14 +1,17 @@
 ---
 article_id: "CN-0015"
 layout: "post"
-topic: rental
-subtopic: scooters
-permalink: /blog/hanoi-rental-scooters-15/
-title: 租车时如何确认头盔是否合适
-description: 头盔合适与否直接影响骑行安全和舒适。本文给出尺码判断、四步佩戴检查、更换标准、内衬卫生确认和头盔留证方法,取车时五分钟完成。
-primary_keyword: 河内踏板车租赁
+topic: "rental"
+subtopic: "scooters"
+permalink: "/blog/hanoi-rental-scooters-15/"
+title: "租车时如何确认头盔是否合适"
+description: "头盔合适与否直接影响骑行安全和舒适。本文给出尺码判断、四步佩戴检查、更换标准、内衬卫生确认和头盔留证方法,取车时五分钟完成。"
+primary_keyword: "河内踏板车租赁"
+date: "2026-10-11 15:29:04 +0700"
+seo_silo: "rental/scooters"
+breadcrumbs: [{"label":"博客","href":"/blog/"},{"label":"专题","href":"/topics/rental/scooters/"},{"label":"租车时如何确认头盔是否合适"}]
+publication_method: "automated_qa"
 ---
-
 头盔是租车时唯一贴身的装备,合适与否直接决定舒适度和安全性,但很多人取车时只看车不看盔,随便扣上就出发。本文给出一套取车时的头盔确认方法,五分钟内可以完成。
 
 ## 尺码不合的表现
