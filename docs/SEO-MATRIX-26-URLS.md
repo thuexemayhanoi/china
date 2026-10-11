@@ -36,8 +36,8 @@
 | SEO-11 | `/privacy/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 隐私政策 | P3 | Rà soát độ đúng của mô tả dữ liệu lưu trữ, dịch vụ ngoài, liên hệ yêu cầu; duyệt chính sách. | TODO |
 | SEO-12 | `/terms/` | Pháp lý | index,follow theo template | Trong sitemap | Nguyễn Tú 使用条款 | P3 | Rà soát điều kiện đặt xe, trách nhiệm/đặt cọc và tuyên bố giới hạn; duyệt pháp lý. | TODO |
 | SEO-13 | `/blog/` | Hub bài viết | noindex khi 0 bài | Ngoài sitemap (0 bài) | 河内摩托车租赁中文博客 | P2 | Duy trì noindex khi 0 bài; mở index/sitemap chỉ khi có bài thật và nội dung hub hữu ích. | TODO |
-| SEO-14 | `/topics/rental/scooters/` | Danh mục con | noindex: true | Ngoài sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | TODO |
-| SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | TODO |
+| SEO-14 | `/topics/rental/scooters/` | Danh mục con | noindex: true | Ngoài sitemap | 河内踏板车租赁 | P2 | Bổ sung mẫu xe, kiểm tra xe, giá dẫn về /prices/; duyệt chất lượng trước khi mở index. | QA_PASS |
+| SEO-15 | `/topics/rental/monthly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车月租 | P2 | Chi tiết khoảng giá/thời hạn/hợp đồng/chi phí đặt cọc, tránh trùng danh mục cha. | QA_PASS |
 | SEO-16 | `/topics/rental/automatic/` | Danh mục con | noindex: true | Ngoài sitemap | 河内自动挡与手动挡摩托车 | P2 | So sánh đúng các kiểu xe, phù hợp người lái, nguồn an toàn, liên kết danh mục thuê. | TODO |
 | SEO-17 | `/topics/pricing/daily/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车日租价格 | P2 | Làm rõ mức thuê/ngày theo xe đã công bố, điều kiện tính ngày và khoản chưa bao gồm. | TODO |
 | SEO-18 | `/topics/pricing/weekly/` | Danh mục con | noindex: true | Ngoài sitemap | 河内摩托车周租价格 | P2 | Giá tuần cho xe có công bố; không tự suy ra gói 50cc/xe điện; liên kết bảng giá. | TODO |
@@ -209,3 +209,23 @@ Cách kiểm tra: tải lại nguồn trực tiếp từ `https://zh.rentbikehan
 - QA trang thật `https://zh.rentbikehanoi.com/topics/old-quarter/` (`maxAge=0`): **HTTP 200**, self-canonical đúng, `index,follow`, `zh-CN`, đúng 1 H1 `从河内老城区出发租摩托车：门店与取还车指南`, 5 H2, LocalBusiness/BreadcrumbList JSON-LD hợp lệ; có địa chỉ, giờ 09:00–21:00, Google Maps, và liên kết liên hệ. Câu phủ định lời hứa giao miễn phí, đại diện Phố Cổ hiển thị đúng.
 
 **Sau lượt này:** 10/26 URL `QA_PASS`, 16 URL chưa hoàn thành. Giữ lịch tự động OFF; chỉ tiếp tục khi người dùng duyệt thủ công.
+
+## L. Lượt SEO thủ công — Rental Scooters & Monthly child guides (2026-10-11)
+
+**Trạng thái:** `SEO-14` `/topics/rental/scooters/` và `SEO-15` `/topics/rental/monthly/` → `QA_PASS` **chỉ về phần tối ưu nội dung/kỹ thuật đã QA sau deploy**. Cả hai **cố ý giữ `noindex,follow`**, ngoài sitemap, và không được coi là Google/Baidu đã index, ranking tốt hơn hay đủ điều kiện bắt buộc phải mở index. Quyết định mở index cần đánh giá riêng về tính độc lập, nội dung, GSC/intent và mức trùng lặp với trang cha, chưa được thực hiện.
+
+**Thay đổi nhỏ đã xác nhận:**
+- `/topics/rental/scooters/`: H1, title và description mô tả hướng dẫn thuê scooter; 4 phần gồm Honda Vision/Air Blade/Click-Mio với giá/ngày và tiền cọc tham khảo lấy trực tiếp `_data/vehicles.json`, cách chọn xe, checklist giao xe, địa chỉ/cách liên hệ; hướng link về bảng giá, rental hub và guides. Không cam kết số lượng xe/giá chốt hoặc miễn phí giao xe.
+- `/topics/rental/monthly/`: 4 phần riêng về mức giá/tháng, tiền cọc của 4 nhóm xe xuất phát từ dữ liệu chung, cách xác định kỳ tháng, gia hạn/trả sớm, trách nhiệm bảo trì/bàn giao, checklist xin báo giá; không tự suy ra giá 50cc/xe điện, không coi tất cả giá tháng là giá chắc chắn.
+- `_data/i18n-en.json`: thêm 50 khóa dịch EN cho nội dung mới, giữ site Chinese-first và công tắc dịch hiện có. Diff được giới hạn 3 file; không sửa dữ liệu giá, URL, NAP, robots, sitemap, CSS/JS, schema template, menu/footer, DNS/CNAME hoặc factory 250 bài.
+
+**GitHub:** [PR #8](https://github.com/thuexemayhanoi/china/pull/8) merge commit `60d84b5c67b2aed95f2b521e3c545aa7e097dd4d`, [GitHub Pages run 38109256857](https://github.com/thuexemayhanoi/china/actions/runs/38109256857) **Build with Jekyll và Deploy SUCCESS**.
+
+**QA HTML thực tế sau deploy (maxAge=0):**
+
+| URL | HTTP | Canonical | Robots | HTML | Giá/CTA/schema | Kết quả |
+|---|---:|---|---|---|---|---|
+| `/topics/rental/scooters/` | 200 | self đúng | `noindex,follow` (giữ nguyên) | `zh-CN`, 1 H1, 4 H2, title/description mới | Vision 200k/ngày cọc 4–5m; Air Blade 200k cọc 3m; Click/Mio 150k cọc 2m; links và LocalBusiness/BreadcrumbList parse hợp lệ | QA_PASS nội dung |
+| `/topics/rental/monthly/` | 200 | self đúng | `noindex,follow` (giữ nguyên) | `zh-CN`, 1 H1, 4 H2, title/description mới | 4 mức tháng từ dữ liệu gốc, không suy ra 50cc/electric, links và schema hợp lệ | QA_PASS nội dung |
+
+**Giới hạn:** Không đo Core Web Vitals, index coverage/GSC, giao diện iPhone tương tác thực tế, tìm kiếm SERP hay tác động chuyển đổi. Bản QA này là nghiệm thu biên tập/tính đúng của HTML và chiến lược giữ noindex, không phải giấy phép mở index. Tiến độ **12/26 QA_PASS**, 14 hạng mục còn lại.
