@@ -2,66 +2,11 @@
   "schema_version": 1,
   "status": "READY",
   "target": 300,
-  "published": 145,
-  "remaining": 155,
+  "published": 150,
+  "remaining": 150,
   "drafts_staged": 0,
   "batch_size": 5,
   "queue": [
-    {
-      "id": "CN-0146",
-      "title": "50cc 事故处理前应准备哪些联系信息",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0146.md",
-      "permalink": "/blog/hanoi-fifty-rules-21/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0147",
-      "title": "50cc 道路标识看不懂时该怎么办",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0147.md",
-      "permalink": "/blog/hanoi-fifty-rules-22/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0148",
-      "title": "50cc 在繁忙路段骑行前的评估",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0148.md",
-      "permalink": "/blog/hanoi-fifty-rules-23/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0149",
-      "title": "50cc 车辆机械检查与合法驾驶的关系",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0149.md",
-      "permalink": "/blog/hanoi-fifty-rules-24/",
-      "review_required": false
-    },
-    {
-      "id": "CN-0150",
-      "title": "越南50cc 租赁常见法规误区澄清",
-      "topic": "50cc",
-      "subtopic": "requirements",
-      "primary_keyword": "河内50cc驾驶要求",
-      "hub": "/topics/50cc/requirements/",
-      "draft": "_drafts/CN-0150.md",
-      "permalink": "/blog/hanoi-fifty-rules-25/",
-      "review_required": false
-    },
     {
       "id": "CN-0151",
       "title": "河内老城区到龙编区租车门店怎么规划路线",
@@ -115,6 +60,61 @@
       "hub": "/topics/old-quarter/directions/",
       "draft": "_drafts/CN-0155.md",
       "permalink": "/blog/hanoi-oldquarter-routes-05/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0156",
+      "title": "龙编区与老城区的地理位置关系",
+      "topic": "old-quarter",
+      "subtopic": "directions",
+      "primary_keyword": "河内老城区附近租摩托车",
+      "hub": "/topics/old-quarter/directions/",
+      "draft": "_drafts/CN-0156.md",
+      "permalink": "/blog/hanoi-oldquarter-routes-06/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0157",
+      "title": "老城区旅客如何核对门店营业时间",
+      "topic": "old-quarter",
+      "subtopic": "directions",
+      "primary_keyword": "河内老城区附近租摩托车",
+      "hub": "/topics/old-quarter/directions/",
+      "draft": "_drafts/CN-0157.md",
+      "permalink": "/blog/hanoi-oldquarter-routes-07/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0158",
+      "title": "出发去租车门店前怎样查看实时交通",
+      "topic": "old-quarter",
+      "subtopic": "directions",
+      "primary_keyword": "河内老城区附近租摩托车",
+      "hub": "/topics/old-quarter/directions/",
+      "draft": "_drafts/CN-0158.md",
+      "permalink": "/blog/hanoi-oldquarter-routes-08/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0159",
+      "title": "老城区附近租车如何避免地址误读",
+      "topic": "old-quarter",
+      "subtopic": "directions",
+      "primary_keyword": "河内老城区附近租摩托车",
+      "hub": "/topics/old-quarter/directions/",
+      "draft": "_drafts/CN-0159.md",
+      "permalink": "/blog/hanoi-oldquarter-routes-09/",
+      "review_required": false
+    },
+    {
+      "id": "CN-0160",
+      "title": "如何在 Google 地图确认 Nguyễn Tú 门店",
+      "topic": "old-quarter",
+      "subtopic": "directions",
+      "primary_keyword": "河内老城区附近租摩托车",
+      "hub": "/topics/old-quarter/directions/",
+      "draft": "_drafts/CN-0160.md",
+      "permalink": "/blog/hanoi-oldquarter-routes-10/",
       "review_required": false
     }
   ]
