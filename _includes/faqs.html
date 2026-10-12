@@ -1,1 +1,11 @@
-<section class="faq-list">{% for f in site.data.faqs %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</section>
+<section class="faq-list">
+{% for f in site.data.faqs %}
+  {% capture faq_answer %}{% include faq-answer.html f=f %}{% endcapture %}
+  <details>
+    <summary>{{ f.q | escape }}</summary>
+    <p>{{ faq_answer | strip | escape }}</p>
+    {% if f.more_path and site.data.site.sitemap_base contains f.more_path %}<p class="muted small"><a href="{{ site.data.site.domain }}{{ f.more_path }}">阅读相关专题 →</a></p>{% endif %}
+    {% if f.source_url %}<p class="muted small"><a href="{{ f.source_url | escape }}" target="_blank" rel="noopener noreferrer">{{ f.source_label | default: '查阅官方资料' | escape }} ↗</a></p>{% endif %}
+  </details>
+{% endfor %}
+</section>
