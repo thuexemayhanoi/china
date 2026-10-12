@@ -36,3 +36,5 @@ jobs:
             git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "audit(china): generate 331 URL FAQ AI Search evidence matrix"
             git push origin HEAD:audit/china-faq-ai-search-20261012
           fi
+
+# Re-run after separating title-answer intent from explicit FAQs.
