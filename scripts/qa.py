@@ -115,6 +115,26 @@ if impl_matrix.is_file():
     check(len({row["url"] for row in all_url_rows}) == 331,
           "AI FAQ implementation Matrix has duplicate URLs")
     changed = [row for row in all_url_rows if row["implementation_status"] == "P2_ANSWER_FIRST_REVISED"]
+    revised_pages = [row for row in all_url_rows if row["implementation_status"] == "P1_CONTENT_REVISED"]
+    for row in revised_pages:
+        url = row["url"]
+        prefix = site["domain"] + "/"
+        check(url.startswith(prefix) and url.endswith("/"),
+              "Invalid P1 topic URL: "+url)
+        if not (url.startswith(prefix) and url.endswith("/")): continue
+        relative = url[len(prefix):]
+        topic_source = root / relative / "index.html"
+        check(topic_source.is_file(), "P1 revised topic source missing: "+relative)
+        if not topic_source.is_file(): continue
+        html_source = topic_source.read_text(encoding="utf-8")
+        check(html_source.count('<section class="inner-panel">') >= 3,
+              "P1 revised topic needs three substantive question sections: "+relative)
+        check("本专题的主要内容" not in html_source and "其他相关租车指南" not in html_source,
+              "P1 revised topic still has generic template text: "+relative)
+        check("site.data.site.domain" in html_source and "<strong>" in html_source,
+              "P1 revised topic needs evidence-backed direct answers and live internal links: "+relative)
+        check("schema_faq: true" not in html_source,
+              "Do not inject FAQPage schema into topical guide pages: "+relative)
     post_sources = {}
     for post in (root / "_posts").glob("*.md"):
         source = post.read_text(encoding="utf-8")
