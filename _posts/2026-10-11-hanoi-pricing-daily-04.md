@@ -37,4 +37,4 @@ publication_method: "automated_qa"
 
 ## 结语
 
-Air Blade 日租咨询的公式:五类信息备好、四句话问完、三步骤核对。信息完整,报价就完整;核对到位,成交就放心。咨询谈成后,取车当天的动作参考[租车行交车检查步骤](/blog/hanoi-rental-scooters-19/),祝你在河内骑得顺心。
+咨询 Honda Air Blade 时请先提供完整日期、路线与需求，再以网站日租 <strong>{{ site.data.vehicles[2].display.day }}</strong>、押金参考 <strong>{{ site.data.vehicles[2].deposit }}</strong> 对比实际报价。**对方确认车辆有货、合同价格及取还车条件后，才能判断租赁是否合适；询价不等于订单成立。**取车检查可参考[交接指南](/blog/hanoi-rental-scooters-19/)。
