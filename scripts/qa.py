@@ -15,6 +15,28 @@ site = json.loads((root / "_data/site.json").read_text(encoding="utf-8"))
 nav = json.loads((root / "_data/navigation.json").read_text(encoding="utf-8"))
 prices = json.loads((root / "_data/vehicles.json").read_text(encoding="utf-8"))
 faq = json.loads((root / "_data/faqs.json").read_text(encoding="utf-8"))
+
+# Central FAQ answer content and schema must have one source and verified links.
+keys = [item.get("key") for item in faq]
+check(len(faq) == 12 and len(set(keys)) == 12 and all(keys), "12 unique FAQ answer keys")
+for item in faq:
+    check(bool(item.get("q")) and len(item.get("a", "")) >= 30,
+          "FAQ question/answer missing for "+str(item.get("key")))
+    check(item.get("more_path") in site["sitemap_base"],
+          "FAQ destination missing from 31 approved core URLs: "+str(item.get("key")))
+    if item.get("source_url"):
+        check(item["source_url"].startswith("https://vbpl.vn/"),
+              "FAQ external legal source must use official legal database")
+faq_include = (root / "_includes/faqs.html").read_text(encoding="utf-8")
+faq_schema = (root / "_includes/schema.html").read_text(encoding="utf-8")
+faq_answer = (root / "_includes/faq-answer.html").read_text(encoding="utf-8")
+check("include faq-answer.html f=f" in faq_include and
+      "include faq-answer.html f=f" in faq_schema,
+      "FAQ visible content and JSON-LD must use identical answer renderer")
+for field in ("site.data.site.business.address", "site.data.site.business.phone_display",
+              "site.data.site.business.hours", "site.data.vehicles[0].display.day"):
+    check(field in faq_answer, "FAQ dynamic data source missing: "+field)
+
 pages = sorted(root.rglob("index.html"))
 check(site["domain"] == "https://zh.rentbikehanoi.com", "canonical domain")
 check((root / "CNAME").read_text(encoding="utf-8").strip() == "zh.rentbikehanoi.com", "CNAME")
