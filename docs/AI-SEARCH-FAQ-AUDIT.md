@@ -21,6 +21,8 @@ Audit-only: source Q&A candidates, NOT AI visibility or Google index confirmatio
 | NO_EXPLICIT_QA | 59 | 55 | 4 |
 
 - Evidence matrix includes 86 explicit question/adjacent-answer candidate pairs and 245 question-intent article titles with existing opening paragraphs (distinct classes).
+- 1 exact normalized question strings recur across different evidence rows; review duplication manually before adding FAQ blocks.
+- Commercial (price/deposit/delivery) and legal/license statements are marked for source verification in the per-URL Matrix.
 
 ## Highest-priority existing question pages
 
