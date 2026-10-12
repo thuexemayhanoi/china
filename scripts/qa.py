@@ -114,6 +114,23 @@ if impl_matrix.is_file():
     check(len(all_url_rows) == 331, "AI FAQ implementation Matrix must retain 331 URL rows")
     check(len({row["url"] for row in all_url_rows}) == 331,
           "AI FAQ implementation Matrix has duplicate URLs")
+    refined_pages = [row for row in all_url_rows if row["implementation_status"] == "P1_ANSWER_REFINED"]
+    for row in refined_pages:
+        url = row["url"]
+        prefix = site["domain"] + "/"
+        check(url.startswith(prefix) and url.endswith("/"), "Invalid refined P1 URL: "+url)
+        if not (url.startswith(prefix) and url.endswith("/")): continue
+        route = url[len(prefix):]
+        source_file = root / route / "index.html"
+        check(source_file.is_file(), "Missing P1 page source: "+route)
+        if not source_file.is_file(): continue
+        content = source_file.read_text(encoding="utf-8")
+        check("<h2" in content and "<strong>" in content,
+              "Refined Q&A must have a specific answer: "+route)
+        check("site.data.site." in content and "site.data.site.domain" in content,
+              "Refined answer should link from shared site config: "+route)
+        check("schema_faq: true" not in content and '"@type":"FAQPage"' not in content,
+              "Do not inject FAQ rich result schema onto general pages: "+route)
     changed = [row for row in all_url_rows if row["implementation_status"] == "P2_ANSWER_FIRST_REVISED"]
     revised_pages = [row for row in all_url_rows if row["implementation_status"] == "P1_CONTENT_REVISED"]
     for row in revised_pages:
