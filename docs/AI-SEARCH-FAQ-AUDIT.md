@@ -8,7 +8,7 @@ Audit-only: source Q&A candidates, NOT AI visibility or Google index confirmatio
 - Inspected 300 Markdown posts and 31 core HTML pages; 331 unique URLs and complete CN-0001 to CN-0300 IDs.
 - The /faq/ page renders 12 central questions from _data/faqs.json; schema_faq is already enabled for that page.
 - No new FAQ or schema added. Google retired FAQ rich results in May 2026; do not add generic FAQPage to every blog post.
-- Question-heading with adjacent substantive paragraph = candidate Q&A, NOT verified FAQ. Human review is required.
+- Question-heading with adjacent substantive paragraph = candidate Q&A, NOT verified FAQ. A title phrased as a question is classified separately as title answer intent, NOT explicit FAQ. Human review is required.
 
 ## Classifications
 
@@ -17,9 +17,10 @@ Audit-only: source Q&A candidates, NOT AI visibility or Google index confirmatio
 | CURATED_FAQ | 1 | 0 | 1 |
 | EXISTING_QA_CANDIDATE | 26 | 0 | 26 |
 | QUESTION_WITHOUT_CLEAR_ANSWER | 0 | 0 | 0 |
-| NO_EXPLICIT_QA | 304 | 300 | 4 |
+| TITLE_ANSWER_INTENT | 245 | 245 | 0 |
+| NO_EXPLICIT_QA | 59 | 55 | 4 |
 
-- Evidence matrix includes 86 existing question/adjacent-answer candidate rows.
+- Evidence matrix includes 86 explicit question/adjacent-answer candidate pairs and 245 question-intent article titles with existing opening paragraphs (distinct classes).
 
 ## Highest-priority existing question pages
 
