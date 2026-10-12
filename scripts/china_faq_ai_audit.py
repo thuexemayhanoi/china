@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"docs"
 DOMAIN="https://zh.rentbikehanoi.com"
-FIELDS=("scope","article_id","url","title","topic","subtopic","status","found_qa","question_only","faq_heading","faq_schema","source","question_examples","priority","action","review_required")
+FIELDS=("scope","article_id","url","title","topic","subtopic","status","found_qa","question_only","faq_heading","faq_schema","source","question_examples","title_question_intent","intro_evidence","priority","action","review_required")
 DETAIL=("article_id","url","source","question","answer_excerpt","answer_length","evidence_type","confidence","review_required")
 
 def front(raw):
@@ -101,23 +101,36 @@ def main():
             if not re.fullmatch(r"CN-\d{4}",article_id) or article_id in ids:raise ValueError("Invalid ID "+article_id)
             ids.add(article_id)
         hits,missing,faqheading=scan(info,body,scope,faqs)
+        # A title expressing a search question is valuable answer-intent evidence,
+        # but is NOT itself an explicit FAQ or an FAQPage schema candidate.
+        title_intent=scope=="post" and bool(re.search(
+            r"如何|怎么|怎样|哪些|什么|为何|为什么|是否|多少钱|多久|怎么办|能否|哪种|哪类|需不需要|能不能|适合|应该|在哪里",info["title"]))
+        first=body.strip().split("\n\n",1)[0]
+        intro=clean(first)
+        title_intent=title_intent and len(intro)>=35
         if route=="/faq/":status,priority,action="CURATED_FAQ","P0","VERIFY_CENTRAL_12_FACTS"
         elif hits:status,priority,action="EXISTING_QA_CANDIDATE","P1","REVIEW_VISIBLE_ANSWER_QUALITY"
         elif missing:status,priority,action="QUESTION_WITHOUT_CLEAR_ANSWER","P1","REVIEW_CONTEXT_BEFORE_ADDING_ANSWER"
+        elif title_intent:status,priority,action="TITLE_ANSWER_INTENT","P2","CHECK_INTRO_ANSWERS_EXISTING_TITLE_QUERY_NO_FAQ_SCHEMA"
         else:status,priority,action="NO_EXPLICIT_QA","P2" if scope=="post" else "P3","DO_NOT_FORCE_FAQ"
         source=path.relative_to(ROOT).as_posix()
         rows.append(dict(scope=scope,article_id=info["article_id"],url=DOMAIN+route,title=info["title"],
             topic=info["topic"],subtopic=info["subtopic"],status=status,found_qa=len(hits),
             question_only=len(missing),faq_heading=str(bool(faqheading)).lower(),
             faq_schema=str(info["schema_faq"]=="true").lower(),source=source,
-            question_examples=" | ".join(h[0][:80] for h in hits[:3]),priority=priority,action=action,
+            question_examples=" | ".join(h[0][:80] for h in hits[:3]) if hits else (info["title"] if title_intent else ""),title_question_intent=str(bool(title_intent)).lower(),intro_evidence=intro[:160] if title_intent else "",priority=priority,action=action,
             review_required="true"))
         for q,a,kind,confidence in hits:
             details.append(dict(article_id=info["article_id"],url=DOMAIN+route,source=source,
                 question=q,answer_excerpt=a[:200],answer_length=len(a),
                 evidence_type=kind,confidence=confidence,review_required="true"))
+        if title_intent:
+            details.append(dict(article_id=info["article_id"],url=DOMAIN+route,source=source,
+                question=info["title"],answer_excerpt=intro[:200],answer_length=len(intro),
+                evidence_type="title_plus_intro_NOT_EXPLICIT_FAQ",confidence="low",review_required="true"))
     if ids!={f"CN-{i:04d}" for i in range(1,301)}:raise ValueError("Incomplete CN IDs")
     OUT.mkdir(exist_ok=True)
+    rows.sort(key=lambda r:(0 if r["scope"]=="page" else 1,r["article_id"],r["url"]))
     for filename,header,items in (("AI-SEARCH-FAQ-URL-MATRIX.csv",FIELDS,rows),
                                   ("AI-SEARCH-FAQ-QUESTION-EVIDENCE.csv",DETAIL,details)):
         with (OUT/filename).open("w",encoding="utf-8-sig",newline="") as f:
@@ -133,12 +146,14 @@ def main():
            "- Inspected 300 Markdown posts and 31 core HTML pages; 331 unique URLs and complete CN-0001 to CN-0300 IDs.",
            "- The /faq/ page renders 12 central questions from _data/faqs.json; schema_faq is already enabled for that page.",
            "- No new FAQ or schema added. Google retired FAQ rich results in May 2026; do not add generic FAQPage to every blog post.",
-           "- Question-heading with adjacent substantive paragraph = candidate Q&A, NOT verified FAQ. Human review is required.","",
+           "- Question-heading with adjacent substantive paragraph = candidate Q&A, NOT verified FAQ. A title phrased as a question is classified separately as title answer intent, NOT explicit FAQ. Human review is required.","",
            "## Classifications","",
            "| Class | Total URLs | Posts | Pages |","|---|---:|---:|---:|"]
-    for k in ("CURATED_FAQ","EXISTING_QA_CANDIDATE","QUESTION_WITHOUT_CLEAR_ANSWER","NO_EXPLICIT_QA"):
+    for k in ("CURATED_FAQ","EXISTING_QA_CANDIDATE","QUESTION_WITHOUT_CLEAR_ANSWER","TITLE_ANSWER_INTENT","NO_EXPLICIT_QA"):
         lines.append("| "+k+f" | {counts[k]} | {by_type['post'][k]} | {by_type['page'][k]} |")
-    lines+=["",f"- Evidence matrix includes {len(details)} existing question/adjacent-answer candidate rows.","",
+    direct_pairs=sum(r["found_qa"] for r in rows)
+    title_pairs=sum(r["title_question_intent"]=="true" for r in rows)
+    lines+=["",f"- Evidence matrix includes {direct_pairs} explicit question/adjacent-answer candidate pairs and {title_pairs} question-intent article titles with existing opening paragraphs (distinct classes).","",
             "## Highest-priority existing question pages","",
             "| URL | Q&A candidates | Status |","|---|---:|---|"]
     for r in priority_rows[:45]:
