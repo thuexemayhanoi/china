@@ -1,0 +1,60 @@
+name: CHINA SEO Audit and Monitoring
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+      - '_data/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - 'topics/**'
+      - 'blog/**'
+      - 'index.html'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'scripts/seo_monitor.py'
+      - 'scripts/qa_rendered_site.py'
+      - '.github/workflows/china-seo-monitor.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: china-seo-monitor
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    name: Read-only SEO source, Jekyll, schema, intent and sitemap audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout China production source
+        uses: actions/checkout@v4
+      - name: Verify source-level SEO and publication constraints
+        run: |
+          python3 -m py_compile scripts/seo_monitor.py
+          python3 scripts/qa.py
+          python3 scripts/china_factory.py validate
+      - name: Build site with native Pages Jekyll tooling
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Audit rendered sitemap, canonicals, schema and links
+        run: python3 scripts/qa_rendered_site.py
+      - name: Report exact duplicates and advisory search-intent clusters
+        run: |
+          python3 scripts/seo_monitor.py --output /tmp/china-seo-monitor.json
+          python3 -c 'import json;d=json.load(open("/tmp/china-seo-monitor.json"));print("SEO summary:",d["status"],d["source_posts"],"posts,",d["sitemap_urls"],"URLs,",len(d["warnings"]),"warnings")'
+      - name: Upload evidence without writing to production repository
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: china-seo-audit
+          path: /tmp/china-seo-monitor.json
+          if-no-files-found: warn
+          retention-days: 14
