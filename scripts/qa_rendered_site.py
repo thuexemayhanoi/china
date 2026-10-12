@@ -92,7 +92,7 @@ def main():
         if route=="/faq/":
             # The page includes structured Q&A ONLY when all 12 answers are visible.
             expected_faq=json.loads((ROOT/"_data/faqs.json").read_text(encoding="utf-8"))
-            pairs=re.findall(r'<details>\\s*<summary>(.*?)</summary>\\s*<p>(.*?)</p>',raw,re.S)
+            pairs=re.findall(r'<details>\s*<summary>(.*?)</summary>\s*<p>(.*?)</p>',raw,re.S)
             def plain(value):
                 return unescape(re.sub(r"<[^>]*>","",value)).strip()
             pairs=[(plain(q),plain(a)) for q,a in pairs]
