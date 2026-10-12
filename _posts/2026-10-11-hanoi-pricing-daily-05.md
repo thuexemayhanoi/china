@@ -25,7 +25,7 @@ publication_method: "automated_qa"
 
 ## 必问项三和四:油量规则与押金条款
 
-第三问,油量:"取车多少油、还车多少油?油费谁承担?"日租的油费由骑行者承担是常态,但要确认取还油量的具体约定,油量照片的记录方法参考[短租留证清单](/blog/hanoi-rental-scooters-24/)。第四问,押金:"押金多少?什么情况扣、怎么退、多久退?"Click 档押金参考约两百万盾,金额不大,条款照旧要问全,押金规则的系统说明看[押金指南](/topics/pricing/deposits/),租金和押金的区别参考[押金指南](/topics/pricing/deposits/)。
+第三问,油量:"取车多少油、还车多少油?油费谁承担?"本站没有公布适用于所有订单的统一油费承担政策，必须确认取还油量及收费约定,油量照片的记录方法参考[短租留证清单](/blog/hanoi-rental-scooters-24/)。第四问,押金:"押金多少?什么情况扣、怎么退、多久退?"Click 档押金参考约两百万盾,金额不大,条款照旧要问全,押金规则的系统说明看[押金指南](/topics/pricing/deposits/),租金和押金的区别参考[押金指南](/topics/pricing/deposits/)。
 
 ## 必问项五:费用变动的触发条件
 
@@ -37,4 +37,4 @@ publication_method: "automated_qa"
 
 ## 结语
 
-Click 日租费用五问:单价边界、装备、油量、押金、变动规则。每问一项,费用画面清晰一分;五项问完,150,000 盾的参考价背后,是总成本的完整账本。入门车型也值得认真谈,费用清单的通用框架回看[日租价格专题](/topics/pricing/daily/)。
+Honda Click / Yamaha Mio 的网站参考日租为 <strong>{{ site.data.vehicles[3].display.day }}</strong>，押金为 <strong>{{ site.data.vehicles[3].deposit }}</strong>。完成询价时把计日时刻、装备、油量、押金和延期条件逐项确认，必要时记录到合同与交车单。**网站没有承诺头盔免费、油费固定由谁支付或超时统一按小时收费。**参见[日租指南](/topics/pricing/daily/)。
