@@ -1,20 +1,20 @@
 scope,article_id,url,title,audit_class,priority,implementation_status,change_scope,review_required,qa_gate
 page,,https://zh.rentbikehanoi.com/,河内摩托车租赁｜价格、50cc 与老城区出行指南,NO_EXPLICIT_QA,P3,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-page,,https://zh.rentbikehanoi.com/about/,关于我们｜Nguyễn Tú 河内摩托车租赁门店、地址与服务,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/about/,关于我们｜Nguyễn Tú 河内摩托车租赁门店、地址与服务,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/blog/,河内摩托车租赁中文博客｜车型、租金及出行专题,NO_EXPLICIT_QA,P3,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-page,,https://zh.rentbikehanoi.com/contact/,河内摩托车租赁联系方式｜Nguyễn Tú 门店地址、电话与 Zalo,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/contact/,河内摩托车租赁联系方式｜Nguyễn Tú 门店地址、电话与 Zalo,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/faq/,河内摩托车租赁常见问题｜价格、押金、50cc 与取还车,CURATED_FAQ,P0,P0_IMPLEMENTED,12_QA_CENTRAL_SHARED_CONFIG_AND_LEGAL_SOURCE,false,VISIBLE_SCHEMA_PARITY_AND_SOURCE_VALIDATION
-page,,https://zh.rentbikehanoi.com/prices/,河内摩托车租赁价格表｜日租、周租、月租与押金,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/prices/,河内摩托车租赁价格表｜日租、周租、月租与押金,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/privacy/,隐私政策｜浏览器设置、网站助手与第三方平台,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/terms/,网站使用条款｜参考报价、预订与押金说明,NO_EXPLICIT_QA,P3,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-page,,https://zh.rentbikehanoi.com/topics/50cc/,河内50cc摩托车租赁指南｜参考价格、押金和驾驶条件,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/50cc/,河内50cc摩托车租赁指南｜参考价格、押金和驾驶条件,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/50cc/checklist/,河内 50cc 摩托车取车检查指南｜Nguyễn Tú,EXISTING_QA_CANDIDATE,P1,P1_CONTENT_REVISED,THREE_UNIQUE_TOPIC_QA_SECTIONS; EXISTING_LAYOUT_PRESERVED,true,SOURCE; RENDERED_331_URLS; GOOGLE_PAGES_DEPLOY
-page,,https://zh.rentbikehanoi.com/topics/50cc/models/,河内50cc踏板车车型与租金｜日租、押金及车况确认,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/50cc/models/,河内50cc踏板车车型与租金｜日租、押金及车况确认,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/50cc/requirements/,越南50cc摩托车驾驶规定｜车辆分类、16岁条件与证件指南,EXISTING_QA_CANDIDATE,P1,P1_IMPLEMENTED,QUESTION_LEAD_ANSWER_FIRST,false,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/topics/guides/,河内摩托车租赁指南｜租前检查、合同与骑行安全,NO_EXPLICIT_QA,P3,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-page,,https://zh.rentbikehanoi.com/topics/guides/contracts/,河内摩托车租赁证件与合同指南｜押金、资格及签约清单,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/guides/contracts/,河内摩托车租赁证件与合同指南｜押金、资格及签约清单,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/guides/maintenance/,河内租车车况检查与故障处理指南｜Nguyễn Tú,EXISTING_QA_CANDIDATE,P1,P1_CONTENT_REVISED,THREE_UNIQUE_TOPIC_QA_SECTIONS; EXISTING_LAYOUT_PRESERVED,true,SOURCE; RENDERED_331_URLS; GOOGLE_PAGES_DEPLOY
-page,,https://zh.rentbikehanoi.com/topics/guides/returns/,河内摩托车还车与押金退还指南｜时间、验车及合同核对,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/guides/returns/,河内摩托车还车与押金退还指南｜时间、验车及合同核对,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/guides/safety/,河内摩托车骑行安全指南｜头盔、车辆检查与交通法规,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/topics/old-quarter/,河内老城区附近租摩托车指南｜Nguyễn Tú 龙编区门店,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/topics/old-quarter/directions/,从河内老城区到龙编区租车店｜地址、Google 地图与到店提示,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
@@ -24,11 +24,11 @@ page,,https://zh.rentbikehanoi.com/topics/pricing/,河内摩托车租金指南�
 page,,https://zh.rentbikehanoi.com/topics/pricing/daily/,河内摩托车日租价格指南｜车型参考价、押金与计费时间,EXISTING_QA_CANDIDATE,P1,P1_IMPLEMENTED,QUESTION_LEAD_ANSWER_FIRST,false,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/topics/pricing/deposits/,河内摩托车租赁押金指南｜车型参考金额及合同返还条件,EXISTING_QA_CANDIDATE,P1,P1_IMPLEMENTED,QUESTION_LEAD_ANSWER_FIRST,false,SOURCE_MATRIX_BUILD_AND_LINKS
 page,,https://zh.rentbikehanoi.com/topics/pricing/monthly/,河内摩托车月租价格与预算指南｜Nguyễn Tú,EXISTING_QA_CANDIDATE,P1,P1_CONTENT_REVISED,THREE_UNIQUE_TOPIC_QA_SECTIONS; EXISTING_LAYOUT_PRESERVED,true,SOURCE; RENDERED_331_URLS; GOOGLE_PAGES_DEPLOY
-page,,https://zh.rentbikehanoi.com/topics/pricing/weekly/,河内摩托车周租价格指南｜各车型参考价与租期说明,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/pricing/weekly/,河内摩托车周租价格指南｜各车型参考价与租期说明,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/rental/,河内摩托车租赁服务指南｜车型选择、租期与取还车,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-page,,https://zh.rentbikehanoi.com/topics/rental/automatic/,河内自动挡与手动挡摩托车租赁｜踏板车、半自动挡选择指南,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/rental/automatic/,河内自动挡与手动挡摩托车租赁｜踏板车、半自动挡选择指南,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/rental/electric/,河内电动车与电动自行车租赁指南｜Nguyễn Tú,EXISTING_QA_CANDIDATE,P1,P1_CONTENT_REVISED,THREE_UNIQUE_TOPIC_QA_SECTIONS; EXISTING_LAYOUT_PRESERVED,true,SOURCE; RENDERED_331_URLS; GOOGLE_PAGES_DEPLOY
-page,,https://zh.rentbikehanoi.com/topics/rental/monthly/,河内摩托车月租指南｜月租参考价、押金与续租条件,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+page,,https://zh.rentbikehanoi.com/topics/rental/monthly/,河内摩托车月租指南｜月租参考价、押金与续租条件,EXISTING_QA_CANDIDATE,P1,P1_ANSWER_REFINED,REAL_EXISTING_QA_ANSWER; SHARED_FACTS; NO_NEW_FAQ_SCHEMA,true,SOURCE_QA; JEKYLL_RENDERED; PAGES_DEPLOY
 page,,https://zh.rentbikehanoi.com/topics/rental/scooters/,河内踏板车租赁指南｜Vision、Air Blade、Click 与 Mio,EXISTING_QA_CANDIDATE,P1,P1_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0001,https://zh.rentbikehanoi.com/blog/hanoi-rental-scooters-01/,河内首次租踏板车前应该确认的八个问题,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0002,https://zh.rentbikehanoi.com/blog/hanoi-rental-scooters-02/,自动挡踏板车适合哪些河内短途出行,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
