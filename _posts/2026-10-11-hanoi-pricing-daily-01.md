@@ -5,22 +5,23 @@ topic: "pricing"
 subtopic: "daily"
 permalink: "/blog/hanoi-pricing-daily-01/"
 title: "河内摩托车日租多少钱以及报价怎么看"
-description: "日租报价不只是一个数字。本文汇总河内常见车型的公开参考价,拆解报价单里租金、押金、油费、头盔配件各自的位置,以及向门店确认报价时的核对要点。"
+description: "河内摩托车参考日租：Wave、Click/Mio 150,000₫；Vision、Air Blade、50cc 200,000₫。押金另计，电动车询价，最终报价看合同。"
+last_modified_at: "2026-10-12"
 primary_keyword: "河内摩托车日租价格"
 date: "2026-10-11 17:49:34 +0700"
 seo_silo: "pricing/daily"
 breadcrumbs: [{"label": "博客", "href": "/blog/"}, {"label": "专题", "href": "/topics/pricing/daily/"}, {"label": "河内摩托车日租多少钱以及报价怎么看"}]
 publication_method: "automated_qa"
 ---
-第一次在河内问租车价格,得到的信息常常只是一个数字,而日租的实际花费是这个数字加上一圈相关条款:押金另算、油费自理、头盔是否包含。这篇把日租价格的构成拆开讲,给你看报价的正确姿势。公开参考价以本站[价格页](/prices/)为准,日租的更多信息见[日租价格专题](/topics/pricing/daily/)。
+**河内摩托车公开参考日租为：Honda Wave、Honda Click / Yamaha Mio 每天 {{ site.data.vehicles[0].display.day }}；Honda Vision、Honda Air Blade 和50cc踏板车每天 {{ site.data.vehicles[1].display.day }}。**押金依车型另计，电动两轮车尚未公布统一日租价。实际总租金、计日方式、油费、头盔、配送和退款条件要向门店确认，不能把网站参考价视为已确认订单。查看[完整价格表](/prices/)及[押金说明](/topics/pricing/deposits/)。
 
 ## 常见车型的日租参考价
 
-按本站公开的参考价目,河内常见车型的日租价格分两档:本田 Wave 和 Honda Click/Yamaha Mio 一档,日租参考价约为 150,000 越南盾;Honda Vision、Honda Air Blade 和 50cc 踏板车一档,日租参考价约为 200,000 越南盾。电动车型的日租价按车型当面确认。两档之间 50,000 盾的差价,对应的是车型定位和配置差异,具体选哪个档位,按你的行程需求来,选车思路参考[月租踏板车和手动挡的比较](/blog/hanoi-rental-longterm-10/)。注意两点:这是参考价,不是锁定的最终报价;旺季和节假日前后,实际报价可能有浮动,以门店当面确认的为准。
+本站公开价格表中，Honda Wave 日租为 <strong>{{ site.data.vehicles[0].display.day }}</strong>，Honda Click / Yamaha Mio 为 <strong>{{ site.data.vehicles[3].display.day }}</strong>；Honda Vision 为 <strong>{{ site.data.vehicles[1].display.day }}</strong>，Air Blade 为 <strong>{{ site.data.vehicles[2].display.day }}</strong>，50cc踏板车为 <strong>{{ site.data.vehicles[4].display.day }}</strong>。电动摩托车与电动自行车须单独询价。**金额是参考价，不证明实时库存、节假日调价或最终成交条件。**押金和其它项目另行核对，参考[价格页](/prices/)。
 
 ## 报价单的四个组成部分
 
-一份完整的日租报价,包含四个部分,缺一个都是信息不全。第一,租金本身:按天计的单价,以及第二天的续租是否同价。第二,押金:金额、支付方式、退还条件,押金不是租金的一部分,归还后按约定退还,详细说明看[押金指南](/topics/pricing/deposits/)。第三,油费规则:取车油量和还车油量的约定,多数门店按同油量归还,油费由骑行者承担。第四,随车装备:头盔包不包含、几顶、第二顶是否收费,锁具和手机支架的情况。四个部分都问清,这个报价才是完整报价。
+询价时应分开确认四方面：**实际租金与计日时段、单独支付的押金及其退还条款、燃油/充电的取还约定、头盔等附件与异地交接服务是否包含**。不同订单未必涉及所有附加项目，本站没有公布所有车辆统一的免费头盔、燃油自付或酒店免费交车政策。要求门店在合同或双方确认的消息中列明实际适用内容。参阅[租赁合同指南](/topics/guides/contracts/)。
 
 ## 看报价时最容易算错的三件事
 
