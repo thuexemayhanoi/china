@@ -8,8 +8,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"docs"
 DOMAIN="https://zh.rentbikehanoi.com"
-FIELDS=("scope","article_id","url","title","topic","subtopic","status","found_qa","question_only","faq_heading","faq_schema","source","question_examples","title_question_intent","intro_evidence","priority","action","review_required")
-DETAIL=("article_id","url","source","question","answer_excerpt","answer_length","evidence_type","confidence","review_required")
+FIELDS=("scope","article_id","url","title","topic","subtopic","status","found_qa","question_only","faq_heading","faq_schema","source","question_examples","title_question_intent","intro_evidence","duplicate_question_count","fact_review_topic","priority","action","review_required")
+DETAIL=("article_id","url","source","question","answer_excerpt","answer_length","evidence_type","confidence","duplicate_question_count","review_required")
 
 def front(raw):
     m=re.match(r"\A---\s*\n(.*?)\n---\s*\n",raw,re.S)
@@ -128,6 +128,20 @@ def main():
             details.append(dict(article_id=info["article_id"],url=DOMAIN+route,source=source,
                 question=info["title"],answer_excerpt=intro[:200],answer_length=len(intro),
                 evidence_type="title_plus_intro_NOT_EXPLICIT_FAQ",confidence="low",review_required="true"))
+    # Duplicate question groups show where editors should choose an owning answer URL.
+    normalize=lambda s:re.sub(r"[\s？?：:，,。.!！]","",s).lower()
+    reused=Counter(normalize(item["question"]) for item in details)
+    for item in details:item["duplicate_question_count"]=reused[normalize(item["question"])]
+    for row in rows:
+        url=row["url"]
+        related=[d for d in details if d["url"]==url]
+        row["duplicate_question_count"]=max((d["duplicate_question_count"] for d in related),default=0)
+        subject=row["title"]
+        if re.search(r"驾照|驾驶证|法律|法规|驾驶资格|年龄要求|交通规则|证件资格",subject):
+            row["fact_review_topic"]="LEGAL_CREDENTIALS"
+        elif re.search(r"押金|费用|租金|价格|退款|退还|租赁合同|配送|送车|预约|营业时间",subject):
+            row["fact_review_topic"]="COMMERCIAL_TERMS"
+        else:row["fact_review_topic"]="GENERAL"
     if ids!={f"CN-{i:04d}" for i in range(1,301)}:raise ValueError("Incomplete CN IDs")
     OUT.mkdir(exist_ok=True)
     rows.sort(key=lambda r:(0 if r["scope"]=="page" else 1,r["article_id"],r["url"]))
@@ -135,6 +149,7 @@ def main():
                                   ("AI-SEARCH-FAQ-QUESTION-EVIDENCE.csv",DETAIL,details)):
         with (OUT/filename).open("w",encoding="utf-8-sig",newline="") as f:
             writer=csv.DictWriter(f,fieldnames=header);writer.writeheader();writer.writerows(items)
+    reused_groups=sum(1 for k,v in reused.items() if v>1)
     counts=Counter(r["status"] for r in rows)
     by_type={t:Counter(r["status"] for r in rows if r["scope"]==t) for t in ("post","page")}
     priority_rows=sorted((r for r in rows if r["found_qa"]),
@@ -153,7 +168,9 @@ def main():
         lines.append("| "+k+f" | {counts[k]} | {by_type['post'][k]} | {by_type['page'][k]} |")
     direct_pairs=sum(r["found_qa"] for r in rows)
     title_pairs=sum(r["title_question_intent"]=="true" for r in rows)
-    lines+=["",f"- Evidence matrix includes {direct_pairs} explicit question/adjacent-answer candidate pairs and {title_pairs} question-intent article titles with existing opening paragraphs (distinct classes).","",
+    lines+=["",f"- Evidence matrix includes {direct_pairs} explicit question/adjacent-answer candidate pairs and {title_pairs} question-intent article titles with existing opening paragraphs (distinct classes).",
+            f"- {reused_groups} exact normalized question strings recur across different evidence rows; review duplication manually before adding FAQ blocks.",
+            "- Commercial (price/deposit/delivery) and legal/license statements are marked for source verification in the per-URL Matrix.","",
             "## Highest-priority existing question pages","",
             "| URL | Q&A candidates | Status |","|---|---:|---|"]
     for r in priority_rows[:45]:
@@ -172,7 +189,7 @@ def main():
             "- Source-level inspection, not full live browser crawl of 331 pages. HTML includes are not rendered except /faq/ shared JSON.",
             "- Answers have not been human fact-checked; Google, Baidu, AI Overviews, ChatGPT citations and GSC performance not measured."]
     (OUT/"AI-SEARCH-FAQ-AUDIT.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
-    print(json.dumps(dict(urls=len(rows),posts=len(posts),pages=len(pages),central_faq=len(faqs),
+    print(json.dumps(dict(urls=len(rows),posts=len(posts),pages=len(pages),central_faq=len(faqs),reused_question_groups=reused_groups,
         candidate_pairs=len(details),by_status=dict(counts)),ensure_ascii=False))
 
 if __name__=="__main__":main()
