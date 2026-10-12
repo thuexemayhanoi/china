@@ -127,8 +127,10 @@ if impl_matrix.is_file():
         check(topic_source.is_file(), "P1 revised topic source missing: "+relative)
         if not topic_source.is_file(): continue
         html_source = topic_source.read_text(encoding="utf-8")
-        check(html_source.count('<section class="inner-panel">') >= 3,
-              "P1 revised topic needs three substantive question sections: "+relative)
+        panel_count = (html_source.count('<section class="inner-panel">')
+                       + html_source.count('<div class="inner-panel">'))
+        check(panel_count >= 3,
+              "P1 revised page needs three substantive question panels: "+relative)
         check("本专题的主要内容" not in html_source and "其他相关租车指南" not in html_source,
               "P1 revised topic still has generic template text: "+relative)
         check("site.data.site.domain" in html_source and "<strong>" in html_source,
