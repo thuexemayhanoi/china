@@ -114,7 +114,7 @@ post,CN-0081,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-06/,河内�
 post,CN-0082,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-07/,长期租车月租区间怎么理解,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0083,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-08/,周租期间提前还车如何咨询费用,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0084,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-09/,周租车型没有报价时应该怎么问,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0085,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-10/,电动摩托车周租价格为什么需要单独咨询,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0085,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-10/,电动摩托车周租价格为什么需要单独咨询,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0086,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-11/,50cc 摩托车周租能否直接按日租推算,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0087,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-12/,河内月租 Honda Wave 的价格区间,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0088,https://zh.rentbikehanoi.com/blog/hanoi-pricing-periods-13/,Honda Vision 月租价格区间如何核实,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
@@ -134,7 +134,7 @@ post,CN-0101,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-01/,河内50cc
 post,CN-0102,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-02/,50cc 摩托车的实际排量如何核实,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0103,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-03/,50cc 自动挡车型适合哪类市区行程,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0104,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-04/,河内租50cc 一天参考价格说明,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0105,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-05/,50cc 租车押金与日租费用有什么区别,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0105,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-05/,50cc 租车押金与日租费用有什么区别,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0106,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-06/,50cc 车型库存需要怎样向门店确认,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0107,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-07/,租50cc 前如何核对车辆登记信息,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0108,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-08/,50cc 车型骑行坐姿应怎样判断,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
@@ -156,13 +156,13 @@ post,CN-0123,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-23/,50cc 摩�
 post,CN-0124,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-24/,50cc 踏板车与电动两轮车差异在哪里,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0125,https://zh.rentbikehanoi.com/blog/hanoi-fifty-models-25/,在河内租50cc 前有哪些常见误解,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0126,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-01/,在越南骑50cc 摩托车要核实哪些法规,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0127,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-02/,50cc 摩托车是否一定不需要驾照,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0127,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-02/,50cc 摩托车是否一定不需要驾照,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0128,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-03/,外国旅客骑50cc 应先确认哪些证件,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0129,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-04/,50cc 与不同车辆类别的法律区别,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0130,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-05/,在河内骑50cc 前如何核实年龄要求,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0130,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-05/,在河内骑50cc 前如何核实年龄要求,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0131,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-06/,50cc 道路通行规则该去哪里查,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0132,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-07/,租50cc 前为什么要核对车辆真实类别,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0133,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-08/,持外国驾照在越南骑车应核实什么,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0133,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-08/,持外国驾照在越南骑车应核实什么,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0134,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-09/,50cc 交通规则变化时如何找到官方来源,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0135,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-10/,50cc 骑行安全帽的选择与佩戴,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0136,https://zh.rentbikehanoi.com/blog/hanoi-fifty-rules-11/,河内50cc 新手出发前检查表,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
@@ -233,7 +233,7 @@ post,CN-0200,https://zh.rentbikehanoi.com/blog/hanoi-oldquarter-pickup-25/,老�
 post,CN-0201,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-01/,第一次在河内租摩托车需要准备哪些资料,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0202,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-02/,河内摩托车租赁合同阅读顺序,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0203,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-03/,如何核实租车合同中的车辆信息,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0204,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-04/,租车押金与预付租金如何区分,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0204,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-04/,租车押金与预付租金如何区分,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0205,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-05/,签署租车合同前必须确认哪些日期,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0206,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-06/,河内租车证件要求为什么要逐车型确认,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0207,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-07/,租车付款前如何保存收据和凭证,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
@@ -247,7 +247,7 @@ post,CN-0214,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-14/,租车
 post,CN-0215,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-15/,长期租车应关注哪些延期条件,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0216,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-16/,租车时是否需要交护照应怎样询问,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0217,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-17/,租车前如何核对车辆已有损伤,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
-post,CN-0218,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-18/,押金退还时间应怎样向门店确认,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
+post,CN-0218,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-18/,押金退还时间应怎样向门店确认,TITLE_ANSWER_INTENT,P2,P2_ANSWER_FIRST_REVISED,INTRO_OR_VERIFIED_BODY; SEO_DESCRIPTION; LAST_MODIFIED_AT,true,300_ARTICLE_MATRIX; BUILD; RENDERED_SEO; GITHUB_PAGES
 post,CN-0219,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-19/,租赁期间发生费用争议先核对什么,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0220,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-20/,河内短租和长租的合同条款比较,NO_EXPLICIT_QA,P2,NO_FORCED_FAQ; KEEP_UNIQUE_CONTENT,NO_CONTENT_EDIT,false,SOURCE_MATRIX_BUILD_AND_LINKS
 post,CN-0221,https://zh.rentbikehanoi.com/blog/hanoi-guides-contracts-21/,押金扣减规则需要提前了解哪些项目,TITLE_ANSWER_INTENT,P2,P2_EDITORIAL_REVIEW_PENDING,NO_CONTENT_EDIT,true,SOURCE_MATRIX_BUILD_AND_LINKS
