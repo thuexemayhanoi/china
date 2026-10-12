@@ -104,6 +104,33 @@ check("site.posts" in index.read_text(encoding="utf-8"), "search index not gener
 check("fr.rentbikehanoi.com" not in assistant.read_text(encoding="utf-8"), "French site link accidentally copied")
 check("https://wa.me/84942467674" == site["business"].get("whatsapp"), "WhatsApp number mismatch")
 check("https://zalo.me/0942467674" == site["business"].get("zalo"), "Zalo number mismatch")
+
+# AEO implementation Matrix must distinguish real edits from pending reviews.
+import csv
+impl_matrix = root / "docs/AI-SEARCH-FAQ-IMPLEMENTATION-MATRIX.csv"
+if impl_matrix.is_file():
+    with impl_matrix.open(encoding="utf-8-sig", newline="") as fh:
+        all_url_rows = list(csv.DictReader(fh))
+    check(len(all_url_rows) == 331, "AI FAQ implementation Matrix must retain 331 URL rows")
+    check(len({row["url"] for row in all_url_rows}) == 331,
+          "AI FAQ implementation Matrix has duplicate URLs")
+    changed = [row for row in all_url_rows if row["implementation_status"] == "P2_ANSWER_FIRST_REVISED"]
+    post_sources = {}
+    for post in (root / "_posts").glob("*.md"):
+        source = post.read_text(encoding="utf-8")
+        ident = re.search(r'^article_id:\s*"?(CN-\d{4})"?', source, re.M)
+        if ident: post_sources[ident.group(1)] = source
+    for row in changed:
+        ident = row["article_id"]
+        source = post_sources.get(ident, "")
+        check(bool(source), "AEO edited article missing: "+ident)
+        check(bool(re.search(r'^last_modified_at:\s*"?\d{4}-\d{2}-\d{2}"?', source, re.M)),
+              "AEO revised post needs last_modified_at: "+ident)
+        body = source.split("\n---\n", 1)[-1]
+        intro = body.split("\n\n##",1)[0]
+        check("**" in intro and len(intro) >= 70,
+              "AEO revised post missing direct, highlighted opening answer: "+ident)
+
 post_count = len(list((root / "_posts").glob("*.md"))) if (root / "_posts").exists() else 0
 if errors:
     print("CHINA QA FAILED:")
