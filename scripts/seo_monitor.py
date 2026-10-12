@@ -55,6 +55,7 @@ def main() -> int:
     title_groups: dict[str, list[str]] = defaultdict(list)
     intent_groups: dict[str, list[str]] = defaultdict(list)
     short_posts: list[str] = []
+    non_chinese_descriptions: list[str] = []
     low_structure: list[str] = []
     outside_sources = 0
     for file in files:
@@ -70,6 +71,8 @@ def main() -> int:
         keyword = meta.get("primary_keyword", "")
         if not title or not description:
             errors.append(f"{ident}: missing title or description")
+        elif len(ZH.findall(description)) < 8:
+            non_chinese_descriptions.append(ident)
         title_groups[normalize(title)].append(ident)
         if keyword:
             intent_groups[normalize(keyword)].append(ident)
@@ -91,6 +94,8 @@ def main() -> int:
         warnings.append(f"{len(short_posts)} posts under 800 Chinese characters; inspect editorial quality")
     if low_structure:
         warnings.append(f"{len(low_structure)} posts have fewer than three H2 sections")
+    if non_chinese_descriptions:
+        warnings.append(f"{len(non_chinese_descriptions)} posts have descriptions that need zh-CN language review")
     repeated_intents = sorted(
         ({"normalized_primary_keyword": key, "posts": len(members), "ids": members[:8]}
          for key, members in intent_groups.items() if len(members) > 1),
@@ -191,6 +196,7 @@ def main() -> int:
         "posts_under_800_hanzi": len(short_posts),
         "sample_short_post_ids": short_posts[:15],
         "posts_with_fewer_than_3_h2": len(low_structure),
+        "non_chinese_meta_description_ids": non_chinese_descriptions[:50],
         "posts_with_external_links": outside_sources,
         "repeated_keyword_groups": repeated_intents[:25],
         "warnings": warnings,
