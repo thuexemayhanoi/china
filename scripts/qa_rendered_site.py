@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Built-site SEO and internal-link integrity checks (stdlib only)."""
 from html.parser import HTMLParser
+from html import unescape
 from pathlib import Path
 from urllib.parse import urlparse, unquote
 import json
@@ -88,6 +89,37 @@ def main():
         check(len(parser.desc)==1 and parser.desc[0].strip(),route+": missing meta description")
         check(all("alt" in img for img in parser.imgs),route+": image missing alt attribute")
         check(bool(parser.scripts),route+": JSON-LD missing")
+        if route=="/faq/":
+            # The page includes structured Q&A ONLY when all 12 answers are visible.
+            expected_faq=json.loads((ROOT/"_data/faqs.json").read_text(encoding="utf-8"))
+            pairs=re.findall(r'<details>\\s*<summary>(.*?)</summary>\\s*<p>(.*?)</p>',raw,re.S)
+            def plain(value):
+                return unescape(re.sub(r"<[^>]*>","",value)).strip()
+            pairs=[(plain(q),plain(a)) for q,a in pairs]
+            check(len(pairs)==len(expected_faq)==12,"FAQ should render exactly 12 visible pairs")
+            graph=[]
+            try:
+                for code in parser.scripts:graph.extend(json.loads(code).get("@graph",[]))
+            except (json.JSONDecodeError,AttributeError) as exc:
+                errors.append("FAQ schema parse error: "+str(exc))
+            faq_nodes=[n for n in graph if n.get("@type")=="FAQPage"]
+            check(len(faq_nodes)==1,"FAQ page should have one FAQPage node")
+            if faq_nodes and len(pairs)==len(expected_faq):
+                claims=[(q.get("name"),q.get("acceptedAnswer",{}).get("text")) for q in faq_nodes[0].get("mainEntity",[])]
+                check(len(claims)==12,"FAQ schema should contain exactly 12 Q&A entries")
+                check(claims==pairs,"FAQ schema answers differ from what visitors see")
+                check([q for q,a in pairs]==[x["q"] for x in expected_faq],
+                      "FAQ visible questions no longer match central data")
+                for amount in ("address", "phone_display", "hours"):
+                    value=CONFIG["business"][amount]
+                    check(any(value in a for q,a in pairs),
+                          "FAQ failed to render central business fact: "+amount)
+                vehicles=json.loads((ROOT/"_data/vehicles.json").read_text(encoding="utf-8"))
+                for vehicle in vehicles[:5]:
+                    check(vehicle["display"]["day"] in pairs[8][1],
+                          "Daily price in FAQ is not sourced from vehicles.json: "+vehicle["name"])
+                check("vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=170620" in raw,
+                      "FAQ must link to official statute for 50cc eligibility")
         for code in parser.scripts:
             try:
                 obj=json.loads(code)
