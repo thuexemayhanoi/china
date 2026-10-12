@@ -1,0 +1,20 @@
+{%- comment -%}
+Shared answer source for visible /faq/ content AND matching JSON-LD. Only
+business facts and reference prices are data-driven; curated factual text
+stays in _data/faqs.json. No generated fact assertions or new schema types.
+{%- endcomment -%}
+{%- assign f = include.f -%}
+{%- case f.key -%}
+{%- when 'store_location' -%}
+不在河内老城区内。门店位于 {{ site.data.site.business.address }}。查看联系页及实时地图确认路线；配送与异地交接需另行确认。
+{%- when 'store_contact' -%}
+门店为 {{ site.data.site.business.name }}，位于 {{ site.data.site.business.address }}。可致电 {{ site.data.site.business.phone_display }} 或通过 Zalo 联系，提供预计租期及车型询问价格与库存。
+{%- when 'business_hours' -%}
+公开营业时间为每天 {{ site.data.site.business.hours }}（河内当地时间）。节假日安排、取还车时段及库存应在出发前向门店确认。
+{%- when 'day_price' -%}
+参考日租：{{ site.data.vehicles[0].name }} {{ site.data.vehicles[0].display.day }}；{{ site.data.vehicles[1].name }} {{ site.data.vehicles[1].display.day }}；{{ site.data.vehicles[2].name }} {{ site.data.vehicles[2].display.day }}；{{ site.data.vehicles[3].name }} {{ site.data.vehicles[3].display.day }}；{{ site.data.vehicles[4].name }} {{ site.data.vehicles[4].display.day }}。押金另计；库存与最终费用须经门店确认。
+{%- when 'directions' -%}
+门店地址为 {{ site.data.site.business.address }}，并不位于河内老城区。可从联系页面打开 Google 地图，以实际出发地点和实时交通规划路线；如需送车请事先联系门店。
+{%- else -%}
+{{- f.a -}}
+{%- endcase -%}
