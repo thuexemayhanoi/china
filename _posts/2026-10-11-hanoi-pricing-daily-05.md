@@ -5,26 +5,27 @@ topic: "pricing"
 subtopic: "daily"
 permalink: "/blog/hanoi-pricing-daily-05/"
 title: "Honda Click 日租费用要问清什么"
-description: "Honda Click 日租参考价约 150,000 越南盾,但费用不只是租金。本文列出问清单价、装备、油量、时间边界、押金五个必问项,给出把每一项落进凭证的方法。"
+description: "Honda Click/Mio 参考日租150,000₫、押金200万₫，须分别核对计日时间、装备、燃油、延期与退款条件；询价不代表已预订。"
+last_modified_at: "2026-10-12"
 primary_keyword: "河内摩托车日租价格"
 date: "2026-10-11 17:49:34 +0700"
 seo_silo: "pricing/daily"
 breadcrumbs: [{"label": "博客", "href": "/blog/"}, {"label": "专题", "href": "/topics/pricing/daily/"}, {"label": "Honda Click 日租费用要问清什么"}]
 publication_method: "automated_qa"
 ---
-Honda Click 是日租市场的入门热门,参考价位在常见车型里属于亲民的一档。价位亲民的车型,费用反而更容易被看粗:租金便宜,大家就不细问其他项,结果头盔收费、油量规则、超时计费这些"小项"加起来,实际花费和预期差一截。这篇列出 Click 日租要问清的费用项目,每个都给核对方法。参考价以[价格页](/prices/)为准,日租的更多信息见[日租价格专题](/topics/pricing/daily/)。
+**Honda Click / Yamaha Mio 网站公开的参考日租是 {{ site.data.vehicles[3].display.day }}，押金参考为 {{ site.data.vehicles[3].deposit }}。**最终需要确认当次车型、实际取还日期、计日规则、头盔及附件、燃油安排、延期费和押金结算。店方未公开适用于所有订单的统一超时收费方式，不能假定按小时、半天或全天加收。详情见[价格表](/prices/)与[押金专题](/topics/pricing/deposits/)。
 
 ## Click 的参考价位
 
-先锚定基准:按本站公开的参考价目,Honda Click 与 Yamaha Mio 同档,日租参考价约为 150,000 越南盾,周租参考价约 700,000 越南盾,月租参考价在 900,000 到 1,200,000 越南盾区间,押金参考标准约为两百万越南盾。这是坐标,不是终价——你的实际费用,取决于接下来五项要问清的内容。Click 和 Mio 的选择比较,参考[两车的月租比较角度](/blog/hanoi-rental-longterm-15/),日租场景同样适用。
+网站将 Honda Click / Yamaha Mio 归为同一参考价格类别：日租 <strong>{{ site.data.vehicles[3].display.day }}</strong>，周租 <strong>{{ site.data.vehicles[3].display.week }}</strong>，月租 <strong>{{ site.data.vehicles[3].display.month }}</strong>，押金 <strong>{{ site.data.vehicles[3].deposit }}</strong>。这些数字用于比较档位，**不能据此确认具体 Honda Click 车辆正在出租、某一租期自动适用优惠，或押金会无条件退还**。门店最终报价及结算需以实际合同为准。
 
 ## 必问项一和二:单价边界与随车装备
 
-第一问,单价的计价边界:"一天从几点算到几点?晚还两小时怎么算?"日租的超时规则各家不同,按小时加收、按半天算、直接按全天算,三种都有,问清才能规划还车时间。第二问,装备包含:"头盔包含几顶?第二顶收费吗?锁具、手机支架呢?"入门价位的车型,装备条款的弹性最大,同样 150,000 盾的报价,一个含头盔一个不含,成本差就出来了。装备的现场清点方法参考[租车行交车检查步骤](/blog/hanoi-rental-scooters-19/)的物品交接环节。
+第一，问清日租从何时开始、何时结束以及延期时如何报价；本站没有发布统一的小时费或半天费。第二，确认头盔数量、锁具、手机支架、雨衣等是否随车提供、是否收费。不能把“低价车型必然附加收费”当作事实。请让门店确认实用项目及金额，参阅[交接检查](/blog/hanoi-rental-scooters-19/)。
 
 ## 必问项三和四:油量规则与押金条款
 
-第三问,油量:"取车多少油、还车多少油?油费谁承担?"日租的油费由骑行者承担是常态,但要确认取还油量的具体约定,油量照片的记录方法参考[短租留证清单](/blog/hanoi-rental-scooters-24/)。第四问,押金:"押金多少?什么情况扣、怎么退、多久退?"Click 档押金参考约两百万盾,金额不大,条款照旧要问全,押金规则的系统说明看[押金指南](/topics/pricing/deposits/),租金和押金的区别参考[押金指南](/topics/pricing/deposits/)。
+第三问,油量:"取车多少油、还车多少油?油费谁承担?"本站没有公布适用于所有订单的统一油费承担政策，必须确认取还油量及收费约定,油量照片的记录方法参考[短租留证清单](/blog/hanoi-rental-scooters-24/)。第四问,押金:"押金多少?什么情况扣、怎么退、多久退?"Click 档押金参考约两百万盾,金额不大,条款照旧要问全,押金规则的系统说明看[押金指南](/topics/pricing/deposits/),租金和押金的区别参考[押金指南](/topics/pricing/deposits/)。
 
 ## 必问项五:费用变动的触发条件
 
@@ -36,4 +37,4 @@ Honda Click 是日租市场的入门热门,参考价位在常见车型里属于�
 
 ## 结语
 
-Click 日租费用五问:单价边界、装备、油量、押金、变动规则。每问一项,费用画面清晰一分;五项问完,150,000 盾的参考价背后,是总成本的完整账本。入门车型也值得认真谈,费用清单的通用框架回看[日租价格专题](/topics/pricing/daily/)。
+Honda Click / Yamaha Mio 的网站参考日租为 <strong>{{ site.data.vehicles[3].display.day }}</strong>，押金为 <strong>{{ site.data.vehicles[3].deposit }}</strong>。完成询价时把计日时刻、装备、油量、押金和延期条件逐项确认，必要时记录到合同与交车单。**网站没有承诺头盔免费、油费固定由谁支付或超时统一按小时收费。**参见[日租指南](/topics/pricing/daily/)。
