@@ -67,3 +67,9 @@ These are keyword **clusters**, not 17 proven cases of duplicate articles. Commo
 The connected SEO accounts currently expose GSC properties for the Nguyễn Tú main domain and chatbot, **not** `https://zh.rentbikehanoi.com/`. Google property addition/ownership and Bing/Baidu console submission require the relevant authorized account and cannot be marked complete from this repository audit. The public `https://zh.rentbikehanoi.com/sitemap.xml` returns 200 with 331 URLs.
 
 No DNS, CNAME, theme or factory workflow changed in this review.
+
+## Follow-up metadata correction: Chinese snippets
+
+The extended monitor found seven Vietnamese-language meta descriptions within a Chinese site. The following published posts were given fully Simplified Chinese meta descriptions without changing title, permalink, date, keyword, body, or schema source: `CN-0069`, `CN-0071`, `CN-0072`, `CN-0073`, `CN-0074`, `CN-0076`, `CN-0078`.
+
+Expected next monitor result: 0 non-Chinese descriptions in this check; 10 posts still under the advisory 800-Hanzi threshold, requiring editorial judgment, not padding. The 17 reused parent keyword groups remain intent-review candidates rather than proven cannibalization.
