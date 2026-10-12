@@ -126,8 +126,8 @@ if impl_matrix.is_file():
         check(bool(source), "AEO edited article missing: "+ident)
         check(bool(re.search(r'^last_modified_at:\s*"?\d{4}-\d{2}-\d{2}"?', source, re.M)),
               "AEO revised post needs last_modified_at: "+ident)
-        body = source.split("\\n---\\n", 1)[-1]
-        intro = body.split("\\n\\n##",1)[0]
+        body = source.split("\n---\n", 1)[-1]
+        intro = body.split("\n\n##",1)[0]
         check("**" in intro and len(intro) >= 70,
               "AEO revised post missing direct, highlighted opening answer: "+ident)
 
